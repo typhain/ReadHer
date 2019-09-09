@@ -1,0 +1,2 @@
+class Crush < ApplicationRecord
+end
