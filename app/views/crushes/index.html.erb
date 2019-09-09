@@ -1,1 +1,39 @@
-<p> Bienvenue sur la page crush<p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kit UI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+</head>
+<body>
+  <div class="text-center pt-1">
+    <h1 class="display-3 mt-4 mb-3 text-primary">ReadHer, share it !</h1>
+       <p>She is too amazing to be forgotten in your library. She matters to you, she will probably matter to us.</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <% @crushes.each do |n| %>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-1"><%= n.title %></h5>
+                  <p class="card-text"><%= n.description %></p>
+                <div class="d-flex w-100 justify-content-between">
+                  <a <%= link_to "View", crush_path(n.id)%> </a>
+                  <div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</body>
+</html>
