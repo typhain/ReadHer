@@ -5,27 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
-
-require 'faker'
-
-def prepare
-
-    book_title = Faker::Book.title
-    genre = Faker::Book.genre
-    author_name = Faker::Book.author
-    author_country = Faker::Address.country
-    description = Faker::Lorem.paragraph
-    quote = Faker::Books::Lovecraft.sentence
-    {book_title: book_title, genre: = genre, author_name: = author_name, author_country: = author_country, description: description, quote: = quote}
-end
-
-50.time do 
-    crush = Crush.create(prepare)
-end
-puts "\nTotal crush created: #{Crush.all.count}"
-
-=======
 require 'faker'
 Crush.destroy_all
 
@@ -34,4 +13,3 @@ Crush.destroy_all
 end
 
 puts "\nTotal crush created: #{Crush.all.count}"
->>>>>>> dad2781cde2da41d663a17be03848fb56e4e7902
