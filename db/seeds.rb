@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+Crush.destroy_all
+
+50.times do
+  Crush.create(book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country_name_to_code, description: Faker::Lorem.paragraph, quote: Faker::Quotes::Shakespeare.hamlet_quote)
+end
+
+puts "\nTotal crush created: #{Crush.all.count}"
