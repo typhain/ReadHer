@@ -7,6 +7,7 @@ class CreateCrushes < ActiveRecord::Migration[5.2]
       t.string :author_country
       t.string :description
       t.string :quote
+      t.belongs_to :user, index: true, foreign_key: true
 
       t.timestamps
     end
