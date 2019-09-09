@@ -74,13 +74,26 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+<<<<<<< HEAD
+=======
+    devise (4.7.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+>>>>>>> 7f0246cf6e0114d943544aaef46ff6dccc13c636
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
+<<<<<<< HEAD
     faker (1.9.6)
+=======
+    faker (1.9.1)
+>>>>>>> 7f0246cf6e0114d943544aaef46ff6dccc13c636
       i18n (>= 0.7)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -203,6 +216,10 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+<<<<<<< HEAD
+=======
+  devise
+>>>>>>> 7f0246cf6e0114d943544aaef46ff6dccc13c636
   dotenv-rails (~> 2.1, >= 2.1.1)
   faker (~> 1.6, >= 1.6.6)
   jbuilder (~> 2.5)

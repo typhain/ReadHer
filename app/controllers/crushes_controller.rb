@@ -4,6 +4,10 @@ class CrushesController < ApplicationController
     @crushes = Crush.all
   end
 
+  def show
+    @crush = Crush.find(params[:id])
+  end
+
   def create
   end
 
