@@ -4,5 +4,5 @@ class Crush < ApplicationRecord
     validates :author_name, presence: true, 
     validates :author_country, presence: true, 
     validates :description, presence: true, 
-    validates :, presence: true, 
+    validates :quote, presence: true
 end
