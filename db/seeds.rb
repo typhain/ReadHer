@@ -8,8 +8,12 @@
 require 'faker'
 Crush.destroy_all
 
-50.times do
-  Crush.create(book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country_name_to_code, description: Faker::Lorem.paragraph, quote: Faker::Quotes::Shakespeare.hamlet_quote)
+20.times do
+  User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, description: Faker::Lorem.paragraph, password: "123456")
+end
+
+20.times do
+  Crush.create!(user: User.all.sample, book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country, description: Faker::Lorem.paragraph, quote: Faker::Quote.yoda)
 end
 
 puts "\nTotal crush created: #{Crush.all.count}"
