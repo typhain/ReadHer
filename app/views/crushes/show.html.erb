@@ -14,8 +14,12 @@
         <p class="card-title"><%= @crush.author_name %> (<%= @crush.author_country %>)<p>
         <p class="card-title blockquote"><%= @crush.quote %><p>
         <p class="card-title"><%= @crush.description %><p>
-        <% if user_signed_in? %>
-        <a class = "btn btn-primary" <%= link_to "Add to my library", crush_libraries_path(:id => @crush)%> </a>
+        <% if current_user == @crush.user_id %>
+        <a class = "btn btn-primary" <%= link_to "Add to my library"%> </a>
+        <a class = "btn btn-primary" <%= link_to "message"%> </a>
+        <% end %>
+        <% if current_user != @crush.user_id %>
+        <a class = "btn btn-primary" <%= link_to "Edit"%> </a>
         <% end %>
   </div>
 </div>
