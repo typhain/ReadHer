@@ -7,8 +7,9 @@
 </head>
 <body>
   <div class="text-center pt-1">
-    <h1 class="display-3 mt-4 mb-3 text-primary">You have read her ? Now share it !</h1>
-       <p>She is too amazing to be forgotten in your library. She matters to you, she will probably matter to us.</p>
+    <h1 class="display-3 mt-4 mb-3 text-primary">ReadHer</h1>
+       <p>She matters to you, she will probably matter to us.</p>
+       <p class="btn btn-primary" <%= link_to "Share your crush", crushes_path, method: :post%> <p>
   </div>
 
   <div class="container">
@@ -19,8 +20,9 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="mb-1"><%= n.book_title %></h5>
-                  <p class="card-text"><%= n.description %></p>
+                  <p class="card-text"><%= n.created_at.to_formatted_s(:long)%></p>
+                  <p class="card-text blockquote display-3"><%= n.quote %></p>
+                  <p class="mb-1 text-muted"><em><%= n.book_title %></em>, <%= n.author_name%> (<%= n.author_country%>)</p>
                 <div class="d-flex w-100 justify-content-between">
                   <a <%= link_to "View", crush_path(n.id)%> </a>
                   <div>
