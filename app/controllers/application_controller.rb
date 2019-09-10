@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: exception 
+    #protect_from_forgery with: exception 
     #permit additionnal parameters in devise 
     before_action :configure_permitted_parameters, if: :devise_controller?
-    before_action :masquerade_user!
+    #before_action :masquerade_user!
 
     protected
     

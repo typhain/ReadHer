@@ -7,3 +7,8 @@ class User < ApplicationRecord
   has_many :crushes
   has_one_attached :avatar
 end
+def show
+  #links the new user to its avatar
+  user.avatar.attach(params[:avatar])
+  @user = User.find(params[:id])
+end 
