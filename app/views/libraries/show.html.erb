@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="card" id="show-card">
+
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Author</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% current_user.library.crush_library.each_with_index do |crush_library, i| %>
+        <tr>
+          <td><strong><%= crush_libraries.crush.book_title %></strong></td>
+          <td><%= crush_libraries.crush.author_name %></td>
+          <td><%= crush_libraries.crush.genre %></td>
+          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from library", crush_libraries_path(crush_libraries.id), :method=>:delete, :remote => true %></button></td>
+        </tr>
+      <% end %>
+      <p>Total: <%= current_user.crush.count %> euros<p>
+
+      </tbody>
+    </table>
+    <div class="d-flex bd-highlight">
+    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', root_path %></div></div>
+    </div>
+        </div>
+</div>

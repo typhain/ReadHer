@@ -2,7 +2,7 @@ class LibrariesController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @library = Library.find_by(params[:id])
+    @libraries = Library.all
   end
 
   def show
