@@ -1,10 +1,12 @@
 <div class="text-center pt-1">
   <h1 class="display-3 mt-4 mb-3 text-primary">ReadHer</h1>
      <p>She matters to you, she will probably matter to us.</p>
-      <p class="btn btn-primary" <%= link_to "Share your crush", crushes_path, method: :post%> <p>
+     <div class="container p-3">
+        <a class = "btn btn-primary"<%= link_to "Share your crush", new_crush_path %> </a>
       <% if current_user %>
-        <p class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <p>
+        <a class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <a>
       <% end %>
+    </div>
 </div>
 
   <div class="container">
