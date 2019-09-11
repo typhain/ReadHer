@@ -1,1 +1,25 @@
-<p>crushes#show<p>
+<div class="text-center pt-1">
+  <h1 class="display-3 mt-4 mb-3 text-primary">ReadHer</h1>
+     <p>Why did she matter ? Tell us all about it !</p>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">
+      <a> <%= @crush.book_title%> </a>
+    </h5>
+      <div class="card-body">
+        <p class="card-title"> <%= @crush.user.first_name %> <%= @crush.user.last_name %></p>
+        <p class="card-title"> <%= @crush.genre %></p>
+        <p class="card-title"><%= @crush.author_name %> (<%= @crush.author_country %>)<p>
+        <p class="card-title blockquote"><%= @crush.quote %><p>
+        <p class="card-title"><%= @crush.description %><p>
+        <% if current_user != @crush.user %>
+          <a class = "btn btn-primary" <%= link_to "Add to my library", crush_libraries_path(:id => @crush), method: :post%> </a>
+          <a class = "btn btn-primary" <%= link_to "Who shared this ?"%> </a>
+          <% end %>
+          <% if current_user == @crush.user %>
+          <a class = "btn btn-primary" <%= link_to "Edit"%> </a>
+        <% end %>
+  </div>
+</div>
