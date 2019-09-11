@@ -10,6 +10,12 @@ h1 {
     color: black
 }
 
+
+.baseline { font-family: bureau-grot-condensed, sans-serif;
+            font-size: 25px;
+}
+
+
 nav {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 300;
@@ -43,6 +49,18 @@ nav a:active {
     padding-left: 7px
 }
 
+.nav-item a:link {
+    color: whitesmoke;
+}
+
+.nav-item a:hover {
+    color: dimgray;
+}
+
+.nav-item a:visited {
+    color: whitesmoke;
+}
+
 .dropdown-menu {
     background-color: black;
     margin-left: 60px
@@ -51,6 +69,10 @@ nav a:active {
 #btn-search {
     font-size: 18px
 }
+
+#add_crush_btn{width: 50px; height: 50px; padding-top: 10px;
+    -webkit-box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561;
+    box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561; }
 
 #card-show {
     display: flex;
@@ -70,7 +92,7 @@ nav a:active {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 4em;
+    font-size: 3.5em;
     line-height: 1.2
 }
 
@@ -108,18 +130,32 @@ nav a:active {
     padding-bottom: 2px
 }
 
+.card-author{   font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.1;}
 .crush-link-btn {
     font-family: bureau-grot-compressed, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 1.1;
     border: 1.4px solid;
-    border-radius: 18px;
-    padding: 2.2px 11px;
+    border-radius: 20px;
+    padding: 2.2px 15px;
     background-color: black;
 }
+#title-crush{font-family: bureau-grot, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;}
 
+#kind_of_book{font-family: 25px; }
+
+#sub_category{font-family: neue-haas-unica, sans-serif;
+              font-weight: 900;
+              font-style: normal;}
 
 .crush-link-btn :active {
     color: mistyrose;

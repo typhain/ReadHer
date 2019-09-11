@@ -23,6 +23,12 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+     <% if user_signed_in? %>
+      <li>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+      </li>
+    <% end %>
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -52,5 +58,52 @@
 </nav>
 
     <%= yield %>
+
+
+    <footer class=" d-flex mt-4 ">
+    <div class="container">
+    <div class="row justify-content-center text-muted">
+    <p class="mt-4 mb-3 baseline">ReadHer — Why did she matter ? Tell us all about it !</p>
+ </div>
+        <p class="float-right">
+          <a href="#" class="footer-link"> ↑ Back to top</a>
+        </p>
+       
+        <div class="text-footer">
+            <div class="container">
+                <div class="row py-2">
+                    <div class="col-sm">
+                        <b>Gleeph</b>
+                        <br>Manifeste
+                        <br>Soutiens
+                    </div>
+
+                    <div class="col-sm">
+                       <b>Support</b>
+                       <br> Mentions Légales
+                       <br> C.G.U.
+                       <br> Politique de Confidentialité 
+                    </div>
+
+                    <div class="col-sm">
+                      <b>Contact</b> 
+                       <br>Email
+                       <br>Facebook
+                       <br>Twitter
+                       <br>Instagram 
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center p-1" id="footer-credit">Readher © Paris — 2019</div>
+            </div>
+
+            <br>
+
+        </div>
+    </div>
+
+</footer>
+
+
   </body>
 </html>
