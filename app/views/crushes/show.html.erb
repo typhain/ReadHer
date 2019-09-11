@@ -33,7 +33,7 @@
 
         <ul class="nav nav-pills nav-fill mt-5">
           <li class="nav-item" >
-             <a href="#" class="crush-link-btn" id="crush-link" <%= link_to "Add to my library"%> </a>
+             <a href="#" class="crush-link-btn" id="crush-link" <%= link_to "Add to my library", crush_libraries_path(:id => @crush), method: :post%></a>
           </li>
 
           <li class="nav-item" >

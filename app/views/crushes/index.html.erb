@@ -2,6 +2,9 @@
   <h3 class="display-5 mt-4 mb-3">ReadHer</h3>
      <p class="baseline">She matters to you, she will probably matter to us.</p>
       <p class="btn btn-danger rounded-circle" id="add_crush_btn" <%= link_to "+", crushes_path, method: :post%> <p>
+      <% if current_user %>
+        <p class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <p>
+      <% end %>
 </div>
 
   <div class="container">

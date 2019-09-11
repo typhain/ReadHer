@@ -1,0 +1,2 @@
+module CrushesLibrariesHelper
+end
