@@ -7,9 +7,9 @@
   <div>
     <% if resource.avatar.attached? %>
       <%= image_tag resource.avatar %>
-    <% end %>
+  <% end %>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :avatar %><br />
     <%= f.file_field :avatar %>
   </div>
