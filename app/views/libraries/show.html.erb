@@ -16,11 +16,9 @@
           <td><strong><%= crush.book_title %></strong></td>
           <td><%= crush.author_name %></td>
           <td><%= crush.genre %></td>
-          <td><%= crush.id %></td>
-          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from cart", crush_library_path, :method=>:delete %></button></td>
+          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from library", crush_library_path, :method=>:delete %></button></td>
         </tr>
       <% end %>
-      <p>Number of crushes <%= current_user.crushes.count %><p>
 
       </tbody>
     </table>

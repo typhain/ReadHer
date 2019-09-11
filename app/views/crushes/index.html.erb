@@ -1,7 +1,7 @@
 <div class="text-center">
   <h3 class="display-5 mt-4 mb-3">ReadHer</h3>
      <p class="baseline">She matters to you, she will probably matter to us.</p>
-      <p class="btn btn-danger rounded-circle" id="add_crush_btn" <%= link_to "+", new_crushes_path%> <p>
+      <%= link_to "+", new_crush_path, class:'btn btn-danger rounded-circle', id: 'add_crush_btn'%>
       <% if current_user %>
         <a class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <a>
       <% end %>

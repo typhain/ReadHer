@@ -18,6 +18,6 @@ class CrushLibrariesController < ApplicationController
       crushlibrary = CrushLibrary.find_by(library_id: library)
       crush_id = crushlibrary.crush.id
       CrushLibrary.find_by(crush_id: crush_id).destroy
-      redirect_to crush_path
+      redirect_to library_path
     end
 end
