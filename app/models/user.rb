@@ -13,7 +13,3 @@ def show
   user.avatar.attach(params[:avatar])
   @user = User.find(params[:id])
 end 
-
-#def edit
-#  gravatar_image_url
-#end
