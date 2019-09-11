@@ -1,7 +1,7 @@
-<div class="text-center pt-1">
-  <h1 class="display-3 mt-4 mb-3 text-primary">ReadHer</h1>
-     <p>She matters to you, she will probably matter to us.</p>
-      <p class="btn btn-primary" <%= link_to "Share your crush", crushes_path, method: :post%> <p>
+<div class="text-center">
+  <h3 class="display-5 mt-4 mb-3">ReadHer</h3>
+     <p class="baseline">She matters to you, she will probably matter to us.</p>
+      <p class="btn btn-danger rounded-circle" id="add_crush_btn" <%= link_to "+", crushes_path, method: :post%> <p>
       <% if current_user %>
         <p class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <p>
       <% end %>
@@ -14,13 +14,22 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-body">
-                  <p class="card-text"><%= n.created_at.to_formatted_s(:long)%></p>
-                  <p class="card-text blockquote display-3"><%= n.quote %></p>
-                  <p class="mb-1 text-muted"><em><%= n.book_title %></em>, <%= n.author_name%> (<%= n.author_country%>)</p>
-                <div class="d-flex w-100 justify-content-between">
-                  <a class = "btn btn-primary"<%= link_to "View", crush_path(n.id)%> </a>
+                <div class="card-body">                       
+                 <div class="card-title">Title</div>
+                  <p class="card-text"></p>
+                  <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
+                  <p class="card-quote">“<%= n.quote %>”</p>
+                  <p class="card-credit"><b><%= n.book_title %></b>, <%= n.author_name%> (<%= n.author_country%>)</p>
+                  <div class="d-flex w-100 justify-content-between">
                   <div>
+                  <ul class="nav nav-pills nav-fill mt-3">
+                  <li class="nav-item">
+
+                      <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                      
+                  </li>
+
+              </ul>
                   </div>
                 </div>
                 </div>
