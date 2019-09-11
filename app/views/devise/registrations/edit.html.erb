@@ -5,9 +5,7 @@
 
 <!-- avatar and active storage config -->
   <div>
-    <% if resource.avatar.attached? %>
-      <%= image_tag resource.avatar %>
-  <% end %>
+    <%= image_tag(user_avatar(current_user)) %>
   </div>
   <div class="field">
     <%= f.label :avatar %><br />

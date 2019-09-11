@@ -52,15 +52,17 @@ ActiveRecord::Schema.define(version: 2019_09_10_104452) do
     t.string "author_country"
     t.string "description"
     t.string "quote"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_crushes_on_user_id"
   end
 
   create_table "libraries", force: :cascade do |t|
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_libraries_on_users_id"
+    t.index ["user_id"], name: "index_libraries_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,5 +84,6 @@ ActiveRecord::Schema.define(version: 2019_09_10_104452) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "crush_libraries", "crushes"
   add_foreign_key "crush_libraries", "libraries"
-  add_foreign_key "libraries", "users", column: "users_id"
+  add_foreign_key "crushes", "users"
+  add_foreign_key "libraries", "users"
 end
