@@ -11,15 +11,16 @@
         </tr>
       </thead>
       <tbody>
-      <% current_user.library.crush_library.each_with_index do |crush_library, i| %>
+      <% current_user.library.crushes.each do |crush| %>
         <tr>
-          <td><strong><%= crush_libraries.crush.book_title %></strong></td>
-          <td><%= crush_libraries.crush.author_name %></td>
-          <td><%= crush_libraries.crush.genre %></td>
-          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from library", crush_libraries_path(crush_libraries.id), :method=>:delete, :remote => true %></button></td>
+          <td><strong><%= crush.book_title %></strong></td>
+          <td><%= crush.author_name %></td>
+          <td><%= crush.genre %></td>
+          <td><%= crush.id %></td>
+          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from cart", crush_library_path, :method=>:delete %></button></td>
         </tr>
       <% end %>
-      <p>Total: <%= current_user.crush.count %> euros<p>
+      <p>Number of crushes <%= current_user.crushes.count %><p>
 
       </tbody>
     </table>

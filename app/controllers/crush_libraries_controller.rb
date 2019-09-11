@@ -8,13 +8,16 @@ class CrushLibrariesController < ApplicationController
         @library = current_user.library
         @library.add_crush(crush)
         if @library.save
-          redirect_to crush_path(crush)
+          redirect_to crushes_path
         end
       end
     end
 
     def destroy
-      Crush_libraries.find(params[:id]).destroy
-      redirect_to crush_path(@crush)
+      library = current_user.library.id
+      crushlibrary = CrushLibrary.find_by(library_id: library)
+      crush_id = crushlibrary.crush.id
+      CrushLibrary.find_by(crush_id: crush_id).destroy
+      redirect_to crush_path
     end
 end
