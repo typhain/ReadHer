@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :crush_libraries
   resources :libraries
   root to: "crushes#index"
+  #resources :edit_user_registration, only: [:new, :create, :update]
+  #resources :users
+  #get "/Edit", to: "registrations#edit", :as => 'Edit'
 end
