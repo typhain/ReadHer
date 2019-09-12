@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/ecn4una.css">
     <link rel="stylesheet" href="https://use.typekit.net/ecn4una.css">
+
     <!-- <link rel="stylesheet" href="stylesheet/style.css"> -->
 
 
@@ -23,24 +24,28 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Crushs <span class="sr-only">(current)</span></a>
+                <%= link_to "Crush", crushes_path, class:"nav-link"%>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profile
-                </a>
+            <li class="nav-item dropdown form-inline my-2 my-lg-0">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                  <% if current_user == nil %>
+                    <a <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %> </a>
+                    <a <%= link_to "Create Account", new_user_registration_path, :class => "dropdown-item" %> </a>
+                  </div>
+                  <% else %>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                    <a <%= link_to "Profil", edit_user_registration_path,:class => "dropdown-item" %> </a>
+                    <a <%= link_to "Sign out", destroy_user_session_path, :class => "dropdown-item", method: :delete %> </a>
+                  </div>
+                  <% end %>
             </li>
         </ul>
 
@@ -53,16 +58,15 @@
 
     <%= yield %>
 
-
-    <footer class=" d-flex mt-4 ">
-    <div class="container">
-    <div class="row justify-content-center text-muted">
-    <p class="mt-4 mb-3 baseline">ReadHer — Why did she matter ? Tell us all about it !</p>
- </div>
+<br>
+<br>
+<br>
+<footer>
+  <div>
         <p class="float-right">
           <a href="#" class="footer-link"> ↑ Back to top</a>
         </p>
-       
+
         <div class="text-footer">
             <div class="container">
                 <div class="row py-2">
@@ -76,15 +80,15 @@
                        <b>Support</b>
                        <br> Mentions Légales
                        <br> C.G.U.
-                       <br> Politique de Confidentialité 
+                       <br> Politique de Confidentialité
                     </div>
 
                     <div class="col-sm">
-                      <b>Contact</b> 
+                      <b>Contact</b>
                        <br>Email
                        <br>Facebook
                        <br>Twitter
-                       <br>Instagram 
+                       <br>Instagram
                     </div>
                 </div>
                 <hr>

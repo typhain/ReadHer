@@ -6,7 +6,11 @@
 <br>
 
 <div class="container">
+<<<<<<< HEAD
   <%= form_tag new_crush_path do %>
+=======
+  <%= form_tag crushes_path, :method => :post do %>
+>>>>>>> create_crush
   <div class="form-group">
     <%= text_field_tag('book_title', '', class:'form-control', required:'true', placeholder:"Title of your crush", autofocus: 'true')%>
   </div>

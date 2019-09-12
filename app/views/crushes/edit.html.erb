@@ -1,0 +1,30 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Share it !</h1>
+  <p class="lead">You have read her ? Tell us everything about her !</p>
+</div>
+
+<br>
+
+<div class="container">
+  <%= form_tag crush_path(@crush), :method => :put do %>
+  <div class="form-group">
+    <%= text_field_tag('book_title', '', class:'form-control', required:'true', placeholder: @crush.book_title, autofocus: 'true')%>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag('author_name', '', class:'form-control', required:'true', placeholder: @crush.author_name, required:'true')%>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag('genre', '', class:'form-control', required:'true', placeholder:@crush.genre, required:'true')%>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag('author_country', '', class:'form-control', required:'true', placeholder:@crush.author_country, required:'true')%>
+  </div>
+  <div class="form-group">
+    <%= text_area_tag('description', '', class:'form-control', required:'true', placeholder: @crush.description, required:'true')%>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag('quote', '', class:'form-control', required:'true', placeholder: @crush.quote, required:'true')%>
+  </div>
+  <%= submit_tag "Submit", class: 'btn btn-default btn btn-success' %>
+</div>
+<% end %>

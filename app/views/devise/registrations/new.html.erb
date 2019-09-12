@@ -3,6 +3,18 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <!-- avatar and active storage config to hide -->
+  <div>
+    <% if resource.avatar.attached? %>
+      <%= image_tag resource.avatar, disabled: true %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
