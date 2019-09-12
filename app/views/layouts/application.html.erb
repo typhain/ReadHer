@@ -12,6 +12,9 @@
     <!-- <link rel="stylesheet" href="stylesheet/style.css"> -->
 
 
+
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -24,29 +27,36 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <%= link_to "Crush", crushes_path, class:"nav-link"%>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item dropdown form-inline my-2 my-lg-0">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
                   <% if current_user == nil %>
-                    <a <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %> </a>
-                    <a <%= link_to "Create Account", new_user_registration_path, :class => "dropdown-item" %> </a>
-                  </div>
+                    <li class="nav-item">
+                    <%= link_to "Login", new_user_session_path, class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                    <%= link_to "Create Account", new_user_registration_path, class:"nav-link" %>
+                    </li>
                   <% else %>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"
-                    <a <%= link_to "Profil", edit_user_registration_path,:class => "dropdown-item" %> </a>
-                    <a <%= link_to "Sign out", destroy_user_session_path, :class => "dropdown-item", :method => :delete %> </a>
-                  </div>
+
+                <li class="nav-item">
+                <%= link_to "Profil", edit_user_registration_path, class:"nav-link" %>
+                </li>
+
+                 <li class="nav-item">
+                    <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
+                </li>
+
+
                   <% end %>
-            </li>
+
         </ul>
 
         <form class="form-inline">
@@ -62,7 +72,7 @@
 <br>
 <br>
 <footer>
-  <div>
+  <div  class="container">
         <p class="float-right">
           <a href="#" class="footer-link"> ↑ Back to top</a>
         </p>

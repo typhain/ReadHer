@@ -1,6 +1,5 @@
 class CrushesController < ApplicationController
 
-
   def index
     @crushes = Crush.all
   end
