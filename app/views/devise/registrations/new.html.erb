@@ -1,41 +1,51 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mx-auto mt-2">
+    <form class="form-signin text-center mt-4" >
+    <a class=" mt-3 mb-3" href="#"><%= image_tag "logo_readher-black.png", :class => "logo_navbar" %></a>
+   
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <h4 class="mt-5 mb-2">Please sign up </h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <!-- avatar and active storage config to hide -->
+        <div>
+          <% if resource.avatar.attached? %>
+            <%= image_tag resource.avatar, disabled: true %>
+          <% end %>
+        </div>
+        <div class="field mt-5 mb-3 pt-3 pb-3 border" id="inputEmail">
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar %>
+        </div>
+ 
+        <div class="field text-left mb-3"> 
+        <%= f.label :email  %>
+        <%= f.email_field :email, :class => "form-control", :id =>"inputEmail" , autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <!-- avatar and active storage config to hide -->
-  <div>
-    <% if resource.avatar.attached? %>
-      <%= image_tag resource.avatar, disabled: true %>
-    <% end %>
+      <div class="field text-left ">
+      <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, :class => "form-control", autocomplete: "new-password" , :id =>"inputEmail"  %>
+
+        </div>
+
+        <div class="field text-left mb-3">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, :class => "form-control", autocomplete: "new-password" , :id =>"inputEmail"  %>
+        </div>
+
+        <div class="actions d-flex justify-content-center">
+          <%= f.submit "Sign up" , :class => "btn  btn-dark ", :id => "btn-signin-signup"%>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+
+      </form>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
