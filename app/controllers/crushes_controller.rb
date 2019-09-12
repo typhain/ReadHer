@@ -31,9 +31,18 @@ before_action :authenticate_user!
   end
 
   def update
-      @user = current_user
-      user_crushes = @user.crushes
-      @crush = user_crushes.find_by(params[:id])
-      @Crush.update_attributes(params[:crush])
+    @crush = Crush.find(params[:id])
+
+    if @crush.update(crush_params)
+    redirect_to @crush
+    else
+    render 'edit'
     end
+  end
+
+end
+
+private
+  def crush_params
+    params.require(:crush).permit(:user, :book_title, :genre, :author_name, :author_country, :description, :quote)
   end

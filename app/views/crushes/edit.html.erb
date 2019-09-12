@@ -5,26 +5,33 @@
 
 <br>
 
-<div class="container">
-  <%= form_tag crush_path(@crush), :method => :put do %>
+
+<div class="container text-center">
+  <%= form_for @crush, method: :patch do |f| %>
   <div class="form-group">
-    <%= text_field_tag('book_title', '', class:'form-control', required:'true', placeholder: @crush.book_title, autofocus: 'true')%>
+    <%= f.label 'Book Title' %><br>
+    <%= f.text_field :book_title %><br>
   </div>
   <div class="form-group">
-    <%= text_field_tag('author_name', '', class:'form-control', required:'true', placeholder: @crush.author_name, required:'true')%>
+    <%= f.label 'Author' %><br>
+    <%= f.text_field :author_name %><br>
   </div>
   <div class="form-group">
-    <%= text_field_tag('genre', '', class:'form-control', required:'true', placeholder:@crush.genre, required:'true')%>
+    <%= f.label 'Genre' %><br>
+    <%= f.text_field :genre %><br>
   </div>
   <div class="form-group">
-    <%= text_field_tag('author_country', '', class:'form-control', required:'true', placeholder:@crush.author_country, required:'true')%>
+    <%= f.label 'Country' %><br>
+    <%= f.text_field :author_country %><br>
   </div>
   <div class="form-group">
-    <%= text_area_tag('description', '', class:'form-control', required:'true', placeholder: @crush.description, required:'true')%>
+    <%= f.label 'Why did this matter to you ?' %><br>
+    <%= f.text_area :description %><br>
   </div>
   <div class="form-group">
-    <%= text_field_tag('quote', '', class:'form-control', required:'true', placeholder: @crush.quote, required:'true')%>
+    <%= f.label 'Quote' %><br>
+    <%= f.text_field :quote %><br>
   </div>
-  <%= submit_tag "Submit", class: 'btn btn-default btn btn-success' %>
-</div>
+  <%= submit_tag "Edit crush", class: 'btn btn-default btn btn-success' %>
+  </div>
 <% end %>
