@@ -31,7 +31,7 @@
     },
     "S3_SECRET_KEY_ID": {
       "required": true
-    },
+    }
   },
   "formation": {
     "web": {
