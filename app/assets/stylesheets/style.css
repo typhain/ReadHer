@@ -1,7 +1,10 @@
 body {
     color: black
 }
-.logo_navbar{width: 80px}
+
+.logo_navbar {
+    width: 80px
+}
 
 h1 {
     font-family: bureau-grot, sans-serif;
@@ -11,8 +14,9 @@ h1 {
 }
 
 
-.baseline { font-family: bureau-grot-condensed, sans-serif;
-            font-size: 25px;
+.baseline {
+    font-family: bureau-grot-condensed, sans-serif;
+    font-size: 25px;
 }
 
 
@@ -61,18 +65,18 @@ nav a:active {
     color: whitesmoke;
 }
 
-.dropdown-menu {
-    background-color: black;
-    margin-left: 60px
-}
 
 #btn-search {
     font-size: 18px
 }
 
-#add_crush_btn{width: 50px; height: 50px; padding-top: 10px;
+#add_crush_btn {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
     -webkit-box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561;
-    box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561; }
+    box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561;
+}
 
 #card-show {
     display: flex;
@@ -130,11 +134,14 @@ nav a:active {
     padding-bottom: 2px
 }
 
-.card-author{   font-family: bureau-grot-condensed, sans-serif;
+.card-author {
+    font-family: bureau-grot-condensed, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 25px;
-    line-height: 1.1;}
+    line-height: 1.1;
+}
+
 .crush-link-btn {
     font-family: bureau-grot-compressed, sans-serif;
     font-weight: 500;
@@ -146,16 +153,23 @@ nav a:active {
     padding: 2.2px 15px;
     background-color: black;
 }
-#title-crush{font-family: bureau-grot, sans-serif;
+
+#title-crush {
+    font-family: bureau-grot, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;}
+    font-size: 25px;
+}
 
-#kind_of_book{font-family: 25px; }
+#kind_of_book {
+    font-family: 25px;
+}
 
-#sub_category{font-family: neue-haas-unica, sans-serif;
-              font-weight: 900;
-              font-style: normal;}
+#sub_category {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
 
 .crush-link-btn :active {
     color: mistyrose;
@@ -216,16 +230,31 @@ nav a:active {
 
 /* —————————————————— Input email / password —————————————————— */
 
-
 #inputEmail,
 #inputPassword {
     border-radius: 0;
-    border-color: black
+    border-color: black;
+    font-size: 15px
 }
 
 #inputPassword {
     border-top: 0
 }
+
+#inputPassword-border {
+    border-radius: 0;
+    border-color: black;
+    font-size: 15px
+}
+
+#six-min {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 13px;
+    padding-left: 10px
+}
+
 
 /* —————————————————— Bouton sign up/ sign in  —————————————————— */
 
@@ -247,7 +276,6 @@ nav a:active {
 
 /* —————————————————— footer —————————————————— */
 
-
 .text-footer {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
@@ -255,7 +283,6 @@ nav a:active {
     font-size: 18px;
     color: black
 }
-
 
 .footer-link {
     font-family: neue-haas-unica, sans-serif;
@@ -273,8 +300,47 @@ nav a:active {
     color: black;
     text-decoration: line-through
 }
+
 #footer-credit {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 18px;}
+    font-size: 18px;
+}
+
+/* —————————————————— Mails  —————————————————— */
+
+.welcome-title {
+    font-family: bureau-grot, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 1.2;
+
+    color: #000000
+}
+
+.welcome-text {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 19px;
+    color: black
+}
+
+.welcome-footer {
+    font-size: 14px;
+}
+
+.color-bgd {
+    border-radius: 0;
+    color: #e5e5e5
+}
+
+.img_shadow {
+    -webkit-box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px #000000;
+    border: 2;
+    border-radius: 0;
+    border-color: black
+}
