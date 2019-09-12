@@ -1,11 +1,12 @@
 <div class="text-center">
-  <h3 class="display-5 mt-4 mb-3">ReadHer</h3>
-     <p class="baseline">She matters to you, she will probably matter to us.</p>
-      <%= link_to "+", new_crush_path, class:'btn btn-danger rounded-circle', id: 'add_crush_btn'%>
+  <%= render 'layouts/banner.html.erb' %>
+
+      <%= link_to "ADD YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle', id: 'add_crush_btn'%>
       <% if current_user %>
         <a class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <a>
       <% end %>
     </div>
+
 </div>
 
   <div class="container">
@@ -16,11 +17,11 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                 <div class="card-title">Title</div>
+                 <div class="card-title"><%= n.book_title %></div>
                   <p class="card-text"></p>
                   <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
                   <p class="card-quote">“<%= n.quote %>”</p>
-                  <p class="card-credit"><b><%= n.book_title %></b>, <%= n.author_name%> (<%= n.author_country%>)</p>
+                  <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
                   <div class="d-flex w-100 justify-content-between">
                   <div>
                   <ul class="nav nav-pills nav-fill mt-3">
