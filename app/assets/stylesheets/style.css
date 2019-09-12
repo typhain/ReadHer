@@ -71,9 +71,13 @@ nav a:active {
 }
 
 #add_crush_btn {
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;font-size: 30px ;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px; margin-bottom:30px; 
+    padding-top: 45px; top:10%; line-height: 1;
     -webkit-box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561;
     box-shadow: 0px 7px 7px -7px #C54561 7px 7px 15px 1px #C54561;
 }
@@ -82,6 +86,7 @@ nav a:active {
     display: flex;
     justify-content: center;
     height: 100%;
+    
 }
 
 .card {
@@ -96,8 +101,8 @@ nav a:active {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 3.5em;
-    line-height: 1.2
+    font-size: 2.5em;
+    line-height: 1
 }
 
 .card-text {
@@ -256,7 +261,7 @@ nav a:active {
 }
 
 
-/* —————————————————— Bouton sign up/ sign in  —————————————————— */
+/* —————————————————— Boutons sign up / sign in  —————————————————— */
 
 #btn-signin-signup {
     background-color: black;
@@ -271,6 +276,17 @@ nav a:active {
     font-weight: 200;
     font-style: normal;
     font-size: 20px
+}
+
+#forgot_yr-pwd {   font-size:15px; 
+                   border-radius: 0; 
+                   background: none;
+                   color: #000000;   
+                   font-weight: 200;
+                   width: 200px;   
+                   font-family: neue-haas-unica, sans-serif;
+                   justify-content: center;
+
 }
 
 
