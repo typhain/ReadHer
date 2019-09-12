@@ -1,4 +1,17 @@
-<h1><%= @user.email %> <%= @user.last_name %></h1>
 
-<%= @user.city %></p>
-<%= @user.description %></p>
+<div class="container">
+<br>
+  <div class="card  mb-5">
+    <h5 class="card-header" id="title-crush">
+      <a>Profil</a>
+    </h5>
+      <div class="card-body">
+        <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
+        <p class="card-credit"><%= @user.city %></p>
+        <p class="card-text"><%= @user.description %><p>
+        <%= link_to "Library", library_path(@user.library), class: "btn btn-primary" %>
+        <%= link_to "Message", class: "btn btn-primary" %>
+
+    </div>
+  </div>
+</div>
