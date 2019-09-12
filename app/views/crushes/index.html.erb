@@ -3,7 +3,7 @@
 
       <%= link_to "ADD YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle', id: 'add_crush_btn'%>
       <% if current_user %>
-        <a class="btn btn-primary" <%= link_to "Your library", library_path(current_user.library)%> <a>
+        <a class="btn btn-primary" <%= link_to "YOUR LIBRARY", library_path(current_user.library) , class:'btn btn-danger rounded-circle', id: 'get_library_btn'%> <a>
       <% end %>
     </div>
 

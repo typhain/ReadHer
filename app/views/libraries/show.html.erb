@@ -16,14 +16,16 @@
           <td><strong><%= crush.book_title %></strong></td>
           <td><%= crush.author_name %></td>
           <td><%= crush.genre %></td>
-          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from library", crush_library_path, :method=>:delete %></button></td>
+          <td> <%= link_to "Remove from library", crush_library_path, :method=>:delete , :class => "btn  btn-dark ", :id => "btn-signin-signup-remove" %></td>
         </tr>
       <% end %>
 
       </tbody>
     </table>
     <div class="d-flex bd-highlight">
-    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', root_path %></div></div>
+    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right">
+    <%= link_to 'Back', root_path , :class => "btn  btn-dark ", :id => "btn-signin-signup" %>
+    </div>
     </div>
         </div>
 </div>
