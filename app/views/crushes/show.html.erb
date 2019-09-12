@@ -36,13 +36,14 @@
           </li>
 
           <li class="nav-item" >
-          <a href="#" class="crush-link-btn" id="crush-link" <%= link_to "Who shared this ?"%> </a>
+          <%= link_to "Who shared this ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
        </li>
         </ul>
         <% end %>
 
           <% if current_user == @crush.user %>
           <a class="crush-link-btn" id="crush-link" <%= link_to "Edit", edit_crush_path(@crush)%> </a>
+          <a class="crush-link-btn" id="crush-link" <%= link_to "Delete", crush_path(@crush), method: :delete %> </a>
         <% end %>
   </div>
 </div>
