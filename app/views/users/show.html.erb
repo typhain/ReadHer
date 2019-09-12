@@ -1,10 +1,17 @@
 
 <div class="container">
 <br>
+<div class="card-body">
+  <% if current_user.id == @user.id %>
+<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-primary" %>
+  <% end %>
+</div>
+<br>
   <div class="card  mb-5">
     <h5 class="card-header" id="title-crush">
       <a>Profil</a>
     </h5>
+
       <div class="card-body">
         <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
         <p class="card-credit"><%= @user.city %></p>
