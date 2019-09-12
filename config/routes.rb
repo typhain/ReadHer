@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :crushes
   resources :crush_libraries
   resources :libraries
-  root to: 'crushes#index'
+  root to: "crushes#index"
 end

@@ -1,4 +1,5 @@
 class CrushesController < ApplicationController
+before_action :authenticate_user!
 
   def index
     @crushes = Crush.all
@@ -8,13 +9,40 @@ class CrushesController < ApplicationController
     @crush = Crush.find(params[:id])
   end
 
+  def new
+  end
+
   def create
+    if !user_signed_in?
+      redirect_to new_user_registration_path
+    else
+    @user = current_user
+    @crush = Crush.new(:user => @user, :book_title=> params[:book_title], :genre => params[:genre], :author_name => params[:author_name], :author_country => params[:author_country], :description => params[:description], :quote => params[:quote])
+      if @crush.save
+        redirect_to root_path(@crush)
+      else
+        render crushs_path
+      end
+    end
+  end
+
+  def edit
+    @crush = Crush.find(params[:id])
   end
 
   def update
-  end
+    @crush = Crush.find(params[:id])
 
-  def destroy
+    if @crush.update(crush_params)
+    redirect_to @crush
+    else
+    render 'edit'
+    end
   end
 
 end
+
+private
+  def crush_params
+    params.require(:crush).permit(:user, :book_title, :genre, :author_name, :author_country, :description, :quote)
+  end

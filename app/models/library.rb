@@ -1,6 +1,6 @@
 class Library < ApplicationRecord
   belongs_to :user
-  has_many :crush_libraries
+  has_many :crush_libraries, dependent: :destroy
   has_many :crushes, through: :crush_libraries
 
   def add_crush(crush)
