@@ -5,13 +5,36 @@
 
 <!-- avatar and active storage config -->
   <div>
-    <%= image_tag(user_avatar(current_user)) %>
+    <% if resource.avatar.attached? %>
+      <%= image_tag resource.avatar%>
+    <% end %>
+
   </div>
   <div class="field">
     <%= f.label :avatar %><br />
     <%= f.file_field :avatar %>
   </div>
-  
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city%><br />
+    <%= f.text_field :city, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description%><br />
+    <%= f.text_area :description, autofocus: true, autocomplete: "email" %>
+  </div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

@@ -39,6 +39,11 @@ class CrushesController < ApplicationController
     end
   end
 
+  def destroy
+    @crush = Crush.find(params[:id]).destroy
+    redirect_to root_path
+  end
+
 end
 
 private

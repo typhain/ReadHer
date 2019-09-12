@@ -6,7 +6,7 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <h4 class="mt-5 mb-2">Please sign in </h4>
 
-            <div class="field text-left mb-3"> 
+            <div class="field text-left mb-3">
               <%= f.label :email  %>
               <%= f.email_field :email, :class => "form-control", :id =>"inputEmail" , autofocus: true, autocomplete: "email" %>
             </div>
@@ -18,7 +18,7 @@
 
             <% if devise_mapping.rememberable? %>
             <div class="checkbox ml-0 mt-2 d-flex justify-content">
-      
+
             <div class="field">
 
               <%= f.check_box :remember_me %>
