@@ -3,7 +3,7 @@ module ApplicationHelper
       if user.avatar.attached?
         user.avatar
       else
-        "default-image.png"
+        "default_image/default-avatar.jpeg"
       end
     end
   end
