@@ -62,16 +62,17 @@ Rails.application.configure do
   # Default_url_options appropriate for a development environment
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_options = { from: 'no-reply@monsite.fr' }
   config.action_mailer.delivery_method = :letter_opener
+
+  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
   address: 'smtp.sendgrid.net',
   port: '587',
   domain: 'heroku.com',
-  user_name: ENV[“SENDGRID_LOGIN”],
-  password: ENV[“SENDGRID_PASSWORD”],
+  user_name: ENV['SENDGRID_LOGIN'],
+  password: ENV['SENDGRID_PASSWORD'],
   authentication: 'plain',
   enable_starttls_auto: true
   }
