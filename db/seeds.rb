@@ -10,11 +10,11 @@ Crush.destroy_all
 User.destroy_all
 Library.destroy_all
 
-20.times do
+6.times do
   User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, description: Faker::Lorem.paragraph, city: Faker::Address.city, password: "123456")
 end
 
-20.times do
+6.times do
   Crush.create!(user: User.all.sample, book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country, description: Faker::Lorem.paragraph, quote: Faker::Quote.yoda)
 end
 

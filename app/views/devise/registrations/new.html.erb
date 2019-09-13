@@ -24,7 +24,7 @@
         <%= f.email_field :email, :class => "form-control", :id =>"inputEmail" , autofocus: true, autocomplete: "email" %>
       </div>
 
-      <div class="field text-left ">
+      <div class="field text-left mb-3">
       <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -38,7 +38,7 @@
           <%= f.password_field :password_confirmation, :class => "form-control", autocomplete: "new-password" , :id =>"inputEmail"  %>
         </div>
 
-        <div class="actions d-flex justify-content-center">
+        <div class="actions d-flex justify-content-center mb-3">
           <%= f.submit "Sign up" , :class => "btn  btn-dark ", :id => "btn-signin-signup"%>
         </div>
       <% end %>
