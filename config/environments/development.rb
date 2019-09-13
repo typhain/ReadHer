@@ -60,8 +60,25 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Default_url_options appropriate for a development environment
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_options = { from: 'no-reply@monsite.fr' }
+
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+  address: 'smtp.sendgrid.net',
+  port: '587',
+  domain: 'monsite.fr',
+  user_name: ENV['SENDGRID_USERNAME'],
+  password: ENV['SENDGRID_PASSWORD'],
+  authentication: 'plain',
+  enable_starttls_auto: true
+  }
+
 
   # to visually see all the new fields and alterations of login, sign up etc pages
   config.scoped_views = true
+
+  # ActionMailer config
 end
