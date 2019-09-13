@@ -20,6 +20,10 @@
 </head>
 
 <body>
+  <%= yield %>
+  <% flash.each do |name, msg| %>
+  <div class='alert alert-<%= name %>'>
+  <% end %>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -33,7 +37,7 @@
     <div class="carousel-inner" role="listbox">
     <div class="item active">
     <%= image_tag  "banner_v.png" , :style => "width:100%" %>
-    
+
 
     </div>
     </div>

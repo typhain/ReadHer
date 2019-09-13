@@ -3,7 +3,7 @@
 <br>
 <div class="card-body">
   <% if current_user.id == @user.id %>
-<%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-dark", :id => "get_library_btn_sm"  %>
+  <%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-dark", :id => "get_library_btn_sm"  %>
   <% end %>
 </div>
 <br>
@@ -12,8 +12,8 @@
   <h2 class="card-title">
   <a>Profile</a>
 </h2>
-  <div class="row"> 
-  <div class="col-md-4 mr-5"> <img src=""> </div>
+  <div class="row">
+  <div class="col-md-4 mr-5 border d-flex align-items-center justify-content-center"> Photo <img src=""> </div>
     <div class="col-md-7">
       <div class="card-body">
         <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>

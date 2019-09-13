@@ -1,5 +1,3 @@
-
-
 <div class="container">
 <br>
   <div class="card  mb-5">
@@ -27,19 +25,18 @@
     </ul>
 
 
-
-
         <% if current_user != @crush.user %>
         <ul class="nav nav-pills nav-fill mt-5">
           <li class="nav-item" >
              <%= link_to "Add to my library", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
           </li>
-
+          <% end %>
+        <% if current_user %>
           <li class="nav-item" >
           <%= link_to "Who shared this ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
        </li>
         </ul>
-        <% end %>
+          <% end %>
 
           <% if current_user == @crush.user %>
           <a class="crush-link-btn" id="crush-link" <%= link_to "Edit", edit_crush_path(@crush)%> </a>
