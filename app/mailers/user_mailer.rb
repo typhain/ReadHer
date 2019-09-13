@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
   default from: 'no-reply@monsite.fr'
-  
+
   def welcome_send(user)
     @user = user
      mail( :to => @user.email,
