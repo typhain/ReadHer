@@ -3,7 +3,7 @@ body {
 }
 
 .logo_navbar {
-    width: 80px
+    width: 100px
 }
 
 h1 {
@@ -14,43 +14,35 @@ h1 {
 }
 
 
-.baseline {
-    font-family: bureau-grot-condensed, sans-serif;
-    font-size: 25px;
-}
-
-
 nav {
-    font-family: bureau-grot-condensed, sans-serif;
-    font-weight: 300;
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    background-color: black;
-    font-size: 20px;
+    background-color: #000000;
+    font-size: 16px;
+    padding-left: 50%;
 }
 
 nav a:link {
     color: white;
 }
 
+nav a:hover {
+    color: darkgray;
+}
 nav a:visited {
     color: white;
 }
 
-nav a:hover {
-    color: darkgray;
-}
 
 nav a:active {
     color: darkgray;
 }
 
-.nav-link {
-    font-size: 25px
-}
 
 .nav-item {
-    padding-right: 7px;
-    padding-left: 7px
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .nav-item a:link {
@@ -59,6 +51,8 @@ nav a:active {
 
 .nav-item a:hover {
     color: dimgray;
+    border: #fa8e58
+
 }
 
 .nav-item a:visited {
@@ -66,33 +60,32 @@ nav a:active {
 }
 
 
-#btn-search {
-    font-size: 18px
-}
 
 #add_crush_btn {
-    font-family: bureau-grot-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;font-size: 30px ;
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 400;
+    font-size: 25px ;
     width: 150px;
     height: 150px;
     background: #fa8e58;
-    margin-top: 30px; margin-bottom:30px; 
-    border: 0;
-    padding-top: 45px; 
-    top:10%; 
+    margin-top: 30px; 
+    margin-bottom:30px; 
+    border: 0; 
+    margin-left: 33%;
     line-height: 1;
-    /* -webkit-box-shadow: 0px 7px 7px -7px #ffc4a7 7px 7px 15px 1px #ffc4a7;
-    box-shadow: 0px 7px 7px -7px #ffc4a7 7px 7px 15px 1px #ffc4a7; */
+   
+    -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7 ;
+    box-shadow: 5px 5px 15px 5px #ffc4a7;; 
 }
 
+/*————————————————————————— Cartes Crushes —————————————————————————*/
 
-#card-show {
+/* #card-show {
     display: flex;
     justify-content: center;
     height: 100%;
     
-}
+} */
 
 .card {
     -webkit-box-shadow: 5px 5px 0px 0px #000000;
@@ -122,9 +115,9 @@ nav a:active {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
     font-style: normal;
-    line-height: 0.2;
+    line-height: 1.0;
     font-size: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .card-quote {
@@ -141,11 +134,10 @@ nav a:active {
     font-style: normal;
     color: gray;
     font-size: 15px;
-    padding-bottom: 2px
 }
 
 .card-author {
-    font-family: bureau-grot-condensed, sans-serif;
+    font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 25px;
@@ -153,22 +145,28 @@ nav a:active {
 }
 
 .crush-link-btn {
-    font-family: bureau-grot-compressed, sans-serif;
-    font-weight: 500;
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
     font-style: normal;
-    font-size: 30px;
-    line-height: 1.1;
-    border: 1.4px solid;
+    font-size: 18px;
+    line-height: 0.3;
     border-radius: 20px;
-    padding: 2.2px 15px;
-    background-color: black;
+    padding: 5.2px 15px;
+    background-color: #7d7d7d;
+    background: #febf9f;
+}
+
+#title{    color:#fa8e58; font-weight: 300;
+   
+    font-family: bureau-grot, sans-serif
 }
 
 #title-crush {
-    font-family: bureau-grot, sans-serif;
+    font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 25px;
+    background-color: #ffffff
 }
 
 #kind_of_book {
@@ -218,7 +216,8 @@ nav a:active {
 
 #crush-link:hover {
     color: #a7a4a4;
-    text-decoration: inherit
+    text-decoration: inherit;
+    color: #cd591f;
 }
 
 
@@ -276,7 +275,7 @@ nav a:active {
 /* —————————————————— Boutons sign up / sign in  —————————————————— */
 
 #btn-signin-signup {
-    background-color: black;
+    background-color: #fa8e58;
     width: 100px;
     text-align: center;
     display: flex;
@@ -316,7 +315,7 @@ nav a:active {
 }
 
 #btn-editprofile {
-    font-size: 24px; 
+    font-size: 20px; 
     border-radius: 0; 
     background: #fa8e58;
     color:#ffffff ;   
@@ -331,7 +330,7 @@ nav a:active {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 30px ;
+    font-size: 28px ;
     width: 150px;
     height: 150px;
     margin-top: 30px; 
@@ -345,17 +344,18 @@ nav a:active {
 }
   
 #get_library_btn_sm{
-    background: #212e9b;
-    font-family: bureau-grot-condensed, sans-serif;
+    background: #fa8e58;
+    font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 24px ; 
+    font-size: 18px ; 
     line-height: 1.3;
     border-radius: 0;
     border :0
 }
-
-
+#jumbotron_colored{
+    background: #f5e5dd
+}
 #btn-message{    
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
@@ -366,31 +366,30 @@ nav a:active {
 
  #btn_update_profile{ 
     background: #fa8e58;
-    font-family: bureau-grot-condensed, sans-serif;
+    font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 24px ; 
+    font-size: 18px ; 
     line-height: 1.3;
     border:0;
     border-radius: 0;
     float: right;
     position:relative;
-    right: 10%;
+    right: 5%;
   }
 /* —————————————————— footer —————————————————— */
 
 .text-footer {
     font-family: neue-haas-unica, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: black
 }
 
 .footer-link {
     font-family: neue-haas-unica, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 500;
     font-size: 18px;
     color: black
 }

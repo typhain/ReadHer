@@ -22,7 +22,11 @@
   <body>
 
   <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand">   <%= image_tag "logo_readher.png", :class => "logo_navbar" %></a>
+    <a class="navbar-brand">  
+     
+     <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%></a>
+
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,19 +34,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item ml-3 mr-3 ">
                 <%= link_to "Crush", crushes_path, class:"nav-link"%>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item mr-3">
                 <a class="nav-link" href="#">About</a>
             </li>
 
                   <% if current_user == nil %>
-                    <li class="nav-item">
+                    <li class="nav-item border ml-2 mr-2">
                     <%= link_to "Login", new_user_session_path, class:"nav-link" %>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item border ">
                     <%= link_to "Create Account", new_user_registration_path, class:"nav-link" %>
                     </li>
                   <% else %>
@@ -52,7 +56,7 @@
                 </li>
 
                  <li class="nav-item">
-                    <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
+                    <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
                 </li>
 
 
@@ -62,7 +66,7 @@
 
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Find..." aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="btn-search">Search</button>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
 </nav>

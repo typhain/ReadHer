@@ -1,15 +1,18 @@
 <div class="text-center">
   <%= render 'layouts/banner.html.erb' %>
+      <div class="jumbotron" id="jumbotron_colored">
+      <div class=" text-center card-title" id="title" >Post a crush here ! </div> 
 
-      <%= link_to "ADD YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle', id: 'add_crush_btn'%>
-      <% if current_user %>
-        <a class="btn btn-primary" <%= link_to "YOUR LIBRARY", library_path(current_user.library) , class:'btn btn-danger rounded-circle', id: 'get_library_btn'%> <a>
-      <% end %>
+          <%= link_to "ADD YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%>
+          <% if current_user %>
+            <a class="btn btn-primary" <%= link_to "YOUR LIBRARY", library_path(current_user.library) , class:'btn btn-danger rounded-circle', id: 'get_library_btn'%> <a>
+          <% end %>
+      </div>
     </div>
-
 </div>
 
   <div class="container">
+  <h1 class="display-3 text-center card-title m-5 p-4" >What’s a crush ? </h1> 
     <div class="row">
       <% @crushes.each do |n| %>
         <div class="col-6">
@@ -20,21 +23,18 @@
                  <div class="card-title"><%= n.book_title %></div>
                   <p class="card-text"></p>
                   <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
-                  <p class="card-quote">“<%= n.quote %>”</p>
-                  <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
-                  <div class="d-flex w-100 justify-content-between">
-                  <div>
-                  <ul class="nav nav-pills nav-fill mt-3">
-                  <li class="nav-item">
-
-                      <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
-
-                  </li>
-
-              </ul>
+                    <p class="card-quote">“<%= n.quote %>”</p>
+                    <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <div>
+                        <ul class="nav nav-pills nav-fill mt-3">
+                            <li class="nav-item">
+                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                </div>
               </div>
             </div>
           </div><br>
