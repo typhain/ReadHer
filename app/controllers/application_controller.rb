@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     #permit additionnal parameters in devise
     before_action :configure_permitted_parameters, if: :devise_controller?
     #before_action :masquerade_user!
-
+    add_flash_types :danger, :info, :warning, :success
 
 
     protected

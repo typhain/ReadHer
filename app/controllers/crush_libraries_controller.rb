@@ -8,6 +8,7 @@ class CrushLibrariesController < ApplicationController
         @library = current_user.library
         @library.add_crush(crush)
         if @library.save
+          flash[:success] = "One new crush in your library :)"
           redirect_to crushes_path
         end
       end
