@@ -31,7 +31,7 @@
              <%= link_to "Add to my library", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
           </li>
           <% end %>
-        <% if current_user != @crush.user %> %>
+        <% if current_user && current_user != @crush.user %>
           <li class="nav-item" >
           <%= link_to "Who shared this ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
        </li>
