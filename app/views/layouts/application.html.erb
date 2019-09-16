@@ -53,18 +53,20 @@
                   <%= link_to "Profile", user_path(current_user.id), class:"nav-link" %>
                   </li>
 
-                   <li class="nav-item">
-                      <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
-                  </li>
-
-
-                    <% end %>
+                  
 
                     <li class="nav-item">
                         <% if current_user %>
                         <%= link_to "Your Library", library_path(current_user.library) , class:'nav-link'%> <a>
                     </li>
                         <% end %>
+
+                        <li class="nav-item">
+                        <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
+                    </li>
+  
+  
+                      <% end %>
 
 
           </ul>
@@ -115,7 +117,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="d-flex justify-content-center p-1" id="footer-credit">Readher © Paris — 2019</div>
+                <div class="d-flex justify-content-center align-self  p-1" id="footer-credit">Readher © Paris — 2019</div>
             </div>
 
             <br>
