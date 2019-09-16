@@ -10,9 +10,10 @@
 
                       <!-- avatar and active storage config -->
                         <div>
-                          <% if resource.avatar.attached? %>
-                            <%= image_tag resource.avatar%>
-                          <% end %>
+                          <!-- <% if resource.avatar.attached? %>
+                          #    <%= image_tag resource.avatar%>
+                          #    <% end %>-->
+                          <%= image_tag user_avatar(current_user) %>
                         </div>
                         <%= f.label :avatar %><br />
                         <div class="field  mb-3 p-3 border" id="inputEmail">
