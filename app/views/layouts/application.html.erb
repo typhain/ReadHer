@@ -69,10 +69,14 @@
 
           </ul>
 
-          <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Find..." aria-label="Search">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            <%= form_tag crushes_path, method: :get do %>
+              <div class="input-group">
+                <%= text_field_tag 'term', params[:term], placeholder: "Enter the name of the author" %>
+              <div class="input-group-btn">
+                <%= submit_tag 'Search!' %>
+            <% end %>
+              </div>
+            </div>
       </div>
     </nav>
 
