@@ -1,8 +1,13 @@
 class CrushesController < ApplicationController
 
   def index
-    @crushes = Crush.all
+    if params[:term]
+      @crushes = Crush.roughly_spelled_like(params[:term])
+    else
+      @crushes = Crush.all
+    end
   end
+
 
   def show
     @crush = Crush.find(params[:id])

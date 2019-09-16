@@ -53,28 +53,25 @@
                   <%= link_to "Profile", user_path(current_user.id), class:"nav-link" %>
                   </li>
 
-                  
+                  <li class="nav-item">
+                    <% if current_user %>
+                    <%= link_to "Your Library", library_path(current_user.library) , class:'nav-link'%> <a>
+                  </li>
+                    <% end %>
 
-                    <li class="nav-item">
-                        <% if current_user %>
-                        <%= link_to "Your Library", library_path(current_user.library) , class:'nav-link'%> <a>
-                    </li>
-                        <% end %>
-
-                        <li class="nav-item">
-                        <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
-                    </li>
-  
-  
-                      <% end %>
-
-
+                  <li class="nav-item">
+                    <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
+                  </li>
+                    <% end %>
           </ul>
 
-          <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Find..." aria-label="Search">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-          </form>
+                <li class="nav-item">
+                  <%= form_tag crushes_path, method: :get do %>
+                      <%= text_field_tag 'term', params[:term], placeholder: "Enter the name of the author" %>
+                      <%= submit_tag 'Search!'%>
+                </li>
+                  <% end %>
+
       </div>
     </nav>
 
