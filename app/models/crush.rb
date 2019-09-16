@@ -10,5 +10,12 @@ class Crush < ApplicationRecord
     has_many :crush_libraries, dependent: :destroy
     has_many :libraries, through: :crush_libraries
 
-    pg_search_scope :search_by_author_name, against: [:author_name]
+    pg_search_scope :roughly_spelled_like,
+                 against: :author_name,
+                 using: {
+                   trigram: {
+                     threshold: 0.1
+                   }
+                 }
+
 end
