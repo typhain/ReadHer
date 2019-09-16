@@ -1,7 +1,11 @@
 class CrushesController < ApplicationController
 
   def index
-    @crushes = Crush.all
+    if params[:term]
+      @crushes = Crush.search_by_author_name(params[:term])
+    else
+      @crushes = Crush.all
+    end
   end
 
   def show
