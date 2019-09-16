@@ -5,6 +5,7 @@ class CrushesController < ApplicationController
       @crushes = Crush.search_by_author_name(params[:term])
     else
       @crushes = Crush.all
+    end
   end
 
   def show
@@ -53,4 +54,3 @@ private
   def crush_params
     params.require(:crush).permit(:user, :book_title, :genre, :author_name, :author_country, :description, :quote)
   end
-end
