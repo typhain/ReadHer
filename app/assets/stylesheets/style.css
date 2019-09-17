@@ -465,39 +465,7 @@ nav a:active {
     right: 5%;
 }
 
-/* —————————————————— footer —————————————————— */
 
-.text-footer {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 16px;
-    color: black
-}
-
-.footer-link {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: black
-}
-
-.footer-link a :active {
-    color: black;
-}
-
-.footer-link a :hover {
-    color: black;
-    text-decoration: line-through
-}
-
-#footer-credit {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 18px;
-    bottom: 0%;
-}
 
 /* —————————————————— Mails —————————————————— */
 
@@ -616,3 +584,42 @@ nav a:active {
     font-style: normal;
     font-size: 2em;
     color: white}
+
+
+/* —————————————————— footer —————————————————— */
+
+.text-footer {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    color: black
+}
+
+.footer-link a :visited {
+    color: black;
+}
+.footer-link {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black
+}
+
+.footer-link a :active {
+    color: black;
+}
+
+a .footer-link :hover {
+    color: black;
+    text-decoration: line-through
+}
+
+#footer-credit {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    bottom: 0%;
+}
+
