@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :crushes, dependent: :destroy
 
   after_create :create_library
-  
-  after_create :welcome_send, unless: :skip_sending_welcome_email
+
+  #after_create :welcome_send, unless: :skip_sending_welcome_email
   attr_accessor :skip_sending_welcome_email
 
   def create_library

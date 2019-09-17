@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   root "crushes#index"
   resources :users, only: [:show]
 
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
+
 end
