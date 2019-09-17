@@ -16,6 +16,11 @@
         </div>
 
         <div class="field text-left mb-3">
+        <%= f.label :username  %>
+        <%= f.text_field :username, :class => "form-control", :id =>"inputUsername" , autofocus: true, autocomplete: "username" %>
+      </div>
+
+        <div class="field text-left mb-3">
         <%= f.label :email  %>
         <%= f.email_field :email, :class => "form-control", :id =>"inputEmail" , autofocus: true, autocomplete: "email" %>
       </div>
