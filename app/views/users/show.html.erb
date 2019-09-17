@@ -20,7 +20,7 @@
   <div class="col-md-4 mr-5 border d-flex align-items-center justify-content-center"> <%= image_tag user_avatar(current_user) %> </div>
     <div class="col-md-7">
       <div class="card-body">
-        <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
+        <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %> </p>
         <p class="card-credit"><%= @user.city %></p>
         <p class="card-text"><%= @user.description %><p>
         <%= link_to "Library", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
