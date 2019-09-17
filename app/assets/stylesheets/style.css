@@ -557,7 +557,7 @@ nav a:active {
         justify-content: center;
     }
 
-
+   
 }
 
 /* —————————————————— Library —————————————————— */
@@ -599,3 +599,9 @@ nav a:active {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+/* —————————————————— Logo shelf —————————————————— */
+
+
+
+.logo_shelf{  width: 30%}

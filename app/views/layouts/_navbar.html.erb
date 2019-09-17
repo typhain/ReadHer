@@ -8,16 +8,17 @@
   </div>
   </button>
   <a class="navbar-brand" href="#"> 
-  <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%></a>
+    <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%>
   </a>
+  
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
   <ul class="navbar-nav mr-auto text-center ">
-  <li class="nav-item  m-1 ">
+  <li class="nav-item p1 ">
       <%= link_to "Crush", crushes_path, class:"nav-link"%>
   </li>
 
-  <li class="nav-item  m-1">
+  <li class="nav-item ">
       <a class="nav-link" href="#">About</a>
   </li>
 
@@ -34,24 +35,24 @@
           <%= link_to "Profile", user_path(current_user.id), class:"nav-link", id:"btn_signupin" %>
           </li>
 
-        <li class="nav-item ">
+        <li class="nav-item">
             <% if current_user %>
-            <%= link_to "Your Library", library_path(current_user.library), class:'nav-link', id:"btn_signupin"  %> <a>
+            <%= link_to (image_tag("shelf.png", class: "logo_shelf")), library_path(current_user.library), class:"nav-link"  %> 
         </li>
             <% end %>
 
-            <li class="nav-item ">
+            <li class="nav-item">
             <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border", id:"btn_signupin" %> </a>
         </li>
           <% end %>
 </ul>
     <form class="form-inline my-2 text-center d-flex justifiy-content-center">
     
-    <li class="nav-item">
+    <li class="nav-item ">
     
     <%= form_tag crushes_path, method: :get do %>
-        <%= text_field_tag "term", params[:term], placeholder: "Author name or Title book", class:"form-control mr" %>
-        <%= submit_tag 'Search!', class:"btn btn-outline-light my-2 mx-2 my-sm-0 ", type:"submit"%>
+        <%= text_field_tag "term", params[:term], placeholder: "Author name or Title book", class:"form-control" %>
+        <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2 ", type:"submit"%>
   
     <% end %> 
     </li>
