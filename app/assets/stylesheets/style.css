@@ -324,7 +324,7 @@ nav a:active {
 #btn-signin-signup {
     background-color: #ffffff;
     color: #CC5F49;
-    padding: 10px 50px;
+    padding: 5px 30px;
     text-align: center;
     display: flex;
     border-radius: 0;
@@ -343,7 +343,28 @@ nav a:active {
     transition: 0.3s;
 }
 
+/* —————————————————— Boutons join us —————————————————— */
 
+#btn-joinus{    background-color: #ffffff;
+    color: #CC5F49;
+    padding: 10px 50px;
+    text-align: center;
+    display: flex;
+    border-radius: 0;
+    border: 0;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+
+#btn-joinus:hover {
+    opacity: 0.5;
+    color: #CC5F49;
+    transition: 0.3s;
+}
 
 #forgot_yr-pwd {
     font-size: 15px;

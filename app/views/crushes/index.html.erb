@@ -7,7 +7,7 @@
   <h1 class="display-3 text-center presentation_text m-4 p-4" id="punchline"> With ReadHer, share your favorite readings, find new mates to talk litterature with, discover new talented writers</h1>
     <div class="container d-flex justify-content-center my-4 mb-5">
       <%if current_user == nil %> 
-      <p> <%= link_to "JOIN US", new_user_registration_path, :class => "btn btn-dark mb-5 ", :id => "btn-signin-signup"%> </p>
+      <p> <%= link_to "JOIN US", new_user_registration_path, :class => "btn btn-dark mb-5 ", :id => "btn-joinus"%> </p>
       <% else %>
       <p> <%= link_to "SHARE YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%> </p>
       <% end %>
