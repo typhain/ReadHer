@@ -1,8 +1,10 @@
+<html>
+
+<body>
 <div class="text-center">
   <%= render 'layouts/banner.html.erb' %>
     </div>
 </div>
-
 
   <div class="container pt-5">
   <h1 class="display-3 text-center card-title m-4 p-4" id="punchline"> With ReadHer, share your favorite readings, find new mates to talk litterature with, discover new talented writers</h1>
@@ -14,9 +16,9 @@
       <% end %>
     </div>
 
-    <div class="row">
+    <div class="row ">
       <% @crushes.each do |n| %>
-        <div class="col-6">
+        <div class="col-sm-6">
           <div class="row">
             <div class="col-12">
               <div class="card">
@@ -43,6 +45,5 @@
       <% end %>
     </div>
   </div>
-
 </body>
 </html>
