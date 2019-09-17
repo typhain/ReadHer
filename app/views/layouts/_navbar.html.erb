@@ -19,7 +19,7 @@
   </li>
 
   <li class="nav-item ">
-      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Inbox</a>
   </li>
 
         <% if current_user == nil %>
@@ -37,12 +37,12 @@
 
         <li class="nav-item">
             <% if current_user %>
-            <%= link_to (image_tag("shelf.png", class: "logo_shelf")), library_path(current_user.library), class:"nav-link"  %> 
+            <%= link_to  " Library", library_path(current_user.library) , class:"nav-link" %> 
         </li>
             <% end %>
 
-            <li class="nav-item">
-            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border", id:"btn_signupin" %> </a>
+            <li class="nav-item border m-1 ">
+            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link", id:"btn_signupin" %> </a>
         </li>
           <% end %>
 </ul>

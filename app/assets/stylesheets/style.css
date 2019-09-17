@@ -19,8 +19,14 @@ body {
 
 }
 
+/* —————————————————— Pictures —————————————————— */
+
 .logo_navbar {
     width: 100px
+}
+
+.logo {
+    width: 200px
 }
 
 h1 {
@@ -601,14 +607,12 @@ nav a:active {
 
 
 
-.logo_shelf{  width: 30%}
-
-
 .text-about{
     display: flex; 
     text-align: left;  
     font-family: bureau-grot-condensed, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 1.2;
     font-style: normal;
     font-size: 2em;
     color: white}
