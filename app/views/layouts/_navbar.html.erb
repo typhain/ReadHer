@@ -1,110 +1,65 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<nav class="navbar navbar-expand-lg ">
-<a class="navbar-brand">
-
- <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%></a>
-
-
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item ml-3 mr-3 ">
-            <%= link_to "Crush", crushes_path, class:"nav-link"%>
-        </li>
-
-        <li class="nav-item mr-3">
-            <a class="nav-link" href="#">About</a>
-        </li>
-
-              <% if current_user == nil %>
-                <li class="nav-item border ml-2 mr-2">
-                <%= link_to "Login", new_user_session_path, class:"nav-link" %>
-                </li>
-                <li class="nav-item border ">
-                <%= link_to "Create Account", new_user_registration_path, class:"nav-link" %>
-                </li>
-              <% else %>
-
-            <li class="nav-item">
-            <%= link_to "Profile", user_path(current_user.id), class:"nav-link" %>
-            </li>
-
-            
-
-              <li class="nav-item">
-                  <% if current_user %>
-                  <%= link_to "Your Library", library_path(current_user.library) , class:'nav-link'%> <a>
-              </li>
-                  <% end %>
-
-                  <li class="nav-item">
-                  <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
-              </li>
-
-
-                <% end %>
-
-
-    </ul>
-
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Find..." aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</div>
-</nav>
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+
+
+<nav class="navbar navbar-expand-lg py-3">
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
   </button>
   <a class="navbar-brand" href="#"> 
   <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%></a>
   </a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-  <ul class="navbar-nav mr-auto">
-  <li class="nav-item ml-3 mr-3 ">
+  <ul class="navbar-nav mr-auto text-center ">
+  <li class="nav-item  m-1 ">
       <%= link_to "Crush", crushes_path, class:"nav-link"%>
   </li>
 
-  <li class="nav-item mr-3">
+  <li class="nav-item  m-1">
       <a class="nav-link" href="#">About</a>
   </li>
 
         <% if current_user == nil %>
-          <li class="nav-item border ml-2 mr-2">
-          <%= link_to "Login", new_user_session_path, class:"nav-link" %>
+          <li class="nav-item border  m-1">
+          <%= link_to "Login", new_user_session_path, class:"nav-link", id:"btn_signupin" %>
           </li>
-          <li class="nav-item border ">
-          <%= link_to "Create Account", new_user_registration_path, class:"nav-link" %>
+          <li class="nav-item border m-1">
+          <%= link_to "Create Account", new_user_registration_path, class:"nav-link", id:"btn_signupin" %>
           </li>
         <% else %>
 
-          <li class="nav-item">
-          <%= link_to "Profile", user_path(current_user.id), class:"nav-link" %>
+          <li class="nav-item ">
+          <%= link_to "Profile", user_path(current_user.id), class:"nav-link", id:"btn_signupin" %>
           </li>
 
-        <li class="nav-item">
+        <li class="nav-item ">
             <% if current_user %>
-            <%= link_to "Your Library", library_path(current_user.library) , class:'nav-link'%> <a>
+            <%= link_to "Your Library", library_path(current_user.library), class:'nav-link', id:"btn_signupin"  %> <a>
         </li>
             <% end %>
 
-            <li class="nav-item">
-            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border" %> </a>
+            <li class="nav-item ">
+            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link border", id:"btn_signupin" %> </a>
         </li>
           <% end %>
 </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form class="form-inline my-2 text-center d-flex justifiy-content-center">
+    <input class="form-control mr" type="search" placeholder="Author name or Title book" aria-label="Search">
+    <button class="btn btn-outline-light my-2 mx-2 my-sm-0 " type="submit">Search</button>
     </form>
   </div>
 </nav>
+
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>

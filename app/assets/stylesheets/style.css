@@ -1,20 +1,21 @@
- /* —————————————————— Alert Messages —————————————————— */
+/* —————————————————— Alert Messages —————————————————— */
 
- .alert_message{ 
-     border: #fa8e58;
+.alert_message {
+    border: #fa8e58;
     color: #212e9b;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 18px; z-index: 0;
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    z-index: 0;
 }
 
- /* —————————————————— Body —————————————————— */
+/* —————————————————— Body —————————————————— */
 
 body {
-    background: linear-gradient( #fee3d5, #91b0fe);
-    color: black;     
-    background-repeat: no-repeat; 
+    background: linear-gradient(#f99e71, #91b0fe);
+    color: black;
+    background-repeat: no-repeat;
 
 }
 
@@ -33,7 +34,8 @@ h1 {
 #punchline {
     font-size: 5em;
     line-height: 0.9;
-  }
+}
+
 nav {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
@@ -50,6 +52,7 @@ nav a:link {
 nav a:hover {
     color: darkgray;
 }
+
 nav a:visited {
     color: white;
 }
@@ -79,48 +82,64 @@ nav a:active {
 #add_crush_btn {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
-    font-size: 25px ;
+    font-size: 25px;
     width: 150px;
     height: 150px;
     background: #fa8e58;
-    margin-top: 30px; 
-    margin-bottom:30px; 
-    border: 0; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0;
     line-height: 1;
-    -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7 ;
-    box-shadow: 5px 5px 15px 5px #ffc4a7;; 
+    -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7;
+    box-shadow: 5px 5px 15px 5px #ffc4a7;
 }
 
 .rounded-circle:hover {
-    opacity: 0.6 ; 
+    opacity: 0.6;
     transition: 0.3s;
 }
 
 
 /*————————————————————————— Cartes Crushes —————————————————————————*/
 
-/* #card-show {
+#card-show {
     display: flex;
     justify-content: center;
     height: 100%;
-    
-} */
+
+
+}
+
+
 
 .card {
-    -webkit-box-shadow: 5px 5px 0px 0px #000000;
-    box-shadow: 5px 5px 0px 0px #000000;
-    border: 1;
-    border-radius: 0;
-    border-color: black
+
+    -webkit-box-shadow: 5px 5px 0px 0px, #212e9b;
+    box-shadow: 5px 5px 0px 0px #212e9b;
+
 }
 
 .card-title {
     font-family: bureau-grot-condensed, sans-serif;
-    font-weight: 500;
+    font-weight: 200;
+    
     font-style: normal;
-    font-size: 2.5em;
-    line-height: 1
+    font-size: 2em;
+    line-height: 1;
+    color: #212e9b;
+
 }
+
+
+.presentation_text {
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2.3em;
+    line-height: 1.2;
+    color: #ffff;
+}
+
 
 .card-text {
     font-family: neue-haas-unica, sans-serif;
@@ -137,22 +156,24 @@ nav a:active {
     line-height: 1.0;
     font-size: 15px;
     padding-bottom: 5px;
+    
 }
 
 .card-quote {
+    color: #D06D59;
     font-family: bureau-grot, sans-serif;
-    font-weight: 500;
+    font-weight: 200;
     font-style: normal;
     font-size: 25px;
     line-height: 1.1;
 }
 
 .card-credit {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 200;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    color: gray;
-    font-size: 15px;
+    color: #D06D59;
+    font-size: 18px;
 }
 
 .card-author {
@@ -175,8 +196,17 @@ nav a:active {
     background: #febf9f;
 }
 
-#title{    color:#fa8e58; font-weight: 300;
-   
+
+#square {
+    border: #000000;
+    border: 1px;
+    border-radius: 0;
+}
+
+#title {
+    color: #fa8e58;
+    font-weight: 300;
+
     font-family: bureau-grot, sans-serif
 }
 
@@ -217,10 +247,12 @@ nav a:active {
 
 /*————————————————————————— Edit Form Text —————————————————————————*/
 
-.edit-form-text{padding-top: 10px;
-                line-height: 0.8;
-                font-family: neue-haas-unica, sans-serif;
-                font-weight: 400; }
+.edit-form-text {
+    padding-top: 10px;
+    line-height: 0.8;
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 400;
+}
 
 /* —————————————————— Bouton Crush —————————————————— */
 #crush-link:active {
@@ -287,29 +319,39 @@ nav a:active {
     padding-left: 10px
 }
 
-/* —————————————————— Boutons sign up / sign in  —————————————————— */
+/* —————————————————— Boutons sign up / sign in —————————————————— */
 
 #btn-signin-signup {
-    background-color: #fa8e58;
-    width: 100px;
+    background-color: #ffffff;
+    color: #CC5F49;
+    padding: 10px 50px;
     text-align: center;
     display: flex;
     border-radius: 0;
-    justify-content: center;
-    border:0;
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 200;
+    border: 0;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-size: 20px
+    font-size: 25px;
+
+
 }
 
-#forgot_yr-pwd {  
-    font-size:15px; 
-    border-radius: 0; 
+#btn-signin-signup:hover {
+    opacity: 0.5;
+    color: #CC5F49;
+    transition: 0.3s;
+}
+
+
+
+#forgot_yr-pwd {
+    font-size: 15px;
+    border-radius: 0;
     background: none;
-    color: #000000;   
+    color: #000000;
     font-weight: 200;
-    width: 200px;   
+    width: 200px;
     font-family: neue-haas-unica, sans-serif;
     justify-content: center;
 
@@ -328,69 +370,74 @@ nav a:active {
 }
 
 #btn-editprofile {
-    font-size: 20px; 
+    font-size: 20px;
     border-radius: 20px;
     background: #fa8e58;
-    color:#ffffff ;   
+    color: #ffffff;
     font-weight: 200;
-    border: 0;   
+    border: 0;
     font-family: bureau-grot-condensed, sans-serif;
-    justify-content: center;}
-  
-  
-#get_library_btn{
+    justify-content: center;
+}
+
+
+#get_library_btn {
     background: #212e9b;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 28px ;
+    font-size: 28px;
     width: 150px;
     height: 150px;
-    margin-top: 30px; 
-    margin-bottom:30px; 
+    margin-top: 30px;
+    margin-bottom: 30px;
     border: 0;
-    padding-top: 45px; top:10%; 
+    padding-top: 45px;
+    top: 10%;
     line-height: 1;
     padding-left: 40px;
-    padding-right: 40px; border-radius: 0
-
+    padding-right: 40px;
+    border-radius: 0
 }
-  
-#get_library_btn_sm{
+
+#get_library_btn_sm {
     background: #fa8e58;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 18px ; 
+    font-size: 18px;
     line-height: 1.3;
     border-radius: 0;
-    border :0
+    border: 0
 }
-#jumbotron_colored{
+
+#jumbotron_colored {
     background: #f5e5dd
 }
-#btn-message{    
+
+#btn-message {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    color: black}
+    color: black
+}
 
 
- #btn_update_profile{ 
+#btn_update_profile {
     background: #fa8e58;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 18px ; 
+    font-size: 18px;
     line-height: 1.3;
-    border:0;
+    border: 0;
     border-radius: 0;
     float: right;
-    position:relative;
+    position: relative;
     right: 5%;
- }
- 
+}
+
 /* —————————————————— footer —————————————————— */
 
 .text-footer {
@@ -425,7 +472,7 @@ nav a:active {
     bottom: 0%;
 }
 
-/* —————————————————— Mails  —————————————————— */
+/* —————————————————— Mails —————————————————— */
 
 .welcome-title {
     font-family: bureau-grot, sans-serif;
@@ -462,26 +509,72 @@ nav a:active {
 }
 
 
-#info{  line-height: 1.3; 
-        color: #6d6d6d; 
-        font-size: 15px;
-        }
+#info {
+    line-height: 1.3;
+    color: #6d6d6d;
+    font-size: 15px;
+}
 
 
-        /* —————————————————— Media Queries —————————————————— */
+/* —————————————————— Media Queries —————————————————— */
 
-        @media only screen and (max-width: 600px) {
-            #punchline {
-              font-size: 3em;
-              line-height: 1.0;
-            }
-          }
+@media only screen and (max-width: 600px) {
+    #punchline {
+        font-size: 3em;
+        line-height: 1.0;
+    }
 
-        
-          /* —————————————————— Library —————————————————— */
 
-          #show_librairies_cart{ display: flex;  
-                                 align-items: flex-start;
-                                 flex-flow: wrap;
-                                }
-    
+
+
+}
+
+@media only screen and (max-width: 990px) {
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+/* —————————————————— Library —————————————————— */
+
+#show_librairies_cart {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: wrap;
+}
+
+/* —————————————————— Toggler Icon —————————————————— */
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
