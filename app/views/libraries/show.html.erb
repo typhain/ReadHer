@@ -1,31 +1,44 @@
+
 <p id="notice"><%= notice %></p>
 <div class="container">
-    <div class="card" id="show-card">
+    <h1 class="display-4 text-center m-4 p-4">Your library !</h1>
+    <div class="row">
 
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th>Book</th>
-          <th>Author</th>
-          <th>Genre</th>
-        </tr>
-      </thead>
-      <tbody>
-      <% current_user.library.crushes.each do |crush| %>
-        <tr>
-          <td><strong><%= crush.book_title %></strong></td>
-          <td><%= crush.author_name %></td>
-          <td><%= crush.genre %></td>
-          <td> <%= link_to "Remove from library", crush_library_path, :method=>:delete , :class => "btn  btn-dark px-0 ", :id => "btn-remove" %></td>
-        </tr>
-      <% end %>
+    <% current_user.library.crushes.each do |crush| %>
+            <div class="col-sm-6 mb-4 ">
 
-      </tbody>
-    </table>
-    <div class="d-flex bd-highlight">
-    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right">
-    <%= link_to 'Back', root_path , :class => "btn  btn-dark ", :id => "btn-signin-signup" %>
-    </div>
-    </div>
-        </div>
+            <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                 <div class="card-title"> <%= crush.book_title %></div>
+                  <p class="card-text"></p>
+                  <div class="card-subtitle mb-3 text-muted"></div>
+                    <p class="card-quote">“<%= crush.quote %>”</p>
+                    <p class="card-credit"><%= crush.author_name %> (<%= crush.author_country%>)</p>
+                    <div class="d-flex justify-content-between">
+                      <div>
+                      <%= link_to "Remove from library", crush_library_path, :method=>:delete , :class => "btn btn-dark px-2 ", :id => "btn-remove" %>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div><br>
+          
+          
+          <% end %>
+          <br>
+
+</div>
+
+          
+          <!-- ——————————————————————— BUTTON ——————————————————————— -->
+
+          <div class="d-flex bd-highlight">
+            <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right">
+            <%= link_to 'Back', root_path , :class => "btn  btn-dark ", :id => "btn-signin-signup" %>
+            </div>
+          </div>
 </div>
