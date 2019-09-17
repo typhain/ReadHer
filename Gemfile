@@ -67,4 +67,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'aws-sdk-s3'
 gem 'letter_opener'
 gem 'pg_search'
+<<<<<<< HEAD
 
+=======
+>>>>>>> d66efbf5305430233008aa702dc7dcc990ab44b7
