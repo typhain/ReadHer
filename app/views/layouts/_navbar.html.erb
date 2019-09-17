@@ -51,9 +51,19 @@
           <% end %>
 </ul>
     <form class="form-inline my-2 text-center d-flex justifiy-content-center">
-    <input class="form-control mr" type="search" placeholder="Author name or Title book" aria-label="Search">
-    <button class="btn btn-outline-light my-2 mx-2 my-sm-0 " type="submit">Search</button>
+    
+    <li class="nav-item">
+    
+    <%= form_tag crushes_path, method: :get do %>
+        <%= text_field_tag "term", params[:term], placeholder: "Author name or Title book", class:"form-control mr" %>
+        <%= submit_tag 'Search!', class:"btn btn-outline-light my-2 mx-2 my-sm-0 ", type:"submit"%>
+  
+    <% end %> 
+    </li>
     </form>
+    
+  
+    
   </div>
 </nav>
 

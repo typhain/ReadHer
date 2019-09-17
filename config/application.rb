@@ -17,6 +17,7 @@ module ReadHer
     # the framework and any gems in your application.
     config.assets.initialize_on_precompile = false
     config.serve_static_assets = true
+    config.active_record.schema_format = :sql
   end
 
 
