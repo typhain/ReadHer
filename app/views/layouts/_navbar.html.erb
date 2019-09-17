@@ -7,10 +7,10 @@
     <div class="bar3"></div>
   </div>
   </button>
-  <a class="navbar-brand" href="#"> 
+  <a class="navbar-brand" href="#">
     <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%>
   </a>
-  
+
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
   <ul class="navbar-nav mr-auto text-center ">
@@ -19,8 +19,9 @@
   </li>
 
   <li class="nav-item ">
-      <a class="nav-link" href="#">About</a>
-  </li>
+        <%= link_to "Inbox", conversations_path, class:"nav-link"%>
+    </li>
+
 
         <% if current_user == nil %>
           <li class="nav-item border  m-1">
@@ -37,7 +38,7 @@
 
         <li class="nav-item">
             <% if current_user %>
-            <%= link_to (image_tag("shelf.png", class: "logo_shelf")), library_path(current_user.library), class:"nav-link"  %> 
+            <%= link_to (image_tag("shelf.png", class: "logo_shelf")), library_path(current_user.library), class:"nav-link"  %>
         </li>
             <% end %>
 
@@ -47,17 +48,17 @@
           <% end %>
 </ul>
     <form class="form-inline my-2 text-center d-flex justifiy-content-center">
-    
+
     <li class="nav-item ">
-    
+
     <%= form_tag crushes_path, method: :get do %>
         <%= text_field_tag "term", params[:term], placeholder: "Author name or Title book", class:"form-control" %>
         <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2 ", type:"submit"%>
-  
-    <% end %> 
+
+    <% end %>
     </li>
     </form>
-    
+
   </div>
 </nav>
 
