@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   root "crushes#index"
   resources :users, only: [:show]
 
+  get 'pages/about' 
+
 end

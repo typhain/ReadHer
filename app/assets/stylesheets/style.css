@@ -571,10 +571,7 @@ nav a:active {
 /* —————————————————— Toggler Icon —————————————————— */
 
 
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
+
 
 .bar1,
 .bar2,
@@ -605,3 +602,13 @@ nav a:active {
 
 
 .logo_shelf{  width: 30%}
+
+
+.text-about{
+    display: flex; 
+    text-align: left;  
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2em;
+    color: white}
