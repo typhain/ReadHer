@@ -14,8 +14,16 @@ class Crush < ApplicationRecord
                  against: :author_name,
                  using: {
                    trigram: {
-                     threshold: 0.1
+                     threshold: 0.2
                    }
                  }
+                 pg_search_scope :roughly_spelled_like,
+                              against: :book_title,
+                              using: {
+                                trigram: {
+                                  threshold: 0.2
+                                }
+                              }
+
 
 end

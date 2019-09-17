@@ -11,7 +11,15 @@ User.destroy_all
 Library.destroy_all
 
 6.times do
-  User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, description: Faker::Lorem.paragraph, city: Faker::Address.city, password: "123456")
+  user = User.new
+  user.skip_sending_welcome_email = true
+  user.email = Faker::Internet.email
+  user.first_name = Faker::Name.first_name
+  user.last_name = Faker::Name.last_name
+  user.description = Faker::Lorem.paragraph
+  user.city = Faker::Address.city
+  user.password = "123456"
+  user.save
 end
 
 6.times do
