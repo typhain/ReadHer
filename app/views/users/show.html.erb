@@ -16,8 +16,11 @@
   <h2 class="card-title">
   <a>Profile</a>
 </h2>
-  <div class="row">
-  <div class="col-md-4 mr-5 border d-flex align-items-center justify-content-center"> <%= image_tag user_avatar(current_user) %> </div>
+  <div class="row pb-5">
+
+  <div class="col-md-4 mr-3 d-flex align-items-center justify-content-center"> 
+  <%= image_tag user_avatar(current_user), class:'img-circled' %> 
+  </div>
     <div class="col-md-7">
       <div class="card-body">
         <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %> </p>
@@ -48,7 +51,7 @@
                       <div>
                         <ul class="nav nav-pills nav-fill mt-3">
                             <li class="nav-item">
-                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> >
                             </li>
                         </ul>
                       </div>

@@ -13,7 +13,12 @@
                           <!-- <% if resource.avatar.attached? %>
                           #    <%= image_tag resource.avatar%>
                           #    <% end %>-->
-                          <%= image_tag user_avatar(current_user) %>
+                          <!-- variant to crop image. not accepted by heroku-->
+                          <!--<%= image_tag user_avatar(current_user).variant(resize: "200x200") %>-->
+                        <div class="col-md-4 mr-3 d-flex align-items-center justify-content-center w-auto"> 
+                        <%= image_tag user_avatar(current_user), class:'img-circled' %> 
+                        </div>
+                        
                         </div>
                         <%= f.label :avatar %><br />
                         <div class="field  mb-3 p-3 border" id="inputEmail">

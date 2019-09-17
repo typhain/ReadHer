@@ -455,6 +455,18 @@ nav a:active {
         }
 
 
+  /* —————————————————— Images —————————————————— */
+
+
+ .img-circled { 
+    width:250px;
+    height:250px; 
+    object-fit:cover;
+    padding: 10px;
+    border-radius:50%;  
+              }
+
+
         /* —————————————————— Media Queries —————————————————— */
 
         @media only screen and (max-width: 600px) {
