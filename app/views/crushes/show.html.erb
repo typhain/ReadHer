@@ -1,9 +1,9 @@
 <div class="container">
 
 <br>
-  <div class="card  mb-5">
-    <h5 class="card-header" id="title-crush">
-      <a> <%= @crush.book_title%> </a>
+  <div class="card p-2 my-2" id="square">
+    <h5 class="card-header border-0" id="title-crush">
+      <a> <b><%= @crush.book_title%> </b></a>
     </h5>
       <div class="card-body">
         <p class="card-author "> <%= @crush.user.first_name %> <%= @crush.user.last_name %></p>
@@ -13,15 +13,7 @@
         <p class="card-text"><%= @crush.description %><p>
 
         <hr>
-        <ul class="list-group-flush ">
-        <li class="list-group">
-            <div class="row justify-content-around" id="badge">
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-
-            </div>
+        
         </li>
     </ul>
 
