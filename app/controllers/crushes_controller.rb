@@ -11,7 +11,6 @@ class CrushesController < ApplicationController
 
   def show
     @crush = Crush.find(params[:id])
-    @comments = @crush.comments
   end
 
   def new

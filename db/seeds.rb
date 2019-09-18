@@ -11,7 +11,6 @@ User.destroy_all
 Library.destroy_all
 Conversation.destroy_all
 Message.destroy_all
-Comment.destroy_all
 
 6.times do
   user = User.new
@@ -38,10 +37,6 @@ end
   Message.create!(user: User.all.sample, conversation: Conversation.all.sample, body:Faker::Lorem.paragraph, read:false)
 end
 
-6.times do
-  Comment.create!(user: User.all.sample, body:Faker::Lorem.paragraph, crush: Crush.all.sample)
-end
-
 # 20.times do
 #   Library.create!(user: User.all.sample)
 # end
@@ -51,4 +46,3 @@ puts "\nTotal crush created: #{Crush.all.count}"
 puts "\nTotal library created: #{Library.all.count}"
 puts "\nTotal Conversations created: #{Conversation.all.count}"
 puts "\nTotal Messages created: #{Message.all.count}"
-puts "\nTotal Comments created: #{Comment.all.count}"
