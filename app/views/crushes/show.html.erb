@@ -37,3 +37,40 @@
         <% end %>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add a Comment</h5>
+          <%= form_tag crush_comments_path(@crush), method: :post do %>
+          <div class="form-group">
+            <%= text_area_tag :content, placeholder = "Add a comment here...", class: 'form-control no-border' %>
+          </div>
+            <%= submit_tag "Comment", class: 'btn btn-default btn btn-primary' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="container">
+  <% @crush.comments.each do |comment| %>
+  <div class="media">
+    <div class="media-body">
+      <p class="mt-0"><%= comment.user.first_name %></p>
+      <p class="mt-0"><%= comment.created_at.to_formatted_s(:long)%></p>
+      <p class="mt-0"><%= comment.body %></p>
+        <% if comment.user_id == current_user.id %>
+        <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %>
+        <% end %>
+    </div>
+  </div> <br>
+  <% end %>
+</div>
+</div>
