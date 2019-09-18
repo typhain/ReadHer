@@ -14,3 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}

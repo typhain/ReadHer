@@ -1,9 +1,9 @@
 <div class="container">
 
 <br>
-  <div class="card  mb-5">
-    <h5 class="card-header" id="title-crush">
-      <a> <%= @crush.book_title%> </a>
+  <div class="card p-2 my-2" id="square">
+    <h5 class="card-header border-0" id="title-crush">
+      <a> <b><%= @crush.book_title%> </b></a>
     </h5>
       <div class="card-body">
         <p class="card-author "> <%= @crush.user.first_name %> <%= @crush.user.last_name %></p>
@@ -11,6 +11,11 @@
         <p class="card-quote">“<%= @crush.quote %>”</p>
         <p class="card-credit"><%= @crush.author_name %> (<%= @crush.author_country %>)</p>
         <p class="card-text"><%= @crush.description %><p>
+
+        <hr>
+        
+        </li>
+    </ul>
 
 
         <% if current_user != @crush.user %>
