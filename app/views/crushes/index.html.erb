@@ -43,5 +43,9 @@
       <% end %>
     </div>
   </div>
-</body>
+    <div class="text-center"
+    <%= will_paginate @crushes %>
+    <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
+    </div>
+  </body>
 </html>

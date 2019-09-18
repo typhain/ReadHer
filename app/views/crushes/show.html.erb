@@ -55,12 +55,15 @@
 
 <div class="container">
   <div class="container">
-  <% @crush.comments.each do |n| %>
+  <% @crush.comments.each do |comment| %>
   <div class="media">
     <div class="media-body">
-      <p class="mt-0"><%= n.user.first_name %></p>
-      <p class="mt-0"><%= n.created_at.to_formatted_s(:long)%></p>
-      <p class="mt-0"><%= n.body %></p>
+      <p class="mt-0"><%= comment.user.first_name %></p>
+      <p class="mt-0"><%= comment.created_at.to_formatted_s(:long)%></p>
+      <p class="mt-0"><%= comment.body %></p>
+        <% if comment.user_id == current_user.id %>
+        <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %>
+        <% end %>
     </div>
   </div> <br>
   <% end %>
