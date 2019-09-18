@@ -351,7 +351,7 @@ nav a:active {
 
 /* —————————————————— Boutons join us —————————————————— */
 
-#btn-joinus{    background-color: #ffffff;
+#btn-white{    background-color: #ffffff;
     color: #CC5F49;
     padding: 10px 50px;
     text-align: center;
@@ -366,7 +366,7 @@ nav a:active {
 
 
 
-#btn-joinus:hover {
+#btn-white:hover {
     opacity: 0.5;
     color: #CC5F49;
     transition: 0.3s;
