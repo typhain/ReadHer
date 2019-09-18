@@ -9,13 +9,32 @@ require 'faker'
 Crush.destroy_all
 User.destroy_all
 Library.destroy_all
+Conversation.destroy_all
+Message.destroy_all
 
-20.times do
-  User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, description: Faker::Lorem.paragraph, city: Faker::Address.city, password: "123456")
+6.times do
+  user = User.new
+  user.skip_sending_welcome_email = true
+  user.email = Faker::Internet.email
+  user.first_name = Faker::Name.first_name
+  user.last_name = Faker::Name.last_name
+  user.description = Faker::Lorem.paragraph
+  user.city = Faker::Address.city
+  user.password = "123456"
+  user.save
 end
 
-20.times do
+6.times do
   Crush.create!(user: User.all.sample, book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country, description: Faker::Lorem.paragraph, quote: Faker::Quote.yoda)
+end
+
+
+6.times do
+  Conversation.create!(sender: User.all.sample, receiver: User.all.sample)
+end
+
+6.times do
+  Message.create!(user: User.all.sample, conversation: Conversation.all.sample, body:Faker::Lorem.paragraph, read:false)
 end
 
 # 20.times do
@@ -25,3 +44,5 @@ end
 puts "\nTotal user created: #{User.all.count}"
 puts "\nTotal crush created: #{Crush.all.count}"
 puts "\nTotal library created: #{Library.all.count}"
+puts "\nTotal Conversations created: #{Conversation.all.count}"
+puts "\nTotal Messages created: #{Message.all.count}"

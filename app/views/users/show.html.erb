@@ -1,0 +1,66 @@
+
+<div class="container pt-5">
+  <h1 class="display-3 text-center card-title m-4 p-4" id="punchline">Reader card</h1>
+</div>
+
+<div class="container">
+<br>
+<div class="card-body">
+  <% if current_user.id == @user.id %>
+  <%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn btn-dark", :id => "get_library_btn_sm"  %>
+  <% end %>
+</div>
+<br>
+
+  <div class="card p-4 mt-5 mb-5">
+  <h2 class="card-title">
+  <a>Profile</a>
+</h2>
+  <div class="row">
+  <div class="col-md-4 mr-5 border d-flex align-items-center justify-content-center"> <%= image_tag user_avatar(current_user) %> </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
+        <p class="card-credit"><%= @user.city %></p>
+        <p class="card-text"><%= @user.description %><p>
+
+          <%= link_to "Library", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
+
+          <%= link_to "Message #{@user.first_name}", conversations_path(sender_id: current_user.id, receiver_id: @user.id), method: :post, class: "btn btn-dark", id: "get_library_btn_sm" %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5 mb-5">
+  <h2 class="card-title p-4"><a>Reading crushes</a></h2>
+    <div class="row">
+      <% @user.crushes.each do |n| %>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                 <div class="card-title"><%= n.book_title %></div>
+                  <p class="card-text"></p>
+                  <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
+                    <p class="card-quote">“<%= n.quote %>”</p>
+                    <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <div>
+                        <ul class="nav nav-pills nav-fill mt-3">
+                            <li class="nav-item">
+                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      <% end %>
+    </div>
+  </div>

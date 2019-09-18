@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Salut <%= @user.first_name %> <%= @user.last_name %> et bienvenue sur ReadHer!</h1>
+    <p>
+      Tu t'es inscrit en utilisant l'e-mail suivant : <%= @user.email %>.
+      <p>
+        On est ravis que tu aies envie de partager tes coups de coeur et que tu contribues à faire connaître les auteures de ta bibliothèque personnelle :)
+      </p>
+    <p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    </p>
+    <p> À très vite sur ReadHer !
+  </body>
+</html>

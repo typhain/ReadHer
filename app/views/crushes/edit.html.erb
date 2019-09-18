@@ -1,0 +1,37 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Share it !</h1>
+  <p class="lead">You have read her ? Tell us everything about her !</p>
+</div>
+
+<br>
+
+
+<div class="container text-center">
+  <%= form_for @crush, method: :patch do |f| %>
+  <div class="form-group">
+    <%= f.label 'Book Title' %><br>
+    <%= f.text_field :book_title %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Author' %><br>
+    <%= f.text_field :author_name %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Genre' %><br>
+    <%= f.text_field :genre %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Country' %><br>
+    <%= f.text_field :author_country %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Why did this matter to you ?' %><br>
+    <%= f.text_area :description %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Quote' %><br>
+    <%= f.text_field :quote %><br>
+  </div>
+  <%= submit_tag "Edit crush", class: 'btn btn-default btn btn-success' %>
+  </div>
+<% end %>
