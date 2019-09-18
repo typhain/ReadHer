@@ -12,19 +12,6 @@
         <p class="card-credit"><%= @crush.author_name %> (<%= @crush.author_country %>)</p>
         <p class="card-text"><%= @crush.description %><p>
 
-        <hr>
-        <ul class="list-group-flush ">
-        <li class="list-group">
-            <div class="row justify-content-around" id="badge">
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-                <a href="#" class=""> #secondary </a>
-
-            </div>
-        </li>
-    </ul>
-
 
         <% if current_user != @crush.user %>
         <ul class="nav nav-pills nav-fill mt-5">
@@ -44,4 +31,38 @@
           <a class="crush-link-btn" id="crush-link" <%= link_to "Delete", crush_path(@crush), method: :delete %> </a>
         <% end %>
   </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add a Comment</h5>
+          <%= form_tag crush_comments_path(@crush), method: :post do %>
+          <div class="form-group">
+            <%= text_area_tag :content, placeholder = "Add a comment here...", class: 'form-control no-border' %>
+          </div>
+            <%= submit_tag "Comment", class: 'btn btn-default btn btn-primary' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="container">
+  <% @crush.comments.each do |n| %>
+  <div class="media">
+    <div class="media-body">
+      <p class="mt-0"><%= n.user.first_name %></p>
+      <p class="mt-0"><%= n.created_at.to_formatted_s(:long)%></p>
+      <p class="mt-0"><%= n.body %></p>
+    </div>
+  </div> <br>
+  <% end %>
+</div>
 </div>

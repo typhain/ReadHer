@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :libraries
   root "crushes#index"
   resources :users, only: [:show]
-  
-  resources :crush do
-    resources comments
+
+  resources :crushs do
+    resources :comments
   end
 
   get 'pages/about'

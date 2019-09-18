@@ -14,14 +14,11 @@ before_action :authenticate_user!
 
     @crush = Crush.find(params[:crush_id])
 
-    # @gossip = Gossip.create(:user => User.all.sample, :title => params[:title], :content => params[:content])
-    # redirect_to root_path
-      #@comment = Comment.new(:user_id => User.all.sample, :commentable_type => "Gossip", :commentable_id => params[:gossip_id], :content => params[:content]) # avec xxx qui sont les données obtenues à partir du formulaire
       @comment = Comment.new(:user => @user, :crush=> @crush, :body => params[:content])
-      if @comment.save # essaie de sauvegarder en base @gossip
-        redirect_to crush_path(@crush.id) # si ça marche, il redirige vers la page d'index du site
+      if @comment.save
+        redirect_to crush_path(@crush.id)
       else
-        # sinon, il render la view new (qui est celle sur laquelle on est déjà)
+
         render crush_comments_path
       end
   end
