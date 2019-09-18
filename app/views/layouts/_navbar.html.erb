@@ -15,7 +15,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
   <ul class="navbar-nav mr-auto text-center ">
   <li class="nav-item p1 ">
-      <%= link_to "Crush", crushes_path, class:"nav-link" , anchor: "my_anchor"%>
+      <%= link_to "Tous les crushes", crushes_path, class:"nav-link" , anchor: "my_anchor"%>
   </li>
 
   <li class="nav-item ">
@@ -38,7 +38,7 @@
 
         <li class="nav-item">
             <% if current_user %>
-            <%= link_to  " Library", library_path(current_user.library) , class:"nav-link" %> 
+            <%= link_to  "Bibliothèque", library_path(current_user), class:"nav-link" %>
         </li>
             <% end %>
 
@@ -52,7 +52,7 @@
     <li class="nav-item ">
 
     <%= form_tag crushes_path, method: :get do %>
-        <%= text_field_tag "term", params[:term], placeholder: "Author name or Title book", class:"form-control" %>
+        <%= text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class:"form-control" %>
         <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2 ", type:"submit"%>
 
     <% end %>

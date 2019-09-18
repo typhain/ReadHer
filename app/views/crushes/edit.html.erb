@@ -1,18 +1,18 @@
 <div class="pricing-header pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4 text-center" id="rubric_chapter">Edit it </h1>
-  <p class="lead" id="rubric_chapter">You have read her ? Tell us everything about her !</p>
+  <h1 class="display-4 text-center" id="rubric_chapter">Edite</h1>
+  <p class="lead" id="rubric_chapter">Elle a compté pour toi ? Elle comptera sûrement pour nous</p>
 </div>
 
 
 <div class="container">
   <%= form_for @crush, method: :patch do |f| %>
   <div class="form-group text-left">
-  <%= f.label 'Book title' %><br>
-  <%= f.text_field :book_title , class:'form-control', required:'true', placeholder:"Book Title", autofocus: 'true', id: "inputEmail"%> 
+  <%= f.label 'Titre du livre' %><br>
+  <%= f.text_field :book_title , class:'form-control', required:'true', placeholder:"Book Title", autofocus: 'true', id: "inputEmail"%>
 
   </div>
   <div class="form-group">
-    <%= f.label 'Author' %><br>
+    <%= f.label 'Auteure' %><br>
     <%= f.text_field :author_name, class:'form-control', required:'true', placeholder:"Author", autofocus: 'true', id: "inputEmail"%>
   </div>
   <div class="form-group">
@@ -20,17 +20,17 @@
     <%= f.text_field :genre, class:'form-control', required:'true', placeholder:"Genre", autofocus: 'true', id: "inputEmail" %>
   </div>
   <div class="form-group">
-    <%= f.label 'Country' %><br>
+    <%= f.label 'Pays' %><br>
     <%= f.text_field :author_country, class:'form-control', required:'true', placeholder:"Country", autofocus: 'true', id: "inputEmail" %>
   </div>
   <div class="form-group">
-    <%= f.label 'Why did this matter to you ?' %><br>
+    <%= f.label 'Pourquoi elle est si importante pour toi ?' %><br>
     <%= f.text_area :description, class:'form-control', required:'true', placeholder:"Why did this matter to you ?", autofocus: 'true', id: "inputEmail"%>
   </div>
   <div class="form-group">
-    <%= f.label 'Quote' %><br>
+    <%= f.label "Une citation qui t'a marqué.e" %><br>
     <%= f.text_field :quote , class:'form-control', required:'true', placeholder:"Why did this matter to you ?", autofocus: 'true', id: "inputEmail"%>
   </div>
-  <%= submit_tag "Edit crush", class: "btn btn-dark mt-4 justify-align-end", id:"btn-white" %>
+  <%= submit_tag "Edite ton crush", class: "btn btn-dark mt-4 justify-align-end", id:"btn-white" %>
   </div>
 <% end %>

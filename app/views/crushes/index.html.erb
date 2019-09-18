@@ -4,14 +4,14 @@
 <div class="text-center">
 
   <div class="container pt-5">
-  <h1 class="display-2  presentation_text" id="catchline"> Let's talk about the invisible writers </h1>
+  <h1 class="display-2  presentation_text" id="catchline">Parlons des écrivaines</h1>
 
-  <h1 class="display-3 text-center presentation_text m-4 p-4" id="punchline"> With ReadHer, share your favorite readings, find new mates to talk litterature with, discover new talented writers</h1>
+  <h1 class="display-3 text-center presentation_text m-4 p-4" id="punchline"> Partage tes découvertes.<br>Rencontre d'autres passionné.e.s.<br>Découvre de nouveaux chefs d'oeuvres.</h1>
     <div class="container d-flex justify-content-center my-4 mb-5">
-      <%if current_user == nil %> 
-      <p> <%= link_to "JOIN US", new_user_registration_path, class: "btn btn-dark mb-5 ", id: "btn-white"%> </p>
+      <%if current_user == nil %>
+      <p> <%= link_to "REJOINS-NOUS", new_user_registration_path, class: "btn btn-dark mb-5 ", id: "btn-white"%> </p>
       <% else %>
-      <p> <%= link_to "SHARE YOUR CRUSH", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%> </p>
+      <p> <%= link_to "PARTAGE TON CRUSH", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%> </p>
       <% end %>
     </div>
 
@@ -31,7 +31,7 @@
                       <div>
                         <ul class="nav nav-pills nav-fill mt-3 mb-2 ">
                             <li class="nav-item">
-                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                                <a class="crush-link-btn" id="crush-link" <%= link_to "Consulter", crush_path(n.id)%> </a>
                             </li>
                         </ul>
                       </div>

@@ -13,7 +13,7 @@
         <p class="card-text"><%= @crush.description %><p>
 
         <hr>
-        
+
         </li>
     </ul>
 
@@ -21,19 +21,19 @@
         <% if current_user != @crush.user %>
         <ul class="nav nav-pills nav-fill mt-5">
           <li class="nav-item" >
-             <%= link_to "Add to my library", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
+             <%= link_to "Ajouter à ma bibliothèque", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
           </li>
           <% end %>
         <% if current_user && current_user != @crush.user %>
           <li class="nav-item" >
-          <%= link_to "Who shared this ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
+          <%= link_to "Qui a partagé ça ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
        </li>
         </ul>
           <% end %>
 
           <% if current_user == @crush.user %>
-          <a class="crush-link-btn" id="crush-link" <%= link_to "Edit", edit_crush_path(@crush)%> </a>
-          <a class="crush-link-btn" id="crush-link" <%= link_to "Delete", crush_path(@crush), method: :delete %> </a>
+          <a class="crush-link-btn" id="crush-link" <%= link_to "Editer", edit_crush_path(@crush)%> </a>
+          <a class="crush-link-btn" id="crush-link" <%= link_to "Supprimer", crush_path(@crush), method: :delete %> </a>
         <% end %>
   </div>
 </div>
@@ -43,12 +43,12 @@
     <div class="col-sm-8">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Add a Comment</h5>
+          <h5 class="card-title">Commentaire</h5>
           <%= form_tag crush_comments_path(@crush), method: :post do %>
           <div class="form-group">
-            <%= text_area_tag :content, placeholder = "Add a comment here...", class: 'form-control no-border' %>
+            <%= text_area_tag :content, placeholder = "Commente ici...", class: 'form-control no-border' %>
           </div>
-            <%= submit_tag "Comment", class: 'btn btn-default btn btn-primary' %>
+            <%= submit_tag "Commenter", class: 'btn btn-default btn btn-primary' %>
             <% end %>
         </div>
       </div>
@@ -66,7 +66,7 @@
       <p class="mt-0"><%= comment.user.first_name %></p>
       <p class="mt-0"><%= comment.created_at.to_formatted_s(:long)%></p>
       <p class="mt-0"><%= comment.body %></p>
-        <% if comment.user_id == current_user.id %>
+        <% if current_user && comment.user_id == current_user.id %>
         <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %>
         <% end %>
     </div>
