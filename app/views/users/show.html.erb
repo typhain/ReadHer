@@ -23,8 +23,11 @@
         <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
         <p class="card-credit"><%= @user.city %></p>
         <p class="card-text"><%= @user.description %><p>
-        <%= link_to "Library", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
-        <%= link_to "Message", class: "btn btn-dark ml-5", id: "btn-message" %>
+
+          <%= link_to "Library", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
+
+          <%= link_to "Message #{@user.first_name}", conversations_path(sender_id: current_user.id, receiver_id: @user.id), method: :post, class: "btn btn-dark", id: "get_library_btn_sm" %>
+
       </div>
     </div>
   </div>

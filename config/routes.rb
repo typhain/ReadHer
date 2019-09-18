@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   get 'pages/about' 
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
 
 end
