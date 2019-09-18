@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   root "crushes#index"
   resources :users, only: [:show]
 
-  get 'pages/about' 
+  resources :crushes do
+   resources :comments
+  end
+
+
+  get 'pages/about'
   resources :conversations, only: [:index, :create] do
     resources :messages, only: [:index, :create]
   end
