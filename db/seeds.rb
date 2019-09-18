@@ -30,7 +30,7 @@ end
 end
 
 
-6.times do
+3.times do
   Conversation.create!(sender: User.all.sample, receiver: User.all.sample)
 end
 
