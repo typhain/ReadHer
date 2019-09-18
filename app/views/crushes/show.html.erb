@@ -1,9 +1,9 @@
 <div class="container">
 
 <br>
-  <div class="card  mb-5">
-    <h5 class="card-header" id="title-crush">
-      <a> <%= @crush.book_title%> </a>
+  <div class="card p-2 my-2" id="square">
+    <h5 class="card-header border-0" id="title-crush">
+      <a> <b><%= @crush.book_title%> </b></a>
     </h5>
       <div class="card-body">
         <p class="card-author "> <%= @crush.user.first_name %> <%= @crush.user.last_name %></p>
@@ -11,6 +11,11 @@
         <p class="card-quote">“<%= @crush.quote %>”</p>
         <p class="card-credit"><%= @crush.author_name %> (<%= @crush.author_country %>)</p>
         <p class="card-text"><%= @crush.description %><p>
+
+        <hr>
+        
+        </li>
+    </ul>
 
 
         <% if current_user != @crush.user %>
@@ -55,12 +60,15 @@
 
 <div class="container">
   <div class="container">
-  <% @crush.comments.each do |n| %>
+  <% @crush.comments.each do |comment| %>
   <div class="media">
     <div class="media-body">
-      <p class="mt-0"><%= n.user.first_name %></p>
-      <p class="mt-0"><%= n.created_at.to_formatted_s(:long)%></p>
-      <p class="mt-0"><%= n.body %></p>
+      <p class="mt-0"><%= comment.user.first_name %></p>
+      <p class="mt-0"><%= comment.created_at.to_formatted_s(:long)%></p>
+      <p class="mt-0"><%= comment.body %></p>
+        <% if comment.user_id == current_user.id %>
+        <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %>
+        <% end %>
     </div>
   </div> <br>
   <% end %>

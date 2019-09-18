@@ -1,7 +1,18 @@
-<h1>Inbox</h1>
-<ul>
-  <% @conversations.each do |conversation| %>
-    <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
-    <li><%= link_to recipient.first_name, conversation_messages_path(conversation) %></li>
-  <% end %>
-</ul>
+
+<h1 class="display-4 text-center m-5 p-4" id="rubric_chapter">Inbox</h1>
+
+<div class="container">
+  <div class="row">
+    <ul>
+      <% @conversations.each do |conversation| %>
+        <div class="text-inbox">
+        <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
+        <li><a><%= link_to recipient.first_name, conversation_messages_path(conversation) %></a></li>
+     
+        </div>
+        <hr>
+      <% end %>
+      
+    </ul>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 
 <p id="notice"><%= notice %></p>
 <div class="container">
-    <h1 class="display-4 text-center m-4 p-4">Your library !</h1>
+    <h1 class="display-4 text-center p-4" id="rubric_chapter">Library </h1>
     <div class="row">
 
     <% current_user.library.crushes.each do |crush| %>
@@ -9,7 +9,7 @@
 
             <div class="row">
             <div class="col-12">
-              <div class="card">
+              <div class="card border-0" id="square">
                 <div class="card-body">
                  <div class="card-title"> <%= crush.book_title %></div>
                   <p class="card-text"></p>
@@ -18,7 +18,7 @@
                     <p class="card-credit"><%= crush.author_name %> (<%= crush.author_country%>)</p>
                     <div class="d-flex justify-content-between">
                       <div>
-                      <%= link_to "Remove from library", crush_library_path, :method=>:delete , :class => "btn btn-dark px-2 ", :id => "btn-remove" %>
+                      <%= link_to "Remove from library", crush_library_path, :method=>:delete , :class => "btn btn-dark  ", id: "btn-remove" %>
                       </div>
                     </div>
                   </div>
@@ -37,8 +37,8 @@
           <!-- ——————————————————————— BUTTON ——————————————————————— -->
 
           <div class="d-flex bd-highlight">
-            <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right">
-            <%= link_to 'Back', root_path , :class => "btn  btn-dark ", :id => "btn-signin-signup" %>
+            <div class="p-2 bd-highlight align-items-end" id="btn-right">
+            <%= link_to 'Back', root_path , :class => "btn  btn-dark ",  id: "btn-signin-signup" %>
             </div>
           </div>
 </div>

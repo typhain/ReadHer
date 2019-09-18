@@ -23,10 +23,10 @@ before_action :authenticate_user!
       end
   end
 
-  def edit
-  end
-
-  def update
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to request.referrer
   end
 
 end
