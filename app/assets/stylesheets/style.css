@@ -664,3 +664,61 @@ a .footer-link :hover {
     bottom: 0%;
 }
 
+/* —————————————————— Button Inbox Message —————————————————— */
+
+.bg-white{   
+    background-color: white;
+                }
+
+ ul {
+      list-style-type: none;
+}
+
+.message_first_name {  
+    color: #6d6d6d;  
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 400;
+    font-size: 2em}
+
+
+    /* —————————————————— Inbox Page —————————————————— */
+
+    .image-cropped{
+        width: 200px;
+        height:200px;
+        object-fit: cover;
+        
+    }
+
+    .text-inbox{font-family: bureau-grot-condensed, sans-serif;
+        font-weight: 300;
+        font-size: 4em ; color: white}
+
+ a.text-inbox :hover{color: white}
+ a {color: white}
+
+ .comment {
+    width: 150%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom:10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: left;
+    border:0;
+    border-radius: 5px
+    }
+
+    #btn-send{    background-color: #FFFFFF;
+        background-color: #ffffff;
+    color: #CC5F49;
+    padding:5px 15px;
+    text-align: center;
+    display: flex;
+    border-radius: 0;
+    border: 0;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    }

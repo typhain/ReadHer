@@ -1,25 +1,37 @@
 <div class="container">
-<div class="row">
-<ul>
-  <% @messages.each do |message| %>
-    <% if message.body %>
-      <li>
-        <h4><%= message.user.first_name %></h4>
-        <p><%= message.body %></p>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+    <div class="jumbotron bg-white">
+      <ul>
+        <% @messages.each do |message| %>
+          <% if message.body %>
+            <li>
+            <div class="media">
+        <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
+
+
+        <div class="media-body ">
+          <h5 class="mt-0 message_first_name"><%= message.user.first_name %></h5>
+          <p><%= message.body %></p>
+        </div>
+      </div>
+            
+          
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+
+    <div class="row">
+      <div class="col-8">
+        <%= form_for [@conversation, @message] do |f| %>
+          <div class="field" >
+            <%= f.text_area :body, placeholder: "Your message", class:"comment"%>
+          </div>
+          <%= f.submit "Send", id: "btn-send" %>
+        <% end %>
+      </div>
+    </div>
+
 </div>
 
-<div class="row">
-<%= form_for [@conversation, @message] do |f| %>
-  <div class="field">
-    <%= f.text_area :body, placeholder: "Your message", class:"flex-fill" %>
-  </div>
-
-  <%= f.submit "Send" %>
-<% end %>
-</div>
-
-</div>
