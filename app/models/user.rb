@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_one :library, dependent: :destroy
   has_many :crushes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   after_create :create_library
 
