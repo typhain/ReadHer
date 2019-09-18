@@ -1,7 +1,8 @@
 
-<h1 class="display-4 text-center mt-5 p-4" id="rubric_chapter">Reader card </h1>
 
 <div class="container">
+    <h1 class="display-4 text-center p-4" id="rubric_chapter">Reader  </h1>
+
 <div class="d-flex justify-content-end">  
 <% if current_user.id == @user.id %>
   <%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn", id: "btn-white" %>
