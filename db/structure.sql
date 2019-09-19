@@ -345,7 +345,8 @@ CREATE TABLE public.users (
     description character varying,
     last_name character varying,
     first_name character varying,
-    city character varying
+    city character varying,
+    admin boolean DEFAULT false
 );
 
 
@@ -692,6 +693,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190916124233'),
 ('20190917115450'),
 ('20190917115500'),
-('20190918085615');
+('20190918085615'),
+('20190919092112');
 
 
