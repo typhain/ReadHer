@@ -5,7 +5,7 @@
 
 <div class="d-flex justify-content-end">
 <% if current_user.id == @user.id %>
-  <%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn", id: "btn-white" %>
+  <%= link_to "Edite ton profil", edit_user_registration_path(@user), class: "btn", id: "btn-white" %>
 <% else %>
 <%= link_to "Envoyer un message à #{@user.first_name}", conversations_path(sender_id: current_user.id, receiver_id: @user.id), method: :post, class: "btn", id: "btn-white" %>
 <% end %>
