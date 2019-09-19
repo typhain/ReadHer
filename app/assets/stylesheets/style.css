@@ -1,3 +1,6 @@
+html{min-height:100%;}
+
+
 /* —————————————————— Alert Messages —————————————————— */
 
 .alert_message {
@@ -16,6 +19,7 @@ body {
     background: linear-gradient(#f99e71, #91b0fe);
     color: black;
     background-repeat: no-repeat;
+    height:100%;
 
 }
 
@@ -56,9 +60,6 @@ h1 {
     font-size: 5em;
     line-height: 0.9;
 }
-
-
-
 
 nav {
     font-family: neue-haas-unica, sans-serif;
@@ -130,11 +131,7 @@ nav a:active {
     display: flex;
     justify-content: center;
     height: 100%;
-
-
 }
-
-
 
 .card {
 
@@ -178,8 +175,7 @@ nav a:active {
     font-style: normal;
     line-height: 1.0;
     font-size: 15px;
-    padding-bottom: 5px;
-    
+    padding-bottom: 5px;    
 }
 
 .card-quote {
@@ -229,7 +225,6 @@ nav a:active {
 #title {
     color: #fa8e58;
     font-weight: 300;
-
     font-family: bureau-grot, sans-serif
 }
 
@@ -356,8 +351,6 @@ nav a:active {
     font-weight: 500;
     font-style: normal;
     font-size: 25px;
-
-
 }
 
 #btn-signin-signup:hover {
@@ -381,8 +374,6 @@ nav a:active {
     font-size: 25px;
 }
 
-
-
 #btn-white:hover {
     opacity: 0.5;
     color: #CC5F49;
@@ -398,7 +389,6 @@ nav a:active {
     width: 200px;
     font-family: neue-haas-unica, sans-serif;
     justify-content: center;
-
 }
 
 #btn-remove {
@@ -467,7 +457,6 @@ nav a:active {
     color: black
 }
 
-
 #btn_update_profile {
     background: #fa8e58;
     font-family: neue-haas-unica, sans-serif;
@@ -481,8 +470,6 @@ nav a:active {
     position: relative;
     right: 5%;
 }
-
-
 
 /* —————————————————— Mails —————————————————— */
 
@@ -538,26 +525,12 @@ nav a:active {
 
 
 
-
-/* —————————————————— Media Queries —————————————————— */
-
-@media only screen and (max-width: 600px) {
-    #punchline {
-        font-size: 3em;
-        line-height: 1.0;
-    }
-
-    .crush-link-btn {
-
-        padding: 15px 15px;        
-    }
-}
-
 @media only screen and (max-width: 990px) {
 
     .nav-item {
         display: flex;
-        justify-content: center;
+        justify-content: center; 
+    
     }
 
    
@@ -570,10 +543,10 @@ nav a:active {
         line-height: 0.9;
         text-align: center;
     }
+
+
+
 }
-
-
-
 
 
 /* —————————————————— Library —————————————————— */
@@ -585,9 +558,6 @@ nav a:active {
 }
 
 /* —————————————————— Toggler Icon —————————————————— */
-
-
-
 
 .bar1,
 .bar2,
@@ -615,8 +585,6 @@ nav a:active {
 
 /* —————————————————— Logo shelf —————————————————— */
 
-
-
 .text-about{
     display: flex; 
     text-align: left;  
@@ -625,10 +593,8 @@ nav a:active {
     line-height: 1.2;
     font-style: normal;
     font-size: 2em;
-    color: white}
-
-
-
+    color: white
+}
 /* —————————————————— Button Inbox Message —————————————————— */
 
 .bg-white{   
@@ -736,3 +702,30 @@ a.footer-link :hover {
 a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
 a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
+
+
+
+
+/* —————————————————— Media Queries —————————————————— */
+
+@media only screen and (max-width: 400px) {
+    
+    
+    #punchline {
+        font-size: 3em;
+        line-height: 1.0;
+    }
+
+    .crush-link-btn {
+
+        padding: 15px 15px;        
+    }
+
+    .nav-link {
+        font-size: 2.5em; 
+        line-height:1.2;
+        justify-content: center; 
+    }
+
+
+}
