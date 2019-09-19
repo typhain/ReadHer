@@ -1,3 +1,27 @@
+html {
+    min-height:100%;}
+
+h4 { color:white
+    }
+
+.minimum {
+    color: white;
+    font-size: 15px}
+
+
+/* —————————————————— Links —————————————————— */
+
+
+a {color: white}
+
+a:visited{
+    color: white ; }
+a:active{
+    color: white ; }
+a:hover{
+     color: #212e9b ;
+     text-decoration: none; }
+
 /* —————————————————— Alert Messages —————————————————— */
 
 .alert_message {
@@ -16,6 +40,7 @@ body {
     background: linear-gradient(#f99e71, #91b0fe);
     color: black;
     background-repeat: no-repeat;
+    height:100%;
 
 }
 
@@ -67,7 +92,7 @@ nav {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #000000;
+    background-color:#000000;
     font-size: 16px;
     padding-left: 50%;
 }
@@ -88,13 +113,11 @@ nav a:active {
     color: darkgray;
 }
 
-.nav-item {
-    padding-right: 5px;
-    padding-left: 5px;
-}
 
 .nav-item a:link {
     color: whitesmoke;
+    list-style: none;
+
 }
 
 .nav-item a:hover {
@@ -109,14 +132,14 @@ nav a:active {
 #add_crush_btn {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 23px;
     width: 150px;
     height: 150px;
     background: #fa8e58;
     margin-top: 30px;
     margin-bottom: 30px;
     border: 0;
-    line-height: 1;
+    line-height: 1.1;
     -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7;
     box-shadow: 5px 5px 15px 5px #ffc4a7;
 }
@@ -126,18 +149,15 @@ nav a:active {
     transition: 0.3s;
 }
 
-
+li{        list-style: none;
+}
 /*————————————————————————— Cartes Crushes —————————————————————————*/
 
 #card-show {
     display: flex;
     justify-content: center;
     height: 100%;
-
-
 }
-
-
 
 .card {
 
@@ -181,8 +201,12 @@ nav a:active {
     font-style: normal;
     line-height: 1.0;
     font-size: 15px;
+<<<<<<< HEAD
     padding-bottom: 5px;
 
+=======
+    padding-bottom: 5px;
+>>>>>>> develop
 }
 
 .card-quote {
@@ -217,7 +241,7 @@ nav a:active {
     font-size: 18px;
     line-height: 0.3;
     border-radius: 20px;
-    padding: 5.2px 15px;
+
     background-color: #7d7d7d;
     background: #febf9f;
 }
@@ -232,7 +256,6 @@ nav a:active {
 #title {
     color: #fa8e58;
     font-weight: 300;
-
     font-family: bureau-grot, sans-serif
 }
 
@@ -254,22 +277,6 @@ nav a:active {
     font-style: normal;
 }
 
-.crush-link-btn :active {
-    color: mistyrose;
-}
-
-.crush-link-btn :visited {
-    color: white
-}
-
-.crush-link-btn :link {
-    color: white;
-}
-
-.crush-link-btn :hover {
-    color: #d9cbcb;
-    text-decoration: inherit
-}
 
 /*————————————————————————— Edit Form Text —————————————————————————*/
 
@@ -291,7 +298,7 @@ nav a:active {
 }
 
 #crush-link:hover {
-    color: #a7a4a4;
+
     text-decoration: inherit;
     color: #cd591f;
 }
@@ -359,8 +366,6 @@ nav a:active {
     font-weight: 500;
     font-style: normal;
     font-size: 25px;
-
-
 }
 
 #btn-signin-signup:hover {
@@ -371,7 +376,8 @@ nav a:active {
 
 /* —————————————————— Boutons join us —————————————————— */
 
-#btn-white{    background-color: #ffffff;
+#btn-white{
+    background-color: #ffffff;
     color: #CC5F49;
     padding: 10px 50px;
     text-align: center;
@@ -383,8 +389,6 @@ nav a:active {
     font-style: normal;
     font-size: 25px;
 }
-
-
 
 #btn-white:hover {
     opacity: 0.5;
@@ -401,7 +405,6 @@ nav a:active {
     width: 200px;
     font-family: neue-haas-unica, sans-serif;
     justify-content: center;
-
 }
 
 #btn-remove {
@@ -458,6 +461,8 @@ nav a:active {
     border: 0
 }
 
+
+
 #jumbotron_colored {
     background: #f5e5dd
 }
@@ -469,7 +474,6 @@ nav a:active {
     font-size: 18px;
     color: black
 }
-
 
 #btn_update_profile {
     background: #fa8e58;
@@ -484,8 +488,6 @@ nav a:active {
     position: relative;
     right: 5%;
 }
-
-
 
 /* —————————————————— Mails —————————————————— */
 
@@ -541,6 +543,7 @@ nav a:active {
 
 
 
+<<<<<<< HEAD
 
 /* —————————————————— Media Queries —————————————————— */
 
@@ -556,11 +559,14 @@ nav a:active {
     }
 }
 
+=======
+>>>>>>> develop
 @media only screen and (max-width: 990px) {
 
     .nav-item {
         display: flex;
         justify-content: center;
+
     }
 
 
@@ -573,10 +579,10 @@ nav a:active {
         line-height: 0.9;
         text-align: center;
     }
+
+
+
 }
-
-
-
 
 
 /* —————————————————— Library —————————————————— */
@@ -588,9 +594,6 @@ nav a:active {
 }
 
 /* —————————————————— Toggler Icon —————————————————— */
-
-
-
 
 .bar1,
 .bar2,
@@ -618,8 +621,6 @@ nav a:active {
 
 /* —————————————————— Logo shelf —————————————————— */
 
-
-
 .text-about{
     display: flex;
     text-align: left;
@@ -628,13 +629,15 @@ nav a:active {
     line-height: 1.2;
     font-style: normal;
     font-size: 2em;
-    color: white}
-
-
-
+    color: white
+}
 /* —————————————————— Button Inbox Message —————————————————— */
 
+<<<<<<< HEAD
 .bg-white{
+=======
+.bg-white{
+>>>>>>> develop
     background-color: white;
                 }
 
@@ -643,7 +646,11 @@ nav a:active {
 }
 
 .message_first_name {
+<<<<<<< HEAD
     color: #6d6d6d;
+=======
+    color: #6d6d6d;
+>>>>>>> develop
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-size: 2em}
@@ -660,15 +667,22 @@ nav a:active {
 
     .text-inbox{font-family: bureau-grot-condensed, sans-serif;
         font-weight: 300;
-        font-size: 4em ; color: white}
+        font-size: 4em ;
+        }
 
- a.text-inbox :hover{color: white}
- a {color: white}
+    .text-inbox a:link {color: #212e9b}
+    .text-inbox a:visited {color: #212e9b}
+    .text-inbox a:active {color: #5D67B6}
+    .text-inbox a:hover {color: #5D67B6}
 
+
+<<<<<<< HEAD
  a:hover{ color: white ;
             text-decoration: line-through }
 a:visited{ color: white ; }
 a:active{ color: white ; }
+=======
+>>>>>>> develop
 
 
  .comment {
@@ -683,8 +697,9 @@ a:active{ color: white ; }
     border-radius: 5px
     }
 
-    #btn-send{    background-color: #FFFFFF;
-        background-color: #ffffff;
+    #btn-send{
+    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #CC5F49;
     padding:5px 15px;
     text-align: center;
@@ -727,6 +742,10 @@ a.footer-link :hover {
     text-decoration: line-through
 }
 
+
+.to_comment{color: white}
+
+
 #footer-credit {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -739,3 +758,58 @@ a.footer-link :hover {
 a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
 a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
+
+.box{width:50% }
+
+
+
+
+/* —————————————————— Media Queries —————————————————— */
+
+@media only screen and (max-width: 600px) {
+
+
+    .navbar-nav{padding-top:20px}
+    .crush-btn{font-size:1.2em
+    }
+    #catchline {
+        font-size: 3.2em;
+        line-height: 1.0;
+        border: 2px solid #FFFFFF ;
+        letter-spacing: 1px
+    }
+
+    #punchline {
+        font-size: 2.5em;
+        line-height: 1.0;
+    }
+
+
+    .nav-link {
+        font-size: 1.2em;
+        line-height:1.2;
+        justify-content: center;
+    }
+
+    #form-place{
+        display: flex;
+        padding-top: 20px}
+
+    #login{
+        padding-bottom: 10px
+    }
+
+
+}
+
+
+/*---------- button view/add crushs ----------*/
+@media only screen and (min-width: 990px) {
+    #crush-link{padding: 5px 10px;}
+
+}
+
+@media only screen and (max-width: 990px) {
+    #crush-link{padding: 12px 15px;}
+
+}
