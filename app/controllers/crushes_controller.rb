@@ -2,9 +2,9 @@ class CrushesController < ApplicationController
 
   def index
     if params[:term]
-      @crushes = Crush.roughly_spelled_like(params[:term]).paginate(:page => params[:page], :per_page => 5)
+      @crushes = Crush.roughly_spelled_like(params[:term]).paginate(:page => params[:page], :per_page => 10)
     elsif
-      @crushes = Crush.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
+      @crushes = Crush.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
     else
       redirect_to crushes_path
     end
