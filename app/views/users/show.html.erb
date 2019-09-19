@@ -15,18 +15,18 @@
     <div  class= "col-md-4 d-flex align-items-center justify-content-center "> <%= image_tag user_avatar(current_user), class:"image-cropped rounded", style:"width:200px" %> </div>
       <div class="col-md-7">
         <div class="card-body">
-          <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
+          <p class="card-author "> <strong><%= @user.first_name %> <%= @user.last_name %></strong></p>
           <p class="card-credit"><%= @user.city %></p>
           <p class="card-text"><%= @user.description %><p>
 
-          <%= link_to "Bibliothèque", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
+          <%= link_to "Bibliothèque", library_path(@user.library), class: "btn", id: "get_library_btn_sm" %>
       </div>
     </div>
   </div>
 </div>
 
 <div class="card p-4 mt-5 mb-5 border-0" id="square" >
-  <h2 class="card-title p-4"><a>Reading crushes</a></h2>
+  <h2 class="card-title p-4 text-center">Les coups de cœur de <%= @user.first_name %></h2>
     <div class="row">
       <% @user.crushes.each do |n| %>
         <div class="col-6">
@@ -43,7 +43,7 @@
                       <div>
                         <ul class="nav nav-pills nav-fill mt-3">
                             <li class="nav-item">
-                                <a class="crush-link-btn" id="crush-link" <%= link_to "View", crush_path(n.id)%> </a>
+                                <a class="crush-link-btn" id="crush-link" <%= link_to "Consulter", crush_path(n.id)%> </a>
                             </li>
                         </ul>
                       </div>

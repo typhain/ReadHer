@@ -11,15 +11,10 @@
         <p class="card-quote">“<%= @crush.quote %>”</p>
         <p class="card-credit"><%= @crush.author_name %> (<%= @crush.author_country %>)</p>
         <p class="card-text"><%= @crush.description %><p>
-
-        <hr>
-
-        </li>
-    </ul>
-
+                <hr>
 
         <% if current_user != @crush.user %>
-        <ul class="nav nav-pills nav-fill mt-5">
+        <ul class="nav nav-pills nav-fill mt-4">
           <li class="nav-item" >
              <%= link_to "Ajouter à ma bibliothèque", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
           </li>
@@ -38,17 +33,16 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
+  <div class="row pt-3">
+    <div class="col-sm-10">
+      <div class="card" id="square">
         <div class="card-body">
           <h5 class="card-title">Commentaire</h5>
           <%= form_tag crush_comments_path(@crush), method: :post do %>
           <div class="form-group">
             <%= text_area_tag :content, placeholder = "Commente ici...", class: 'form-control no-border' %>
           </div>
-            <%= submit_tag "Commenter", class: 'btn btn-default btn btn-primary' %>
+            <%= submit_tag "Commenter", class: "btn to_comment", id:"get_library_btn_sm"%>
             <% end %>
         </div>
       </div>
@@ -56,21 +50,24 @@
   </div>
 </div>
 
-<br>
+<br><br>
 
 <div class="container">
-  <div class="container">
+
   <% @crush.comments.each do |comment| %>
   <div class="media">
+  <div class="card pt-4 px-5 " id="square">
     <div class="media-body">
-      <p class="mt-0"><%= comment.user.first_name %></p>
-      <p class="mt-0"><%= comment.created_at.to_formatted_s(:long)%></p>
-      <p class="mt-0"><%= comment.body %></p>
+      <p class="mt-0 card-author"><b><%= comment.user.first_name %></b></p>
+      <p class="mt-0 card-subtitle mb-1 text-muted"><%= comment.created_at.to_formatted_s(:long)%></p>
+      <p class="mt-0 card-text pb-3" style="color:#212e9b"><%= comment.body %></p>
         <% if current_user && comment.user_id == current_user.id %>
         <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %>
         <% end %>
+    </div>
     </div>
   </div> <br>
   <% end %>
 </div>
 </div>
+<br>
