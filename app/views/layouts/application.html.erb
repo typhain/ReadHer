@@ -18,9 +18,12 @@
       <%= render 'layouts/navbar.html.erb' %>
       <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
 
-
-
-
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
     <%= yield %>
 <br>
