@@ -7,53 +7,53 @@
     <div class="bar3"></div>
   </div>
   </button>
-  <a class="navbar-brand" href="#">
-    <%=link_to(image_tag("logo_readher.png", class: "logo_navbar"), crushes_path)%>
+  <a class="navbar-brand " href="#">
+    <%=link_to(image_tag("logo_readher.png", class: "logo_navbar pr-2"), crushes_path)%>
   </a>
 
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
   <ul class="navbar-nav mr-auto text-center ">
-  <li class="nav-item p1 ">
-      <%= link_to "Coups de coeur", crushes_path, class:"nav-link" , anchor: "my_anchor"%>
+  <li class="nav-item py-3 px-2 mx-1" >
+      <%= link_to "Coups de cœur", crushes_path, class:"crush-btn" , anchor: "my_anchor"%>
   </li>
 
-  <li class="nav-item ">
-        <%= link_to "Inbox", conversations_path, class:"nav-link"%>
+  <li class="nav-item py-3  mx-1">
+        <%= link_to(image_tag("enveloppe-10-10.png", class: "box"), conversations_path)%>
     </li>
 
 
         <% if current_user == nil %>
-          <li class="nav-item border  m-1">
-          <%= link_to "Login", new_user_session_path, class:"nav-link", id:"btn_signupin" %>
+          <li class="nav-item border  py-1 px-2 mx-2 d-flex justify-align-items">
+          <%= link_to "Login", new_user_session_path, class:"nav-link" , id:"login"%>
           </li>
-          <li class="nav-item border m-1">
-          <%= link_to "Crée ton compte", new_user_registration_path, class:"nav-link", id:"btn_signupin" %>
+          <li class="nav-item border py-1 px-2 mx-2">
+          <%= link_to "Crée ton compte", new_user_registration_path, class:"nav-link" %>
           </li>
         <% else %>
 
-          <li class="nav-item ">
-          <%= link_to "Profil", user_path(current_user.id), class:"nav-link", id:"btn_signupin" %>
+          <li class="nav-item py-2 px-2 mx-1">
+          <%= link_to "Profil", user_path(current_user.id), class:"nav-link" %>
           </li>
 
-        <li class="nav-item">
+        <li class="nav-item py-2 px-2 mx-1">
             <% if current_user %>
             <%= link_to  "Bibliothèque", library_path(current_user), class:"nav-link" %>
         </li>
             <% end %>
 
-            <li class="nav-item border m-1 ">
-            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link", id:"btn_signupin" %> </a>
+            <li class="nav-item border py-1 px-2 mx-2">
+            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
         </li>
           <% end %>
 </ul>
-    <form class="form-inline my-2 text-center d-flex justifiy-content-center">
+    <form class="form-inline my-2 d-flex justifiy-content-center">
 
-    <li class="nav-item ">
+    <li class="nav-item" id="form-place">
 
     <%= form_tag crushes_path, method: :get do %>
-        <%= text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class:"form-control" %>
-        <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2 ", type:"submit"%>
+        <%= text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class:"form-control border-0" %>
+        <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2", type:"submit"%>
 
     <% end %>
     </li>
@@ -62,7 +62,3 @@
   </div>
 </nav>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

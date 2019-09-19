@@ -1,27 +1,22 @@
 <div class="container-fluid">
-    <div class="jumbotron bg-white">
-      <div >
+  <div class="jumbotron bg-white">
+  <div class="card" >
       <ul class="col-sm-8 border rounded p-2">
         <% @messages.each do |message| %>
           <% if message.body %>
             <li>
-            <div class="media">
-        <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
-
-        <div class="media-body >
-          <h5 class="mt-0 message_first_name"><%= message.user.first_name %></h5>
-          <p><%= message.body %></p>
-        </div>
-      </div>
-            
-          
+              <div class="media">
+                <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
+                <div class="media-body >
+                    <h5 class="mt-0 message_first_name"><%= message.user.first_name %></h5>
+                    <p><%= message.body %></p>
+                </div>
+              </div>
             </li>
           <% end %>
         <% end %>
       </ul>
     </div>
-  </div>
-
 
     <div class="row">
       <div class="col-8">
@@ -32,7 +27,7 @@
           <%= f.submit "Send", id: "btn-send" %>
         <% end %>
       </div>
-    </div>
-
+    </div>  
+  </div>
 </div>
 
