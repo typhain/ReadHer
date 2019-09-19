@@ -1,7 +1,7 @@
 html {
-    min-height:100%;}
+    min-height: 100%;}
 ​
-h4 { color:white
+h4 { color: white
     }
 ​
 .minimum {
@@ -41,12 +41,11 @@ body {
     color: black;
     background-repeat: no-repeat;
     height:100%;
-​
 }
 ​
-​
-.message{ background: linear-gradient(#FDE4D8, #E1E9FE)
-            }
+.message {
+  background: linear-gradient(#FDE4D8, #E1E9FE)
+        }
 ​
 /* —————————————————— Pictures —————————————————— */
 ​
@@ -64,8 +63,6 @@ h1 {
     font-style: normal;
     color: black
 }
-​
-​
 ​
 /* —————————————————— Catchline —————————————————— */
 #catchline {
@@ -286,11 +283,11 @@ li{        list-style: none;
 }
 ​
 #crush-link :link,
-#crush-link:visited {
+#crush-link :visited {
     color: white;
 }
 ​
-#crush-link:hover {
+#crush-link :hover {
 
     text-decoration: inherit;
     color: #cd591f;
@@ -361,7 +358,7 @@ li{        list-style: none;
     font-size: 25px;
 }
 ​
-#btn-signin-signup:hover {
+#btn-signin-signup :hover {
     opacity: 0.5;
     color: #CC5F49;
     transition: 0.3s;
@@ -383,7 +380,7 @@ li{        list-style: none;
     font-size: 25px;
 }
 ​
-#btn-white:hover {
+#btn-white :hover {
     opacity: 0.5;
     color: #CC5F49;
     transition: 0.3s;
@@ -629,14 +626,14 @@ li{        list-style: none;
 ​
     /* —————————————————— Inbox Page —————————————————— */
 ​
-    .image-cropped{
+    .image-cropped {
         width: 200px;
         height:200px;
         object-fit: cover;
 
     }
 ​
-    .text-inbox{font-family: bureau-grot-condensed, sans-serif;
+    .text-inbox {font-family: bureau-grot-condensed, sans-serif;
         font-weight: 300;
         font-size: 4em ;
         }
@@ -661,7 +658,7 @@ li{        list-style: none;
     border-radius: 5px
     }
 ​
-    #btn-send{
+    #btn-send {
     background-color: #FFFFFF;
     background-color: #ffffff;
     color: #CC5F49;
@@ -707,7 +704,7 @@ a.footer-link :hover {
 }
 ​
 ​
-.to_comment{color: white}
+.to_comment {color: white}
 ​
 ​
 #footer-credit {
@@ -721,9 +718,9 @@ a.footer-link :hover {
 ​
 a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
-a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
+a.footer-link:hover {color:white; text-decoration: none; transition: 0.3s;}
 ​
-.box{width:50% }
+.box {width:50% }
 ​
 ​
 ​
@@ -732,8 +729,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 ​
 @media only screen and (max-width: 600px) {
 
-    .navbar-nav{padding-top:20px}
-    .crush-btn{font-size:1.2em
+    .navbar-nav {padding-top:20px}
+    .crush-btn {font-size:1.2em
     }
     #catchline {
         font-size: 3.2em;
@@ -754,11 +751,11 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
         justify-content: center;
     }
 ​
-    #form-place{
+    #form-place {
         display: flex;
         padding-top: 20px}
 ​
-    #login{
+    #login {
         padding-bottom: 10px
     }
 }
