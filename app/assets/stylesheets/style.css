@@ -201,12 +201,12 @@ li{        list-style: none;
     font-style: normal;
     line-height: 1.0;
     font-size: 15px;
-<<<<<<< HEAD
+
     padding-bottom: 5px;
 
-=======
+
     padding-bottom: 5px;
->>>>>>> develop
+
 }
 
 .card-quote {
@@ -540,11 +540,6 @@ li{        list-style: none;
 
 
 
-
-
-
-<<<<<<< HEAD
-
 /* —————————————————— Media Queries —————————————————— */
 
 @media only screen and (max-width: 600px) {
@@ -559,8 +554,6 @@ li{        list-style: none;
     }
 }
 
-=======
->>>>>>> develop
 @media only screen and (max-width: 990px) {
 
     .nav-item {
@@ -633,11 +626,11 @@ li{        list-style: none;
 }
 /* —————————————————— Button Inbox Message —————————————————— */
 
-<<<<<<< HEAD
+
 .bg-white{
-=======
+
 .bg-white{
->>>>>>> develop
+
     background-color: white;
                 }
 
@@ -646,11 +639,9 @@ li{        list-style: none;
 }
 
 .message_first_name {
-<<<<<<< HEAD
+
     color: #6d6d6d;
-=======
     color: #6d6d6d;
->>>>>>> develop
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-size: 2em}
@@ -676,13 +667,12 @@ li{        list-style: none;
     .text-inbox a:hover {color: #5D67B6}
 
 
-<<<<<<< HEAD
  a:hover{ color: white ;
             text-decoration: line-through }
 a:visited{ color: white ; }
 a:active{ color: white ; }
 =======
->>>>>>> develop
+
 
 
  .comment {

@@ -18,15 +18,11 @@
       <%= link_to "Coups de cœur", crushes_path, class:"crush-btn" , anchor: "my_anchor"%>
   </li>
 
-<<<<<<< HEAD
-  <li class="nav-item ">
-        <% if current_user %>
-        <%= link_to "Inbox", conversations_path, class:"nav-link"%>
-          <% end %>
-=======
+
   <li class="nav-item py-3  mx-1">
+    <% if current_user %>
         <%= link_to(image_tag("enveloppe-10-10.png", class: "box"), conversations_path)%>
->>>>>>> develop
+        <% end %>
     </li>
 
 
@@ -68,4 +64,3 @@
 
   </div>
 </nav>
-
