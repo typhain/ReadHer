@@ -58,7 +58,10 @@ h1 {
 }
 
 
-
+#keywords {
+    font-size: 6.7em;
+    line-height: 0.9;
+}
 
 nav {
     font-family: neue-haas-unica, sans-serif;
@@ -179,7 +182,7 @@ nav a:active {
     line-height: 1.0;
     font-size: 15px;
     padding-bottom: 5px;
-    
+
 }
 
 .card-quote {
@@ -549,7 +552,7 @@ nav a:active {
 
     .crush-link-btn {
 
-        padding: 15px 15px;        
+        padding: 15px 15px;
     }
 }
 
@@ -560,7 +563,7 @@ nav a:active {
         justify-content: center;
     }
 
-   
+
     #catchline {
         font-family: bureau-grot-condensed, sans-serif;
         font-weight: 500;
@@ -618,8 +621,8 @@ nav a:active {
 
 
 .text-about{
-    display: flex; 
-    text-align: left;  
+    display: flex;
+    text-align: left;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     line-height: 1.2;
@@ -631,7 +634,7 @@ nav a:active {
 
 /* —————————————————— Button Inbox Message —————————————————— */
 
-.bg-white{   
+.bg-white{
     background-color: white;
                 }
 
@@ -639,8 +642,8 @@ nav a:active {
       list-style-type: none;
 }
 
-.message_first_name {  
-    color: #6d6d6d;  
+.message_first_name {
+    color: #6d6d6d;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-size: 2em}
@@ -652,7 +655,7 @@ nav a:active {
         width: 200px;
         height:200px;
         object-fit: cover;
-        
+
     }
 
     .text-inbox{font-family: bureau-grot-condensed, sans-serif;
@@ -662,7 +665,7 @@ nav a:active {
  a.text-inbox :hover{color: white}
  a {color: white}
 
- a:hover{ color: white ; 
+ a:hover{ color: white ;
             text-decoration: line-through }
 a:visited{ color: white ; }
 a:active{ color: white ; }
@@ -694,7 +697,7 @@ a:active{ color: white ; }
     font-size: 25px;
     }
 
-   
+
 /* —————————————————— footer —————————————————— */
 
 .text-footer {
@@ -712,7 +715,7 @@ a:active{ color: white ; }
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-size: 18px;
-    
+
 }
 
 .footer-link a :active {
