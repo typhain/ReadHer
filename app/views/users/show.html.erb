@@ -1,29 +1,25 @@
 
 
 <div class="container">
-    <h1 class="display-4 text-center p-4" id="rubric_chapter">Reader  </h1>
+    <h1 class="display-4 text-center p-4" id="rubric_chapter">Profil</h1>
 
-<div class="d-flex justify-content-end">  
+<div class="d-flex justify-content-end">
 <% if current_user.id == @user.id %>
-  <%= link_to "Edit profile", edit_user_registration_path(@user), class: "btn", id: "btn-white" %>
-  <% end %>
+  <%= link_to "Edite ton profil", edit_user_registration_path(@user), class: "btn", id: "btn-white" %>
+<% else %>
+<%= link_to "Envoyer un message à #{@user.first_name}", conversations_path(sender_id: current_user.id, receiver_id: @user.id), method: :post, class: "btn", id: "btn-white" %>
+<% end %>
 </div>
   <div class="card p-4 mt-5 mb-5 border-0" id="square">
-  <h2 class="card-title pl-2 pb-2">
-  <a>Profile </a>
-</h2>
   <div class="row">
-  <div  class= "col-md-4 d-flex align-items-center justify-content-center "> <%= image_tag user_avatar(current_user), class:"image-cropped rounded", style:"width:200px" %> </div>
-    <div class="col-md-7">
-      <div class="card-body">
-        <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
-        <p class="card-credit"><%= @user.city %></p>
-        <p class="card-text"><%= @user.description %><p>
+    <div  class= "col-md-4 d-flex align-items-center justify-content-center "> <%= image_tag user_avatar(current_user), class:"image-cropped rounded", style:"width:200px" %> </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <p class="card-author "> <%= @user.first_name %> <%= @user.last_name %></p>
+          <p class="card-credit"><%= @user.city %></p>
+          <p class="card-text"><%= @user.description %><p>
 
-          <%= link_to "Library", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
-
-          <%= link_to "Message #{@user.first_name}", conversations_path(sender_id: current_user.id, receiver_id: @user.id), method: :post, class: "btn btn-dark", id: "get_library_btn_sm" %>
-
+          <%= link_to "Bibliothèque", library_path(@user.library), class: "btn btn-dark", id: "get_library_btn_sm" %>
       </div>
     </div>
   </div>
