@@ -7,16 +7,16 @@
     <a class=" mt-5" href="#"><%= image_tag "logo_readher.png", :class => "logo" %></a>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <h4 class="mt-4 mb-2">Please sign in </h4>
-
+        </br>
 
             <div class="field text-left">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, :class => "form-control", autocomplete: "email", :id =>"inputEmail"  %>
+             
+              <%= f.email_field :email, :class => "form-control", autocomplete: "email", placeholder:"Email", :id =>"inputEmail"  %>
             </div>
 
             <div class="field text-left">
-              <%= f.label :password %>
-              <%= f.password_field :password, :class => "form-control", autocomplete: "current-password", :id =>"inputEmail"  %>
+              </br>
+              <%= f.password_field :password, :class => "form-control", autocomplete: "current-password",placeholder:"Password", :id =>"inputEmail"  %>
             </div>
 
             <% if devise_mapping.rememberable? %>
