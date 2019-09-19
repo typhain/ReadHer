@@ -12,8 +12,9 @@ Library.destroy_all
 Conversation.destroy_all
 Message.destroy_all
 Comment.destroy_all
+CrushLibrary.destroy_all
 
-6.times do
+30.times do
   user = User.new
   user.skip_sending_welcome_email = true
   user.email = Faker::Internet.email
@@ -25,21 +26,25 @@ Comment.destroy_all
   user.save
 end
 
-6.times do
+30.times do
   Crush.create!(user: User.all.sample, book_title: Faker::Book.title, genre: Faker::Book.genre, author_name: Faker::Book.author, author_country: Faker::Address.country, description: Faker::Lorem.paragraph, quote: Faker::Quote.yoda)
 end
 
 
-3.times do
+10.times do
   Conversation.create!(sender: User.all.sample, receiver: User.all.sample)
 end
 
-6.times do
+15.times do
   Message.create!(user: User.all.sample, conversation: Conversation.all.sample, body:Faker::Lorem.paragraph, read:false)
 end
 
-6.times do
+30.times do
   Comment.create!(user: User.all.sample, body:Faker::Lorem.paragraph, crush: Crush.all.sample)
+end
+
+30.times do
+  CrushLibrary.create!(crush: Crush.all.sample, library: Library.all.sample)
 end
 
 # 20.times do
@@ -52,3 +57,4 @@ puts "\nTotal library created: #{Library.all.count}"
 puts "\nTotal Conversations created: #{Conversation.all.count}"
 puts "\nTotal Messages created: #{Message.all.count}"
 puts "\nTotal Comment created: #{Comment.all.count}"
+puts "\nTotal CrushLibrary created: #{CrushLibrary.all.count}"

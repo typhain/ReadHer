@@ -6,7 +6,8 @@ before_action :authenticate_user!
   end
 
   def show
-    @library = Library.find_by(user_id: current_user.id)
+    @user = User.find(params[:id])
+    @library = Library.find_by(user_id: @user.id)
   end
 
 end
