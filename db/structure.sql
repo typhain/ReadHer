@@ -345,7 +345,8 @@ CREATE TABLE public.users (
     description character varying,
     last_name character varying,
     first_name character varying,
-    city character varying
+    city character varying,
+    username character varying
 );
 
 
@@ -618,6 +619,13 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING bt
 
 
 --
+-- Name: index_users_on_username; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_users_on_username ON public.users USING btree (username);
+
+
+--
 -- Name: messages fk_rails_273a25a7a6; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -692,6 +700,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190916124233'),
 ('20190917115450'),
 ('20190917115500'),
-('20190918085615');
+('20190918085615'),
+('20190919160206');
 
 

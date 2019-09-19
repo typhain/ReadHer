@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, authentication_keys: [:login]
   has_one :library
   has_many :crushes
   has_one_attached :avatar
@@ -29,6 +29,12 @@ class User < ApplicationRecord
     #links the new user to its avatar
     user.avatar.attach(params[:avatar])
     @user = User.find(params[:id])
+  end
+
+  attr_writer :login
+
+  def login
+    @login || self.username || self.email
   end
 
 end
