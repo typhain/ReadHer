@@ -24,7 +24,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
 
-  namespace :admin do
-      resources :crushes, :comments
-  end
+  
 end
