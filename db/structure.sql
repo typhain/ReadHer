@@ -576,6 +576,13 @@ CREATE INDEX index_crushes_on_author_name ON public.crushes USING gist (author_n
 
 
 --
+-- Name: index_crushes_on_book_title; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_crushes_on_book_title ON public.crushes USING gist (book_title);
+
+
+--
 -- Name: index_crushes_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 

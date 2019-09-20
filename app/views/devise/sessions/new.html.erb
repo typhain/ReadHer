@@ -6,11 +6,11 @@
 
     <a class=" mt-5" href="#"><%= image_tag "logo_readher.png", :class => "logo" %></a>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <h4 class="mt-4 mb-2">Please sign in </h4>
+        <h4 class="mt-4 mb-2">Se connecter </h4>
         </br>
 
             <div class="field text-left">
-             
+
               <%= f.email_field :email, :class => "form-control", autocomplete: "email", placeholder:"Email", :id =>"inputEmail"  %>
             </div>
 
@@ -32,7 +32,7 @@
 
 
             <div class="actions d-flex justify-content-center">
-              <%= f.submit "Log In", :class => "btn  btn-dark mb-4", :id => "btn-signin-signup"  %>
+              <%= f.submit "Se connecter", :class => "btn  btn-dark mb-4", :id => "btn-signin-signup"  %>
             </div>
             <% end %>
 
