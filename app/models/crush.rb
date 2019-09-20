@@ -1,10 +1,6 @@
 class Crush < ApplicationRecord
     include PgSearch::Model
 
-    # validates :book_title, length: { maximum: 15 }
-    # validates :description, length: { maximum: 1000 }
-    # validates :quote, length: { maximum: 1000 }
-
     belongs_to :user
     has_many :crush_libraries, dependent: :destroy
     has_many :libraries, through: :crush_libraries
