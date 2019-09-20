@@ -7,6 +7,9 @@ class PagesController < ApplicationController
     
     def about; end
 
+    def policy 
+    end
+
     def welcome_page
       @disable_nav = true
       @disable_footer = true
