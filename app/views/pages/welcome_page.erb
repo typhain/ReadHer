@@ -1,9 +1,14 @@
-<div class="text-center">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
 
+<div class="text-center">
+<%= image_tag "logo_readher.png", class: "mt-5 logo" %>
   <div class="container pt-5 mt-4">
-    <h1 class="display-2  presentation_text my-5" id="catchline">Parlons des écrivaines</h1>
+    <h1 class="display-2  presentation_text my-2 animated fadeIn delay-1" id="catchline">
+    PARLONS DES ÉCRIVAINES</h1>
   </div>
-<h1 class="display-3 text-center presentation_text my-0 pt-2" id="punchline"> Partage tes plus belles lectures.<br>Rencontre d'autres passionné.e.s.<br>Découvre de nouveaux chefs d'oeuvres.</h1>
+<h1 class="display-3 text-center presentation_text my-0 pt-2 animated fadeIn delay-1s" id="punchline"> Partage tes plus belles lectures.<br>Rencontre d'autres passionné.e.s.<br>Découvre de nouveaux chefs d'oeuvres.</h1>
   <div class="container d-flex justify-content-center mt-5 pt-4">
     <p> <%= link_to "VIENS DONC VOIR UN PEU !", crushes_path, class: "btn btn-dark mb-5 ", id: "btn-white"%> </p>
   </div>
