@@ -1,19 +1,19 @@
 html {
-    min-height: 100%;}
-​
-h4 { color: white
+    min-height:100%;}
+
+h4 { color:white
     }
-​
+
 .minimum {
     color: white;
     font-size: 15px}
-​
-​
+
+
 /* —————————————————— Links —————————————————— */
-​
-​
+
+
 a {color: white}
-​
+
 a:visited{
     color: white ; }
 a:active{
@@ -21,9 +21,9 @@ a:active{
 a:hover{
      color: #212e9b ;
      text-decoration: none; }
-​
+
 /* —————————————————— Alert Messages —————————————————— */
-​
+
 .alert_message {
     border: #fa8e58;
     color: #212e9b;
@@ -33,37 +33,36 @@ a:hover{
     font-size: 18px;
     z-index: 0;
 }
-​
+
 /* —————————————————— Body —————————————————— */
-​
+
 body {
     background: linear-gradient(#f99e71, #91b0fe);
     color: black;
     background-repeat: no-repeat;
     height:100%;
+
 }
-​
-.message {
-  background: linear-gradient(#FDE4D8, #E1E9FE)
-        }
-​
+
 /* —————————————————— Pictures —————————————————— */
-​
+
 .logo_navbar {
     width: 100px
 }
-​
+
 .logo {
     width: 200px
 }
-​
+
 h1 {
     font-family: bureau-grot, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: black
 }
-​
+
+
+
 /* —————————————————— Catchline —————————————————— */
 #catchline {
     font-family: bureau-grot-condensed, sans-serif;
@@ -75,14 +74,20 @@ h1 {
     text-align: center;
     border: #ffffff 5px solid
 }
-​
+
 /* —————————————————— Punchline —————————————————— */
-​
+
 #punchline {
     font-size: 5em;
     line-height: 0.9;
 }
-​
+
+
+#keywords {
+    font-size: 6.7em;
+    line-height: 0.9;
+}
+
 nav {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
@@ -91,39 +96,39 @@ nav {
     font-size: 16px;
     padding-left: 50%;
 }
-​
+
 nav a:link {
     color: white;
 }
-​
+
 nav a:hover {
     color: darkgray;
 }
-​
+
 nav a:visited {
     color: white;
 }
-​
+
 nav a:active {
     color: darkgray;
 }
-​
-​
+
+
 .nav-item a:link {
     color: whitesmoke;
     list-style: none;
-​
+
 }
-​
+
 .nav-item a:hover {
     color: dimgray;
     border: #fa8e58
 }
-​
+
 .nav-item a:visited {
     color: whitesmoke;
 }
-​
+
 #add_crush_btn {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
@@ -138,29 +143,29 @@ nav a:active {
     -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7;
     box-shadow: 5px 5px 15px 5px #ffc4a7;
 }
-​
+
 .rounded-circle:hover {
     opacity: 0.6;
     transition: 0.3s;
 }
-​
+
 li{        list-style: none;
 }
 /*————————————————————————— Cartes Crushes —————————————————————————*/
-​
+
 #card-show {
     display: flex;
     justify-content: center;
     height: 100%;
 }
-​
+
 .card {
-​
+
     -webkit-box-shadow: 5px 5px 0px 0px, #212e9b;
     box-shadow: 5px 5px 0px 0px #212e9b;
-​
+
 }
-​
+
 .card-title {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 200;
@@ -168,10 +173,10 @@ li{        list-style: none;
     font-size: 2em;
     line-height: 1;
     color: #212e9b;
-​
+
 }
-​
-​
+
+
 .presentation_text {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 200;
@@ -180,8 +185,8 @@ li{        list-style: none;
     line-height: 1.2;
     color: #ffff;
 }
-​
-​
+
+
 .card-text {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
@@ -189,7 +194,7 @@ li{        list-style: none;
     font-size: 15px;
     line-height: 1.2;
 }
-​
+
 .card-subtitle {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -197,8 +202,10 @@ li{        list-style: none;
     line-height: 1.0;
     font-size: 15px;
     padding-bottom: 5px;
+
+    padding-bottom: 5px;
 }
-​
+
 .card-quote {
     color: #D06D59;
     font-family: bureau-grot, sans-serif;
@@ -207,7 +214,7 @@ li{        list-style: none;
     font-size: 25px;
     line-height: 1.1;
 }
-​
+
 .card-credit {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
@@ -215,7 +222,7 @@ li{        list-style: none;
     color: #D06D59;
     font-size: 18px;
 }
-​
+
 .card-author {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
@@ -223,7 +230,7 @@ li{        list-style: none;
     font-size: 25px;
     line-height: 1.1;
 }
-​
+
 .crush-link-btn {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -235,20 +242,20 @@ li{        list-style: none;
     background-color: #7d7d7d;
     background: #febf9f;
 }
-​
-​
+
+
 #square {
     border: #000000;
     border: 1px;
     border-radius: 0;
 }
-​
+
 #title {
     color: #fa8e58;
     font-weight: 300;
     font-family: bureau-grot, sans-serif
 }
-​
+
 #title-crush {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
@@ -256,45 +263,45 @@ li{        list-style: none;
     font-size: 25px;
     background-color: #ffffff
 }
-​
+
 #kind_of_book {
     font-family: 25px;
 }
-​
+
 #sub_category {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 900;
     font-style: normal;
 }
-​
-​
+
+
 /*————————————————————————— Edit Form Text —————————————————————————*/
-​
+
 .edit-form-text {
     padding-top: 10px;
     line-height: 0.8;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 400;
 }
-​
+
 /* —————————————————— Bouton Crush —————————————————— */
 #crush-link:active {
     color: rosybrown;
 }
-​
+
 #crush-link :link,
-#crush-link :visited {
+#crush-link:visited {
     color: white;
 }
-​
-#crush-link :hover {
+
+#crush-link:hover {
 
     text-decoration: inherit;
     color: #cd591f;
 }
-​
+
 /* —————————————————— BADGE Lien —————————————————— */
-​
+
 #badge {
     margin-left: 8px;
     margin-right: 8px;
@@ -303,37 +310,37 @@ li{        list-style: none;
     font-style: normal;
     background: none
 }
-​
+
 #badge :link,
 #badge :visited {
     color: black;
 }
-​
+
 #badge :hover {
     color: dimgray;
     text-decoration: inherit
 }
-​
-​
+
+
 /* —————————————————— Input email / password —————————————————— */
-​
+
 #inputEmail,
 #inputPassword {
     border-radius: 0;
     border-color: black;
     font-size: 15px
 }
-​
+
 #inputPassword {
     border-top: 0
 }
-​
+
 #inputPassword-border {
     border-radius: 0;
     border-color: black;
     font-size: 15px
 }
-​
+
 #six-min {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -341,9 +348,9 @@ li{        list-style: none;
     font-size: 13px;
     padding-left: 10px
 }
-​
+
 /* —————————————————— Boutons sign up / sign in —————————————————— */
-​
+
 #btn-signin-signup {
     background-color: #ffffff;
     color: #CC5F49;
@@ -357,15 +364,15 @@ li{        list-style: none;
     font-style: normal;
     font-size: 25px;
 }
-​
-#btn-signin-signup :hover {
+
+#btn-signin-signup:hover {
     opacity: 0.5;
     color: #CC5F49;
     transition: 0.3s;
 }
-​
+
 /* —————————————————— Boutons join us —————————————————— */
-​
+
 #btn-white{
     background-color: #ffffff;
     color: #CC5F49;
@@ -379,13 +386,13 @@ li{        list-style: none;
     font-style: normal;
     font-size: 25px;
 }
-​
-#btn-white :hover {
+
+#btn-white:hover {
     opacity: 0.5;
     color: #CC5F49;
     transition: 0.3s;
 }
-​
+
 #forgot_yr-pwd {
     font-size: 15px;
     border-radius: 0;
@@ -396,7 +403,7 @@ li{        list-style: none;
     font-family: neue-haas-unica, sans-serif;
     justify-content: center;
 }
-​
+
 #btn-remove {
     background-color: #5D67B6;
     text-align: center;
@@ -408,7 +415,7 @@ li{        list-style: none;
     font-style: normal;
     font-size: 15px; border: 0
 }
-​
+
 #btn-editprofile {
     font-size: 20px;
     border-radius: 20px;
@@ -419,8 +426,8 @@ li{        list-style: none;
     font-family: bureau-grot-condensed, sans-serif;
     justify-content: center;
 }
-​
-​
+
+
 #get_library_btn {
     background: #212e9b;
     font-family: bureau-grot-condensed, sans-serif;
@@ -439,7 +446,7 @@ li{        list-style: none;
     padding-right: 40px;
     border-radius: 0
 }
-​
+
 #get_library_btn_sm {
     background: #fa8e58;
     font-family: neue-haas-unica, sans-serif;
@@ -450,13 +457,13 @@ li{        list-style: none;
     border-radius: 0;
     border: 0
 }
-​
-​
-​
+
+
+
 #jumbotron_colored {
     background: #f5e5dd
 }
-​
+
 #btn-message {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
@@ -464,7 +471,7 @@ li{        list-style: none;
     font-size: 18px;
     color: black
 }
-​
+
 #btn_update_profile {
     background: #fa8e58;
     font-family: neue-haas-unica, sans-serif;
@@ -478,9 +485,9 @@ li{        list-style: none;
     position: relative;
     right: 5%;
 }
-​
+
 /* —————————————————— Mails —————————————————— */
-​
+
 .welcome-title {
     font-family: bureau-grot, sans-serif;
     font-weight: 100;
@@ -489,7 +496,7 @@ li{        list-style: none;
     line-height: 1.2;
     color: #000000
 }
-​
+
 .welcome-text {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -497,16 +504,16 @@ li{        list-style: none;
     font-size: 19px;
     color: black
 }
-​
+
 .welcome-footer {
     font-size: 14px;
 }
-​
+
 .color-bgd {
     border-radius: 0;
     color: #e5e5e5
 }
-​
+
 .img_shadow {
     -webkit-box-shadow: 5px 5px 0px 0px #000000;
     box-shadow: 5px 5px 0px 0px #000000;
@@ -514,30 +521,44 @@ li{        list-style: none;
     border-radius: 0;
     border-color: black
 }
-​
-​
+
+
 #info {
     line-height: 1.3;
     color: #6d6d6d;
     font-size: 15px;
 }
-​
+
 /* —————————————————— Rubric chapter —————————————————— */
-​
+
 #rubric_chapter {
    color: #FFF
 }
-​
-​
-​
+
+
+
+/* —————————————————— Media Queries —————————————————— */
+
+@media only screen and (max-width: 600px) {
+    #punchline {
+        font-size: 3em;
+        line-height: 1.0;
+    }
+
+    .crush-link-btn {
+
+        padding: 15px 15px;
+    }
+}
+
 @media only screen and (max-width: 990px) {
-​
+
     .nav-item {
         display: flex;
         justify-content: center;
 
     }
-​
+
 
     #catchline {
         font-family: bureau-grot-condensed, sans-serif;
@@ -549,25 +570,21 @@ li{        list-style: none;
         text-align: center;
     }
 
+
+
 }
 
-    #keywords {
-        font-size: 6.7em;
-        line-height: 0.9;
-    }
 
-​
-​
 /* —————————————————— Library —————————————————— */
-​
+
 #show_librairies_cart {
     display: flex;
     align-items: flex-start;
     flex-flow: wrap;
 }
-​
+
 /* —————————————————— Toggler Icon —————————————————— */
-​
+
 .bar1,
 .bar2,
 .bar3 {
@@ -577,23 +594,23 @@ li{        list-style: none;
     margin: 6px 0;
     transition: 0.4s;
 }
-​
+
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
 }
-​
+
 .change .bar2 {
     opacity: 0;
 }
-​
+
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-​
+
 /* —————————————————— Logo shelf —————————————————— */
-​
+
 .text-about{
     display: flex;
     text-align: left;
@@ -605,44 +622,51 @@ li{        list-style: none;
     color: white
 }
 /* —————————————————— Button Inbox Message —————————————————— */
-​
+
+
 .bg-white{
     background-color: white;
                 }
-​
+
  ul {
       list-style-type: none;
 }
-​
+
 .message_first_name {
+
     color: #6d6d6d;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-size: 2em}
-​
-​
+
+
     /* —————————————————— Inbox Page —————————————————— */
-​
-    .image-cropped {
+
+    .image-cropped{
         width: 200px;
         height:200px;
         object-fit: cover;
 
     }
-​
-    .text-inbox {font-family: bureau-grot-condensed, sans-serif;
+
+    .text-inbox{font-family: bureau-grot-condensed, sans-serif;
         font-weight: 300;
         font-size: 4em ;
         }
-​
+
     .text-inbox a:link {color: #212e9b}
     .text-inbox a:visited {color: #212e9b}
     .text-inbox a:active {color: #5D67B6}
     .text-inbox a:hover {color: #5D67B6}
-​
-​
-​
-​
+
+
+
+ a:hover{ color: white ;
+            text-decoration: line-through }
+a:visited{ color: white ; }
+a:active{ color: white ; }
+
+
  .comment {
     width: 152%;
     height: 100px;
@@ -654,8 +678,8 @@ li{        list-style: none;
     border:0;
     border-radius: 5px
     }
-​
-    #btn-send {
+
+    #btn-send{
     background-color: #FFFFFF;
     background-color: #ffffff;
     color: #CC5F49;
@@ -669,10 +693,10 @@ li{        list-style: none;
     font-style: normal;
     font-size: 25px;
     }
-​
+
 
 /* —————————————————— footer —————————————————— */
-​
+
 .text-footer {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
@@ -680,7 +704,7 @@ li{        list-style: none;
     font-size: 16px;
     color: black
 }
-​
+
 .footer-link a :visited {
     color: black
 }
@@ -690,20 +714,20 @@ li{        list-style: none;
     font-size: 18px;
 
 }
-​
+
 .footer-link a :active {
     color: white;
 }
-​
+
 a.footer-link :hover {
     color: white;
     text-decoration: line-through
 }
-​
-​
-.to_comment {color: white}
-​
-​
+
+
+.to_comment{color: white}
+
+
 #footer-credit {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
@@ -711,23 +735,24 @@ a.footer-link :hover {
     font-size: 18px;
     bottom: 0%;
 }
-​
-​
+
+
 a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
-a.footer-link:hover {color:white; text-decoration: none; transition: 0.3s;}
-​
-.box {width:50% }
-​
-​
-​
-​
+a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
+
+.box{width:50% }
+
+
+
+
 /* —————————————————— Media Queries —————————————————— */
-​
+
 @media only screen and (max-width: 600px) {
 
-    .navbar-nav {padding-top:20px}
-    .crush-btn {font-size:1.2em
+
+    .navbar-nav{padding-top:20px}
+    .crush-btn{font-size:1.2em
     }
     #catchline {
         font-size: 3.2em;
@@ -740,30 +765,32 @@ a.footer-link:hover {color:white; text-decoration: none; transition: 0.3s;}
         font-size: 2.5em;
         line-height: 1.0;
     }
-​
+
 
     .nav-link {
         font-size: 1.2em;
         line-height:1.2;
         justify-content: center;
     }
-​
-    #form-place {
+
+    #form-place{
         display: flex;
         padding-top: 20px}
-​
-    #login {
+
+    #login{
         padding-bottom: 10px
     }
-}
-​
-​
-/*---------- button view/add crushs ----------*/
-@media only screen and (min-width: 990px) {
-    #crush-link{ padding: 5px 10px;}
+
 
 }
-​
+
+
+/*---------- button view/add crushs ----------*/
+@media only screen and (min-width: 990px) {
+    #crush-link{padding: 5px 10px;}
+
+}
+
 @media only screen and (max-width: 990px) {
     #crush-link{padding: 12px 15px;}
 
