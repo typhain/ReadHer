@@ -1,54 +1,56 @@
 <html>
 
 <body>
-<div class="text-center">
+  <div class="text-center">
 
-  <div class="container pt-5">
-  <h1 class="display-2  presentation_text" id="catchline">Parlons des écrivaines</h1>
+    <div class='container pt-5'>
 
-  <h1 class="display-3 text-center presentation_text m-4 p-4" id="punchline"> Partage tes plus belles lectures.<br>Rencontre d'autres passionné.e.s.<br>Découvre de nouveaux chefs d'oeuvres.</h1>
-    <div class="container d-flex justify-content-center my-4 mb-5">
-      <%if current_user == nil %>
-      <p> <%= link_to "REJOINS-NOUS", new_user_registration_path, class: "btn btn-dark mb-5 ", id: "btn-white"%> </p>
-      <% else %>
-      <p> <%= link_to "AJOUTE TON COUP DE CŒUR", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%> </p>
-      <% end %>
-    </div>
+     <h1 class='display-3 text-center presentation_text m-4 p-4' id='keywords'> Partage • Rencontre • Découvre</h1>
+       <div class='container d-flex justify-content-center my-4 mb-5'>
+        <div class='container'>
+          <div class='container d-flex justify-content-center my-4 mb-5'>
+            <%if current_user == nil %>
+            <p> <%= link_to "REJOINS-NOUS", new_user_registration_path, class: "btn btn-dark mb-5 ", id: "btn-white"%> </p>
+            <% else %>
+            <p> <%= link_to "AJOUTE TON COUP DE COEUR", new_crush_path, class:'btn btn-danger rounded-circle d-flex flex-wrap align-content-center', id: 'add_crush_btn'%> </p>
+            <% end %>
+          </div>
 
-    <div class="row mb-5" id="my_anchor">
-      <% @crushes.each do |n| %>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-12">
-              <div class="card  text-left", id="square">
-                <div class="card-body">
-                 <div class="card-title"><%= n.book_title %></div>
-                  <p class="card-text pr-4"></p>
-                  <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
-                    <p class="card-quote">“<%= n.quote %>”</p>
-                    <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
-                    <div class="d-flex w-100 justify-content-between">
-                      <div>
-                        <ul class="nav nav-pills nav-fill mt-3 mb-2 ">
-                            <li class="nav-item">
-                                <a class="crush-link-btn" id="crush-link" <%= link_to "Consulter", crush_path(n.id)%> </a>
-                            </li>
-                        </ul>
+
+      <div class="row mb-5" id="my_anchor">
+        <% @crushes.each do |n| %>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="card  text-left", id="square">
+                  <div class="card-body">
+                   <div class="card-title"><%= n.book_title %></div>
+                    <p class="card-text pr-4"></p>
+                    <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
+                      <p class="card-quote">“<%= n.quote %>”</p>
+                      <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
+                      <div class="d-flex w-100 justify-content-between">
+                        <div>
+                          <ul class="nav nav-pills nav-fill mt-3 mb-2 ">
+                              <li class="nav-item">
+                                  <a class="crush-link-btn" id="crush-link" <%= link_to "Consulter", crush_path(n.id)%> </a>
+                              </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                </div>
               </div>
-            </div>
-          </div><br>
-        </div>
-      <% end %>
-    </div>
-  </div>
+            </div><br>
+          </div>
+        <% end %>
+      </div>
 
-    <div class="container text-center"
-    <%= will_paginate @crushes %>
-      <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
-    </div>
-    </div>
-  </body>
-</html>
+      <div class="container text-center"
+      <%= will_paginate @crushes %>
+        <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
+      </div>
+      </div>
+      </div
+    </body>
+  </html>

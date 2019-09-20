@@ -12,4 +12,22 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar, :first_name,:last_name, :email, :city, :description])
         devise_parameter_sanitizer.permit(:account_update, keys: [:avatar, :first_name, :last_name, :email, :city, :description])
     end
+
+    def disable_nav
+      @disable_nav = true
+    end
+
+    def disable_footer
+      @disable_footer = true
+    end
+
+    def after_sign_in_path_for(resource)
+      stored_location_for(resource) || crushes_path
+    end
+
+    def after_sign_up_path_for(resource)
+      stored_location_for(resource) || crushes_path
+    end
+
+
 end

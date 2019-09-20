@@ -1,11 +1,11 @@
-html { 
+html {
     min-height:100%;}
 
-h4 { color:white 
+h4 { color:white
     }
 
 .minimum {
-    color: white; 
+    color: white;
     font-size: 15px}
 
 
@@ -19,7 +19,7 @@ a:visited{
 a:active{
     color: white ; }
 a:hover{
-     color: #212e9b ; 
+     color: #212e9b ;
      text-decoration: none; }
 
 /* —————————————————— Alert Messages —————————————————— */
@@ -83,6 +83,12 @@ h1 {
 
 #punchline {
     font-size: 5em;
+    line-height: 0.9;
+}
+
+
+#keywords {
+    font-size: 6.7em;
     line-height: 0.9;
 }
 
@@ -199,7 +205,9 @@ li{        list-style: none;
     font-style: normal;
     line-height: 1.0;
     font-size: 15px;
-    padding-bottom: 5px;    
+    padding-bottom: 5px;
+
+    padding-bottom: 5px;
 }
 
 .card-quote {
@@ -234,7 +242,7 @@ li{        list-style: none;
     font-size: 18px;
     line-height: 0.3;
     border-radius: 20px;
-    
+
     background-color: #7d7d7d;
     background: #febf9f;
 }
@@ -291,7 +299,7 @@ li{        list-style: none;
 }
 
 #crush-link:hover {
-  
+
     text-decoration: inherit;
     color: #cd591f;
 }
@@ -533,17 +541,23 @@ li{        list-style: none;
 
 
 
+/* —————————————————— Media Queries —————————————————— */
 
+@media only screen and (max-width: 600px) {
+    #punchline {
+        font-size: 3em;
+        line-height: 1.0;
+    }
 
 @media only screen and (max-width: 990px) {
 
     .nav-item {
         display: flex;
-        justify-content: center; 
-    
+        justify-content: center;
+
     }
 
-   
+
     #catchline {
         font-family: bureau-grot-condensed, sans-serif;
         font-weight: 500;
@@ -596,8 +610,8 @@ li{        list-style: none;
 /* —————————————————— Logo shelf —————————————————— */
 
 .text-about{
-    display: flex; 
-    text-align: left;  
+    display: flex;
+    text-align: left;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     line-height: 1.2;
@@ -607,7 +621,8 @@ li{        list-style: none;
 }
 /* —————————————————— Button Inbox Message —————————————————— */
 
-.bg-white{ 
+
+.bg-white{
     background-color: white;
                 }
 
@@ -616,7 +631,8 @@ li{        list-style: none;
 }
 
 .message_first_name {
-    color: #6d6d6d;  
+
+    color: #6d6d6d;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
     font-size: 2em}
@@ -628,20 +644,25 @@ li{        list-style: none;
         width: 200px;
         height:200px;
         object-fit: cover;
-        
+
     }
 
     .text-inbox{font-family: bureau-grot-condensed, sans-serif;
         font-weight: 300;
-        font-size: 4em ; 
+        font-size: 4em ;
         }
 
     .text-inbox a:link {color: #212e9b}
-    .text-inbox a:visited {color: #212e9b}     
-    .text-inbox a:active {color: #5D67B6}  
-    .text-inbox a:hover {color: #5D67B6}       
+    .text-inbox a:visited {color: #212e9b}
+    .text-inbox a:active {color: #5D67B6}
+    .text-inbox a:hover {color: #5D67B6}
 
 
+
+ a:hover{ color: white ;
+            text-decoration: line-through }
+a:visited{ color: white ; }
+a:active{ color: white ; }
 
 
  .comment {
@@ -671,7 +692,7 @@ li{        list-style: none;
     font-size: 25px;
     }
 
-   
+
 /* —————————————————— footer —————————————————— */
 
 .text-footer {
@@ -689,7 +710,7 @@ li{        list-style: none;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-size: 18px;
-    
+
 }
 
 .footer-link a :active {
@@ -734,8 +755,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 /* —————————————————— Media Queries —————————————————— */
 
 @media only screen and (max-width: 600px) {
-    
-  
+
+
     .navbar-nav{padding-top:20px}
     .crush-btn{font-size:1.2em
     }
@@ -745,16 +766,16 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
         border: 2px solid #FFFFFF ;
         letter-spacing: 1px
     }
-    
+
     #punchline {
         font-size: 2.5em;
         line-height: 1.0;
     }
 
     .nav-link {
-        font-size: 1.2em; 
+        font-size: 1.2em;
         line-height:1.2;
-        justify-content: center; 
+        justify-content: center;
     }
 
     #form-place{
@@ -765,18 +786,16 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
         padding-bottom: 10px
     }
 
-    
+
 }
 
 
 /*---------- button view/add crushs ----------*/
 @media only screen and (min-width: 990px) {
     #crush-link{padding: 5px 10px;}
- 
+
 }
 
 @media only screen and (max-width: 990px) {
     #crush-link{padding: 12px 15px;}
- 
 }
-

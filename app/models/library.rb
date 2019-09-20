@@ -6,9 +6,7 @@ class Library < ApplicationRecord
   def add_crush(crush)
      current_crush = crush_libraries.find_by(crush_id: crush.id)
      if !current_crush
-       current_item = crush_libraries.create(crush_id: crush.id)
-     else
-      # flash[:alert] = "You already have added this crush to your library")
+       current_crush = crush_libraries.create(crush_id: crush.id)
      end
      current_crush
   end
