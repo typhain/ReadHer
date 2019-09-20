@@ -62,7 +62,7 @@
       <p class="mt-0 card-subtitle mb-1 text-muted"><%= comment.created_at.to_formatted_s(:long)%></p>
       <p class="mt-0 card-text pb-2" style="color:#212e9b"><%= comment.body %></p>
       <p><div class="delete_com text-center"> <% if current_user && comment.user_id == current_user.id %>
-         <%= link_to 'Delete', crush_comment_path(crush_id: @crush), method: :delete %> </div></p>
+         <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete %> </div></p>
 
         <% end %>
     </div>
