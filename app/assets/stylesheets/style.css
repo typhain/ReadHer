@@ -44,10 +44,6 @@ body {
 
 }
 
-
-.message{ background: linear-gradient(#FDE4D8, #E1E9FE)   
-            }
-
 /* —————————————————— Pictures —————————————————— */
 
 .logo_navbar {
@@ -549,6 +545,12 @@ li{        list-style: none;
         line-height: 1.0;
     }
 
+    .crush-link-btn {
+
+        padding: 15px 15px;
+    }
+}
+
 @media only screen and (max-width: 990px) {
 
     .nav-item {
@@ -742,14 +744,6 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 .box{width:50% }
 
 
-.delete_com {
-    background-color: #febf9f;;
-    width: 50% ; 
-    height: 15%;
-    border-radius:50px  
- }
-
- a.delete_com :visited {color:black}
 
 
 /* —————————————————— Media Queries —————————————————— */
@@ -771,6 +765,7 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
         font-size: 2.5em;
         line-height: 1.0;
     }
+
 
     .nav-link {
         font-size: 1.2em;
@@ -798,4 +793,5 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 
 @media only screen and (max-width: 990px) {
     #crush-link{padding: 12px 15px;}
+
 }
