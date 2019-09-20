@@ -661,8 +661,7 @@ li{        list-style: none;
 
 
 
- a:hover{ color: white ;
-            text-decoration: line-through }
+ a:hover{ color: gainsboro ;}
 a:visited{ color: white ; }
 a:active{ color: white ; }
 
@@ -785,6 +784,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 }
 
 
+.button-pages{font-size: larger}
+
 /*---------- button view/add crushs ----------*/
 @media only screen and (min-width: 990px) {
     #crush-link{padding: 5px 10px;}
@@ -794,4 +795,19 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 @media only screen and (max-width: 990px) {
     #crush-link{padding: 12px 15px;}
 
+}
+
+/*---------- button view/add crushs ----------*/
+
+
+.page-link a:link {
+    color: #000000;
+}
+
+.page-link a:hover {
+    color: #000000;
+}
+
+.page-link a:visited {
+    color: #000000;
 }
