@@ -16,13 +16,13 @@
                   <div class="card-subtitle mb-3 text-muted"></div>
                     <p class="card-quote">“<%= crush.quote %>”</p>
                     <p class="card-credit"><%= crush.author_name %> (<%= crush.author_country%>)</p>
-                    <div class="row d-flex justify-content-left ml-3">
+                    <div class="row d-flex justify-content-around ml-0">
                       <div class="text-center">
                         <%= link_to "Consulter", crush_path(crush), class:"btn ", id: "btn-remove" %>
                       </div>
                       <div class="text-center">
-                        <% if current_user =! @user %>
-                      <%= link_to "Supprimer", crush_library_path, :method=>:delete , class:"btn btn-dark", id: "btn-remove" %> 
+                        <% if current_user == @user %>
+                      <%= link_to "Supprimer", crush_library_path, :method=>:delete, class:"btn", id: "btn-remove" %>
                         <% end %>
                       </div>
                     </div>

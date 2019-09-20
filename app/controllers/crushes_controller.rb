@@ -26,9 +26,9 @@ class CrushesController < ApplicationController
     @crush = Crush.new(:user => @user, :book_title=> params[:book_title], :genre => params[:genre], :author_name => params[:author_name], :author_country => params[:author_country], :description => params[:description], :quote => params[:quote])
       if @crush.save
         flash[:success] = "Ton coup de coeur est maintenant visible par tout.e.s ! :)"
-        redirect_to crushes_path(@crush)
+        redirect_to crushes_path
       else
-        render crushs_path
+        render new_crush_path
       end
     end
   end

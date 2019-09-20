@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  
+  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
+
   get 'users/show'
   get 'pages/about'
 
@@ -24,5 +24,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
 
-  
+
 end
