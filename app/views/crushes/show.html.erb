@@ -55,15 +55,17 @@
 <div class="container">
   <div class="container text-left">
     <% @crush.comments.each do |comment| %>
-      <div class="media" >
-        <div class="card pt-4 pr-5 pl-4 text-left" id="square">
-          <div class="media-body ">
-            <h5 class="mt-0 card-title"><b><%= comment.user.first_name %></b></h5>
-            <p class="mt-0 card-subtitle mb-1 text-muted"><%= comment.created_at.to_formatted_s(:long)%></p>
-            <p class="mt-0 card-text pb-2" style="color:#212e9b"><%= comment.body %></p>
-            <p><div class="delete_com text-center"> <% if current_user && comment.user_id == current_user.id %>
-              <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete,class: "btn to_comment", id:"get_library_btn_sm" %> </div></p>
-              <% end %>
+      <div class="container">
+        <div class="media" >
+          <div class="card pt-4 pr-5 pl-4 text-left" id="square">
+            <div class="media-body ">
+              <h5 class="mt-0 card-title"><b><%= comment.user.first_name %></b></h5>
+              <p class="mt-0 card-subtitle mb-1 text-muted"><%= comment.created_at.to_formatted_s(:long)%></p>
+              <p class="mt-0 card-text pb-2" style="color:#212e9b"><%= comment.body %></p>
+              <p><div class="delete_com text-center"> <% if current_user && comment.user_id == current_user.id %>
+                <%= link_to 'Delete', crush_comment_path(crush_id: @crush, id: comment), method: :delete,class: "btn to_comment", id:"get_library_btn_sm" %> </div></p>
+                <% end %>
+              </div>
             </div>
           </div>
         </div><br>
