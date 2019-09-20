@@ -6,7 +6,7 @@ class CrushesController < ApplicationController
     elsif
       @crushes = Crush.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
     else
-      redirect_to crushes_path
+      flash[:info] = "Aucun coup de coeur ne correspond à ta recherche. Reste plus qu'à en créer un ;)"
     end
   end
 
@@ -25,7 +25,8 @@ class CrushesController < ApplicationController
     @user = current_user
     @crush = Crush.new(:user => @user, :book_title=> params[:book_title], :genre => params[:genre], :author_name => params[:author_name], :author_country => params[:author_country], :description => params[:description], :quote => params[:quote])
       if @crush.save
-        redirect_to root_path(@crush)
+        flash[:success] = "Ton coup de coeur est maintenant visible par tout.e.s ! :)"
+        redirect_to crushes_path(@crush)
       else
         render crushs_path
       end
@@ -48,7 +49,7 @@ class CrushesController < ApplicationController
 
   def destroy
     @crush = Crush.find(params[:id]).destroy
-    redirect_to root_path
+    redirect_to crushes_path
   end
 
 end

@@ -17,13 +17,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
-
-      <%= render 'layouts/navbar.html.erb' %>
+      <%= render 'layouts/navbar.html.erb' unless @disable_nav %>
       <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
     <%= yield %>
 <br>
 <br>
 <br>
-  <%= render 'layouts/footer.html.erb' %>
-</body>
+
+  <%= render 'layouts/footer.html.erb' unless @disable_footer %>
+
+  </body>
 </html>
