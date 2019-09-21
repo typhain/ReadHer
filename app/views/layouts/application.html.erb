@@ -18,18 +18,21 @@
   </head>
   <body>
       <%= render 'layouts/navbar.html.erb' unless @disable_nav %>
-      <div  class="alert_message text-center p-2 "><strong><%= flash[:success] %></strong></div>
+     <div class="container"> <div  class="alert_message text-center "><strong><%= flash[:success] %></strong></div></div>
 
       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+      <div class="container col-md-12  d-flex justify-content-center pt-4">  <p class="alert alert-success"><%= notice %></p></div>
       <% end %>
       <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+      <div class="container col-md-12  d-flex justify-content-center pt-4">
+        <p class="alert alert-danger  "><%= alert %></p>
+        </div>
       <% end %>
 
     <%= yield %>
 <br>
 <br>
+
 <br>
 
   <%= render 'layouts/footer.html.erb' unless @disable_footer %>

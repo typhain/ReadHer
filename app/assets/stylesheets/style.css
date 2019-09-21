@@ -67,19 +67,19 @@ h1 {
 #catchline {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
     padding-bottom: 0.5em; margin-top: 0.5em ;margin-bottom: 1em;
-    font-size: 8.5em;
-    line-height: 0.9;
-    text-align: center;
-    border: #ffffff 5px solid
+    font-size: 7em;
+    line-height: 1;
+
+
 }
 
 /* —————————————————— Punchline —————————————————— */
 
 #punchline {
-    font-size: 5em;
-    line-height: 0.9;
+    font-size: 4em;
+    line-height: 1;
 }
 
 
@@ -243,6 +243,7 @@ li{        list-style: none;
     background: #febf9f;
 }
 
+#setting-box{margin-left: -15px}
 
 #square {
     border: #000000;
@@ -541,7 +542,7 @@ li{        list-style: none;
 
 @media only screen and (max-width: 600px) {
     #punchline {
-        font-size: 3em;
+        font-size: 4em;
         line-height: 1.0;
     }
 
@@ -661,8 +662,7 @@ li{        list-style: none;
 
 
 
- a:hover{ color: white ;
-            text-decoration: line-through }
+ a:hover{ color: gainsboro ;}
 a:visited{ color: white ; }
 a:active{ color: white ; }
 
@@ -755,14 +755,13 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     .crush-btn{font-size:1.2em
     }
     #catchline {
-        font-size: 3.2em;
+        font-size: 3.5em;
         line-height: 1.0;
-        border: 2px solid #FFFFFF ;
         letter-spacing: 1px
     }
 
     #punchline {
-        font-size: 2.5em;
+        font-size: 3em;
         line-height: 1.0;
     }
 
@@ -785,6 +784,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 }
 
 
+.button-pages{font-size: larger}
+
 /*---------- button view/add crushs ----------*/
 @media only screen and (min-width: 990px) {
     #crush-link{padding: 5px 10px;}
@@ -795,3 +796,22 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     #crush-link{padding: 12px 15px;}
 
 }
+
+/*---------- button view/add crushs ----------*/
+
+
+.page-link a:link {
+    color: #000000;
+}
+
+.page-link a:hover {
+    color: #000000;
+}
+
+.page-link a:visited {
+    color: #000000;
+}
+
+#error_explanation{color:white}
+
+#alerte-devise, #error_explanation{color: #212e9b}
