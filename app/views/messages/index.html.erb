@@ -1,7 +1,7 @@
 <html class="message">
 <div class="container ">
   <div class="jumbotron bg-white card" id="square">
-  <h2 class="card-title pb-2 text-left">Conversation avec … </h2>
+  <h2 class="card-title pb-2 text-left">Conversation avec <%= @receiver.first_name %></h2>
 
       <ul class="col-sm-12 border rounded p-2">
         <% @messages.each do |message| %>
@@ -9,8 +9,9 @@
             <li>
               <div class="media">
                 <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
-                <div class="media-body >
+                <div class="media-body">
                     <h5 class="mt-0 message_first_name"><%= message.user.first_name %></h5>
+                    <p class="text-muted"> <%= message.created_at.to_formatted_s(:long)%></p>
                     <p class="text-muted"> <%= message.body %></p>
                 </div>
               </div>
@@ -24,9 +25,9 @@
       <div class="col-8">
         <%= form_for [@conversation, @message] do |f| %>
           <div class="field " >
-            <%= f.text_area :body, placeholder: "Your message", class:"comment rounded-0" %>
+            <%= f.text_area :body, placeholder: "Ton message", class:"comment rounded-0" %>
           </div>
-          <%= f.submit "Send", id: "btn-send" %>
+          <%= f.submit "Envoyer", id: "btn-send" %>
         <% end %>
       </div>
   </div>
