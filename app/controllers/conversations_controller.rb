@@ -18,7 +18,7 @@ class ConversationsController < ApplicationController
  def destroy
    @conversation = Conversation.find_by(params[:sender_id], params[:receiver_id])
    @conversation.destroy
-   redirect_to conversations_path(@conversation)
+   redirect_to conversations_path
  end
 
 private
