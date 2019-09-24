@@ -14,7 +14,7 @@ Built with Ruby on Rails 2.5.1
 
 ## How it work ?
 
-### Database 
+### Database
 - Users
 - Crushes
 - Libraries
@@ -29,9 +29,9 @@ Built with Ruby on Rails 2.5.1
 2. Select the other crushes to store them in their library
 3. Use a search bar to find a specific book or author
 4. Send or receive private messages
-5. Comment the other crushes. 
+5. Comment the other crushes.
 
-### Front 
+### Front
 
 Readher uses the framework Bootstrap.
 
@@ -42,11 +42,8 @@ To get the Rails server running locally:
 - Clone this repo
 - bundle install to install all the dependencies : ```$ bundle install```
 - rake db:migrate to make all database migrations: ```$ Rails db:migrate```
-- start the local server : ```$ Rails s``` 
+- start the local server : ```$ Rails s```
 
 ## Code overview
 
 Devise - For implementing authentication
-
-
-
