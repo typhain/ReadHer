@@ -28,7 +28,7 @@
 
         <% if current_user == nil %>
           <li class="nav-item border  py-1 px-2 mx-2 d-flex justify-align-items">
-          <%= link_to "Login", new_user_session_path, class:"nav-link" , id:"login"%>
+          <%= link_to "Se connecter", new_user_session_path, class:"nav-link" , id:"login"%>
           </li>
           <li class="nav-item border py-1 px-2 mx-2">
           <%= link_to "Crée ton compte", new_user_registration_path, class:"nav-link" %>
@@ -46,7 +46,7 @@
             <% end %>
 
             <li class="nav-item border py-1 px-2 mx-2">
-            <a <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
+            <a <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
         </li>
           <% end %>
 </ul>
@@ -56,7 +56,7 @@
 
     <%= form_tag crushes_path, method: :get do %>
         <%= text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class:"form-control border-0" %>
-        <%= submit_tag 'Search!', class:"btn btn-outline-light mx-2", type:"submit"%>
+        <%= submit_tag 'Rechercher', class:"btn btn-outline-light mx-2", type:"submit"%>
 
     <% end %>
     </li>
