@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      crush:
+        book_title: "Titre du livre"
+        author_name: "Autrice"
+        author_country: "Pays"
+        description: "Son importance dans ta vie"
+        quote: "Citation marquante"
+
+    

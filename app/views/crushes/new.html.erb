@@ -11,14 +11,17 @@
   <%= form_tag crushes_path, :method => :post do  %>
 
   <% if !!flash[:errors] %>
-    <% flash[:errors].each do |e| %>
-    <p><%= e %></p> <br>
-    <% end %>
+    <div id="error_explanation">
+      <% flash[:errors].each do |e| %>
+      <p><%= e %></p> 
+      <% end %>
+    </div>
   <% end %>
+
 <br>
 
   <div class="form-group">
-    <%= text_field_tag('book_title', '', class:'form-control', placeholder:"Titre du livre", autofocus: 'true', id: "inputEmail")%>
+    <%= text_field_tag('book_title', '', class:'form-control invaliud', placeholder:"Titre du livre", autofocus: 'true', id: "inputEmail")%>
   </div>
   <div class="form-group">
     <%= text_field_tag('author_name', '', class:'form-control', placeholder:"Autrice", id: "inputEmail")%>
