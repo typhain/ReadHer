@@ -16,6 +16,7 @@ class CrushesController < ApplicationController
   end
 
   def new
+    @crush = Crush.new
   end
 
   def create
@@ -28,6 +29,7 @@ class CrushesController < ApplicationController
         flash[:success] = "Ton coup de coeur est maintenant visible par tout.e.s ! :)"
         redirect_to crushes_path
       else
+        flash[:errors] = @crush.errors.full_messages
         render new_crush_path
       end
     end

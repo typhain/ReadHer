@@ -6,25 +6,34 @@
 
 <br>
 
+
 <div class="container pb-4 mb-5">
   <%= form_tag crushes_path, :method => :post do  %>
+
+  <% if !!flash[:errors] %>
+    <% flash[:errors].each do |e| %>
+    <p><%= e %></p> <br>
+    <% end %>
+  <% end %>
+<br>
+
   <div class="form-group">
-    <%= text_field_tag('book_title', '', class:'form-control', placeholder:"Titre du livre", required:'true', autofocus: 'true', id: "inputEmail")%>
+    <%= text_field_tag('book_title', '', class:'form-control', placeholder:"Titre du livre", autofocus: 'true', id: "inputEmail")%>
   </div>
   <div class="form-group">
-    <%= text_field_tag('author_name', '', class:'form-control', placeholder:"Auteure", required:'true', id: "inputEmail")%>
+    <%= text_field_tag('author_name', '', class:'form-control', placeholder:"Autrice", id: "inputEmail")%>
   </div>
   <div class="form-group">
-    <%= text_field_tag('genre', '', class:'form-control', placeholder:"Genre", required:'true', id: "inputEmail")%>
+    <%= text_field_tag('genre', '', class:'form-control', placeholder:"Genre", id: "inputEmail")%>
   </div>
   <div class="form-group">
-    <%= text_field_tag('author_country', '', class:'form-control', placeholder:"Pays", required:'true', id: "inputEmail")%>
+    <%= text_field_tag('author_country', '', class:'form-control', placeholder:"Pays", id: "inputEmail")%>
   </div>
   <div class="form-group">
-    <%= text_area_tag('description', '', class:'form-control', placeholder:"Pourquoi elle a compté pour toi ?", required:'true', id: "inputEmail")%>
+    <%= text_area_tag('description', '', class:'form-control', placeholder:"Pourquoi a-t-elle compté pour toi ?", id: "inputEmail")%>
   </div>
   <div class="form-group ">
-    <%= text_field_tag('quote', '', class:'form-control', placeholder:"Une citation qui t'a marqué.e", required:'true', id: "inputEmail")%>
+    <%= text_field_tag('quote', '', class:'form-control', placeholder:"Une citation qui t'a marqué.e", id: "inputEmail")%>
   </div>
   <%= submit_tag "Publier", class: "btn btn-dark mt-4 justify-align-end", id:"btn-white" %>
 </div>
