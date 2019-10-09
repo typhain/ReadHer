@@ -39,16 +39,23 @@
           <%= link_to "Profil", user_path(current_user.id), class:"nav-link" %>
           </li>
 
-        <li class="nav-item py-2 px-2 mx-1">
+          <li class="nav-item py-2 px-2 mx-1">
             <% if current_user %>
             <%= link_to  "Bibliothèque", library_path(current_user), class:"nav-link" %>
-        </li>
+          </li>
             <% end %>
 
             <li class="nav-item border py-1 px-2 mx-2">
             <a <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
-        </li>
-          <% end %>
+            </li>
+            <% end %>
+
+            <% if isAdmin? %>
+            <li class="nav-item border py-2 px-2 mx-1">
+            <%= link_to "Admin", class:"nav-link" %>
+            </li>
+            <% end %>
+
 </ul>
     <form class="form-inline my-2 d-flex justifiy-content-center">
 

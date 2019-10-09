@@ -13,25 +13,51 @@
         <p class="card-text"><%= @crush.description%><p>
                 <hr>
 
-        <% if current_user != @crush.user %>
+      <div class="container">
+
+        <% if isNotCrushAuthor? %>
         <ul class="nav nav-pills nav-fill mt-4">
+
           <li class="nav-item" >
              <%= link_to "Ajouter à ma bibliothèque", crush_libraries_path(:id => @crush), method: :post, class: 'crush-link-btn', id: 'crush-link' %>
           </li>
           <% end %>
-        <% if current_user && current_user != @crush.user %>
+
+        <% if current_user && isNotCrushAuthor? %>
           <li class="nav-item" >
-          <%= link_to "Qui a partagé ça ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
-       </li>
-        </ul>
+            <%= link_to "Qui a partagé ça ?", user_path(@crush.user), class: "crush-link-btn", id: "crush-link"%>
+          </li>
           <% end %>
 
-          <% if current_user == @crush.user %>
-          <a class="crush-link-btn" id="crush-link" <%= link_to "Editer", edit_crush_path(@crush)%> </a>
-          <a class="crush-link-btn" id="crush-link" <%= link_to "Supprimer", crush_path(@crush), method: :delete %> </a>
+          <% if isAdmin? && isNotCrushAuthor? %>
+          <li class="nav-item" >
+            <a class="crush-link-btn" id="crush-link" <%= link_to "Modérer", edit_crush_path(@crush)%> </a>
+         </li>
+          <% end %>
+
+        </ul>
+      </div>
+
+      <div class="container d-flex">
+
+        <% if isCrushAuthor? %>
+        <ul class="nav nav-pills nav-fill mt-4">
+
+          <li class="nav-item mx-5" >
+            <a class="crush-link-btn" id="crush-link" <%= link_to "Editer", edit_crush_path(@crush)%> </a>
+          </li>
+
+          <li class="nav-item" >
+            <a class="crush-link-btn" id="crush-link" <%= link_to "Supprimer", crush_path(@crush), method: :delete %> </a>
+          </li>
         <% end %>
-  </div>
-</div>
+
+        </ul>
+
+      </div>
+
+      </div>
+    </div>
 
   <div class="row pt-3">
     <div class="col-sm-10">

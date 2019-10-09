@@ -345,7 +345,8 @@ CREATE TABLE public.users (
     description character varying,
     last_name character varying,
     first_name character varying DEFAULT 'Anonyme'::character varying,
-    city character varying
+    city character varying,
+    role character varying
 );
 
 
@@ -699,6 +700,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190916124233'),
 ('20190917115450'),
 ('20190917115500'),
-('20190918085615');
+('20190918085615'),
+('20191009111605');
 
 

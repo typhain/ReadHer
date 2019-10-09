@@ -25,5 +25,8 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
 
-
+  scope 'admin', module: 'admin', as: 'admin' do
+    resources :crushes
+  end
+  
 end
