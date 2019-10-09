@@ -41,4 +41,10 @@ en:
         description: "Son importance dans ta vie"
         quote: "Citation marquante"
 
-    
+  activerecord:
+    attributes:
+      user:
+        first_name: "Prénom"
+        last_name: "Nom"
+        description: "Bio"
+        city: "Ville"

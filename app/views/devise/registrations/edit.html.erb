@@ -21,22 +21,22 @@
                         </div>
 
                         <div class="field ">
-                          <%= f.label :first_name, :class => "edit-form-text" %><br />
+                          <%= f.label "Prénom", :class => "edit-form-text" %><br />
                           <%= f.text_field :first_name, :class => "form-control", :id =>"inputEmail",  autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :last_name ,  :class => "edit-form-text" %><br />
+                          <%= f.label "Nom",  :class => "edit-form-text" %><br />
                           <%= f.text_field :last_name, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :city, :class => "edit-form-text" %><br />
+                          <%= f.label "Ville", :class => "edit-form-text" %><br />
                           <%= f.text_field :city, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :description , :class => "edit-form-text" %><br />
+                          <%= f.label "Bio" , :class => "edit-form-text" %><br />
                           <%= f.text_area :description, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
                     </div>
@@ -52,10 +52,10 @@
                     <% end %>
 
                     <div class="field">
-                      <%= f.label :password, :class => "edit-form-text"%> <div id="info">(leave blank if you don’t want to change it)</div>
+                      <%= f.label :password, :class => "edit-form-text"%> <div id="info">(Laisse ce champ vide si tu ne souhaites pas modifier ton mot de passe)</div>
                       <%= f.password_field :password, autocomplete: "new-password", :class => "form-control", :id =>"inputEmail" %>
                       <% if @minimum_password_length %>
-                        <em id="info"><%= @minimum_password_length %> characters minimum  </em>
+                        <em id="info"><%= @minimum_password_length %> caractères minimum </em>
                       <% end %>
                     </div>
 
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="field">
-                      <%= f.label :current_password, :class => "edit-form-text" %> <br /><div id="info">(we need your current password to confirm your changes)</div>
+                      <%= f.label :current_password, :class => "edit-form-text" %> <br /><div id="info">(Nous avons besoin de ton mot de passe actuel pour confirmer tes modifications.)</div>
                       <%= f.password_field :current_password, autocomplete: "current-password", :class => "form-control", :id =>"inputEmail" %>
                     </div>
                     </div>
