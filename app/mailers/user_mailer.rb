@@ -1,9 +1,9 @@
 class UserMailer < ApplicationMailer
-  default from: 'no-reply@monsite.fr'
+  default from: 'ReadHer'
 
   def welcome_send(user)
     @user = user
      mail( :to => @user.email,
-     :subject => 'Thanks for signing up for our amazing app' )
+     :subject => 'Bienvenue sur ReadHer :)' )
    end
 end

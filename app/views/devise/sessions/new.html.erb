@@ -11,12 +11,12 @@
 
             <div class="field text-left">
 
-              <%= f.email_field :email, :class => "form-control", autocomplete: "email", placeholder:"Email", :id =>"inputEmail"  %>
+              <%= f.email_field :email, :class => "form-control", autocomplete: "email", placeholder:"Ton Email", :id =>"inputEmail"  %>
             </div>
 
             <div class="field text-left">
               </br>
-              <%= f.password_field :password, :class => "form-control", autocomplete: "current-password",placeholder:"Password", :id =>"inputEmail"  %>
+              <%= f.password_field :password, :class => "form-control", autocomplete: "current-password",placeholder:"Mot de passe", :id =>"inputEmail"  %>
             </div>
 
             <% if devise_mapping.rememberable? %>
