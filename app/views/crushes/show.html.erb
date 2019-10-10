@@ -6,7 +6,7 @@
       <a> <b><%= @crush.book_title%> </b></a>
     </h5>
       <div class="card-body">
-        <p class="card-author "> <%= @crush.user.first_name %> <%= @crush.user.last_name %></p>
+        <p class="card-author "> <%= @crush.user.pseudo %></p>
         <div class="card-subtitle mt-2 mb-2 text-muted" id="kind_of_book"><%= @crush.genre %></div>
         <p class="card-quote">“<%= @crush.quote %>”</p>
         <p class="card-credit"><%= @crush.author_name %> (<%= @crush.author_country %>)</p>
@@ -85,7 +85,7 @@
         <div class="media" >
           <div class="card pt-4 pr-5 pl-4 text-left" id="square">
             <div class="media-body ">
-              <h5 class="mt-0 card-title"><b><%= comment.user.first_name %></b></h5>
+              <h5 class="mt-0 card-title"><b><%= comment.user.pseudo %></b></h5>
               <p class="mt-0 card-subtitle mb-1 text-muted"><%= comment.created_at.to_formatted_s(:long)%></p>
               <p class="mt-0 card-text pb-2" style="color:#212e9b"><%= comment.body %></p>
               <p><div class="delete_com text-center"> <% if current_user && comment.user_id == current_user.id %>
