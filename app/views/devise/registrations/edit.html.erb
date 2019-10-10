@@ -21,7 +21,12 @@
                         </div>
 
                         <div class="field ">
-                          <%= f.label "Prénom", :class => "edit-form-text" %><br />
+                          <%= f.label 'Pseudo', :class => "edit-form-text" %><br />
+                          <%= f.text_field :pseudo, :class => "form-control", :id =>"inputEmail",  autofocus: true, autocomplete: "email" %>
+                        </div>
+
+                        <div class="field ">
+                          <%= f.label 'Prénom', :class => "edit-form-text" %><br />
                           <%= f.text_field :first_name, :class => "form-control", :id =>"inputEmail",  autofocus: true, autocomplete: "email" %>
                         </div>
 
