@@ -25,7 +25,7 @@ class User < ApplicationRecord
   end
 
   def set_pseudo
-    self.pseudo = self.email.split('@')[0].capitalize
+    self.update(pseudo: self.email.split('@')[0].capitalize)
   end
 
 

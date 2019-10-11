@@ -344,7 +344,7 @@ CREATE TABLE public.users (
     updated_at timestamp without time zone NOT NULL,
     description character varying,
     last_name character varying,
-    first_name character varying DEFAULT 'Anonyme'::character varying,
+    first_name character varying,
     city character varying,
     role character varying,
     pseudo character varying
