@@ -344,8 +344,10 @@ CREATE TABLE public.users (
     updated_at timestamp without time zone NOT NULL,
     description character varying,
     last_name character varying,
-    first_name character varying DEFAULT 'Anonyme'::character varying,
-    city character varying
+    first_name character varying,
+    city character varying,
+    role character varying,
+    pseudo character varying
 );
 
 
@@ -699,6 +701,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190916124233'),
 ('20190917115450'),
 ('20190917115500'),
-('20190918085615');
+('20190918085615'),
+('20191009111605'),
+('20191010100709');
 
 

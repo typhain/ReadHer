@@ -1,5 +1,8 @@
 class CrushesController < ApplicationController
 
+  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
+  before_action :set_crush, only:[:show, :edit, :update, :destroy]
+
   def index
     if params[:term]
       @crushes = Crush.roughly_spelled_like(params[:term]).paginate(:page => params[:page], :per_page => 10)
@@ -12,7 +15,6 @@ class CrushesController < ApplicationController
 
 
   def show
-    @crush = Crush.find(params[:id])
   end
 
   def new
@@ -36,11 +38,9 @@ class CrushesController < ApplicationController
   end
 
   def edit
-    @crush = Crush.find(params[:id])
   end
 
   def update
-    @crush = Crush.find(params[:id])
 
     if @crush.update(crush_params)
     redirect_to @crush
@@ -50,13 +50,18 @@ class CrushesController < ApplicationController
   end
 
   def destroy
-    @crush = Crush.find(params[:id]).destroy
+    @crush.destroy
     redirect_to crushes_path
   end
 
 end
 
 private
+
   def crush_params
     params.require(:crush).permit(:user, :book_title, :genre, :author_name, :author_country, :description, :quote)
+  end
+
+  def set_crush
+    @crush = Crush.find(params[:id])
   end

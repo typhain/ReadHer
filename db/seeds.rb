@@ -18,6 +18,7 @@ CrushLibrary.destroy_all
   user = User.new
   user.skip_sending_welcome_email = true
   user.email = Faker::Internet.email
+  user.pseudo = Faker::Superhero.descriptor
   user.first_name = Faker::Name.first_name
   user.last_name = Faker::Name.last_name
   user.description = Faker::Lorem.paragraph
