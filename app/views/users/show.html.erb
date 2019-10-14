@@ -30,11 +30,14 @@
 
       <% if current_user != @user && @user.crushes.blank? %>
         <p class="card-body text-center"> <%= "#{@user.pseudo} n'a rien partagé pour l'instant" %> <p>
+
       <% elsif current_user == @user && @user.crushes.blank? %>
+      
       <div class= "container text-center">
         <p class="card-body text-center">Tu n'as rien partagé pour l'instant.<p>
-        <%= link_to "Partage ton premier coup de coeur", new_crush_path, class: "btn", id: "get_library_btn_sm" %>
+        <%= link_to "Partage ton coup de coeur", new_crush_path, class: "btn", id: "get_library_btn_sm" %>
       </div>
+
       <% else %>
         <div class="row">
           <% @user.crushes.each do |n| %>
