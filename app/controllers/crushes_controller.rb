@@ -4,13 +4,16 @@ class CrushesController < ApplicationController
   before_action :set_crush, only:[:show, :edit, :update, :destroy]
 
   def index
-    if params[:term]
+
+    if params[:term].blank?
+    @crushes = Crush.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+
+    elsif params[:term].present? && !params[:term].nil?
       @crushes = Crush.roughly_spelled_like(params[:term]).paginate(:page => params[:page], :per_page => 10)
     elsif
-      @crushes = Crush.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
-    else
       flash[:info] = "Aucun coup de coeur ne correspond à ta recherche. Reste plus qu'à en créer un ;)"
     end
+
   end
 
 
