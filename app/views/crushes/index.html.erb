@@ -13,6 +13,10 @@
                       <% end %>
                     </div>
 
+                    <% if @crushes.count == 0 %>
+                      <p>Aucun partage ne correspond à ta recherche</p>
+                    <% end %>
+
                 <div class="row mb-5" id="my_anchor">
                   <% @crushes.each do |n| %>
                     <div class="col-lg-6">
@@ -44,11 +48,6 @@
 
               <!-- ————————————— Flash error message ————————————— -->
 
-                <div class="container px-5 ">
-                  <div  class="alert_message text-center p-5 ">
-                  <strong><%= flash[:info] %></strong>
-                  </div>
-                </div>
 
                 <!-- ————————————— Pagination buttons ————————————— -->
                   <div class="container text-center d-flex justify-content-center button-pages ">
