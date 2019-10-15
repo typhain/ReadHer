@@ -3,16 +3,24 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
+
   <body>
-    <h1>Salut <%= @user.first_name %> <%= @user.last_name %> et bienvenue sur ReadHer!</h1>
-    <p>
-      Tu t'es inscrit en utilisant l'e-mail suivant : <%= @user.email %>.
-      <p>
-        On est ravis que tu aies envie de partager tes coups de coeur et que tu contribues à faire connaître les auteures de ta bibliothèque personnelle :)
-      </p>
-    <p>
-      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
-    </p>
-    <p> À très vite sur ReadHer !
+    <%= image_tag ("logo_readher-black.png") %>
+    <%= image_tag("rss.jpg", alt:"rss feed") %>
+
+    <h1 class='welcome-title'>Salut <%= @user.first_name %> <%= @user.last_name %> et bienvenue sur ReadHer!</h1>
+    <h5>
+      Tu t’es inscrit.e en utilisant l’e-mail suivant : <%= @user.email %>.
+    </h5>
+    <h5>
+      On est ravi.e.s que tu aies envie de partager tes coups de cœur 
+      et que tu contribues à faire connaître les auteures de ta bibliothèque personnelle :) </h5>
+    </h5>
+    <h3>
+      Pour accéder à ton espace, connecte-toi via : <%= @url %>. 
+    </h3>
+
+    <h2> À très vite sur ReadHer ! </h2>
   </body>
+
 </html>

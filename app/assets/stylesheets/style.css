@@ -8,11 +8,10 @@ h4 { color:white
     color: white;
     font-size: 15px}
 
-
 /* —————————————————— Links —————————————————— */
 
-
-a {color: white}
+a { 
+    color: white}
 
 a:visited{
     color: white ; }
@@ -41,7 +40,6 @@ body {
     color: black;
     background-repeat: no-repeat;
     height:100%;
-
 }
 
 /* —————————————————— Pictures —————————————————— */
@@ -61,8 +59,6 @@ h1 {
     color: black
 }
 
-
-
 /* —————————————————— Catchline —————————————————— */
 #catchline {
     font-family: bureau-grot-condensed, sans-serif;
@@ -70,9 +66,7 @@ h1 {
     padding-top: 0.2em;
     padding-bottom: 0.5em; margin-top: 0.5em ;margin-bottom: 1em;
     font-size: 7em;
-    line-height: 1;
-
-   
+    line-height: 1;   
 }
 
 /* —————————————————— Punchline —————————————————— */
@@ -81,7 +75,6 @@ h1 {
     font-size: 4em;
     line-height: 1;
 }
-
 
 #keywords {
     font-size: 6.7em;
@@ -113,11 +106,9 @@ nav a:active {
     color: darkgray;
 }
 
-
 .nav-item a:link {
     color: whitesmoke;
     list-style: none;
-
 }
 
 .nav-item a:hover {
@@ -149,7 +140,7 @@ nav a:active {
     transition: 0.3s;
 }
 
-li{        list-style: none;
+li {  list-style: none;
 }
 /*————————————————————————— Cartes Crushes —————————————————————————*/
 
@@ -163,7 +154,6 @@ li{        list-style: none;
 
     -webkit-box-shadow: 5px 5px 0px 0px, #212e9b;
     box-shadow: 5px 5px 0px 0px #212e9b;
-
 }
 
 .card-title {
@@ -173,7 +163,6 @@ li{        list-style: none;
     font-size: 2em;
     line-height: 1;
     color: #212e9b;
-
 }
 
 
@@ -202,7 +191,6 @@ li{        list-style: none;
     line-height: 1.0;
     font-size: 15px;
     padding-bottom: 5px;
-
     padding-bottom: 5px;
 }
 
@@ -274,7 +262,6 @@ li{        list-style: none;
     font-style: normal;
 }
 
-
 /*————————————————————————— Edit Form Text —————————————————————————*/
 
 .edit-form-text {
@@ -295,12 +282,11 @@ li{        list-style: none;
 }
 
 #crush-link:hover {
-
     text-decoration: inherit;
     color: #cd591f;
 }
 
-/* —————————————————— BADGE Lien —————————————————— */
+/* —————————————————— BADGE Links —————————————————— */
 
 #badge {
     margin-left: 8px;
@@ -321,8 +307,7 @@ li{        list-style: none;
     text-decoration: inherit
 }
 
-
-/* —————————————————— Input email / password —————————————————— */
+/* —————————————————— Inputs email / password —————————————————— */
 
 #inputEmail,
 #inputPassword {
@@ -371,7 +356,7 @@ li{        list-style: none;
     transition: 0.3s;
 }
 
-/* —————————————————— Boutons join us —————————————————— */
+/* —————————————————— Buttons join us —————————————————— */
 
 #btn-white{
     background-color: #ffffff;
@@ -413,7 +398,8 @@ li{        list-style: none;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 15px; border: 0
+    font-size: 15px; 
+    border: 0
 }
 
 #btn-editprofile {
@@ -489,12 +475,11 @@ li{        list-style: none;
 /* —————————————————— Mails —————————————————— */
 
 .welcome-title {
-    font-family: bureau-grot, sans-serif;
+    font-family: bureau-grot-condensed, sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1.2;
-    color: #000000
 }
 
 .welcome-text {
@@ -522,7 +507,6 @@ li{        list-style: none;
     border-color: black
 }
 
-
 #info {
     line-height: 1.3;
     color: #6d6d6d;
@@ -534,8 +518,6 @@ li{        list-style: none;
 #rubric_chapter {
    color: #FFF
 }
-
-
 
 /* —————————————————— Media Queries —————————————————— */
 
@@ -569,9 +551,6 @@ li{        list-style: none;
         line-height: 0.9;
         text-align: center;
     }
-
-
-
 }
 
 
@@ -637,16 +616,15 @@ li{        list-style: none;
     color: #6d6d6d;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
-    font-size: 2em}
+    font-size: 2em
+}
 
-
-    /* —————————————————— Inbox Page —————————————————— */
+/* —————————————————— Inbox Page —————————————————— */
 
     .image-cropped{
         width: 200px;
         height:200px;
         object-fit: cover;
-
     }
 
     .text-inbox{font-family: bureau-grot-condensed, sans-serif;
@@ -661,9 +639,9 @@ li{        list-style: none;
 
 
 
- a:hover{ color: gainsboro ;}
-a:visited{ color: white ; }
-a:active{ color: white ; }
+    a:hover{ color: gainsboro ;}
+    a:visited{ color: white ; }
+    a:active{ color: white ; }
 
 
  .comment {
@@ -724,7 +702,9 @@ a.footer-link :hover {
 }
 
 
-.to_comment{color: white}
+.to_comment{
+    color: white
+}
 
 
 #footer-credit {
@@ -785,7 +765,7 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 
 .button-pages{font-size: larger}
 
-/*---------- button view/add crushs ----------*/
+/*---------- Button view/add crushs ----------*/
 @media only screen and (min-width: 990px) {
     #crush-link{padding: 5px 10px;}
 
@@ -795,9 +775,6 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     #crush-link{padding: 12px 15px;}
 
 }
-
-/*---------- button view/add crushs ----------*/
-
 
 .page-link a:link {
     color: #000000;
@@ -811,6 +788,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     color: #000000;
 }
 
-#error_explanation{color:white}
+#error_explanation{
+    color:white}
 
-#alerte-devise, #error_explanation{color: #212e9b}
+#alerte-devise, #error_explanation{
+    color: #212e9b}

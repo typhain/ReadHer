@@ -1,4 +1,6 @@
-class UserMailer < ApplicationMailer
+ require 'letter_opener'
+ 
+ class UserMailer < ApplicationMailer
   default from: 'no-reply@monsite.fr'
 
   def welcome_send(user)
