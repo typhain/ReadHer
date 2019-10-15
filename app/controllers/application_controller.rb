@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
     protected
 
     def configure_permitted_parameters
-        devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar, :first_name,:last_name, :email, :city, :description])
-        devise_parameter_sanitizer.permit(:account_update, keys: [:avatar, :first_name, :last_name, :email, :city, :description])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar, :pseudo, :first_name,:last_name, :email, :city, :description])
+        devise_parameter_sanitizer.permit(:account_update, keys: [:avatar, :pseudo, :first_name, :last_name, :email, :city, :description])
     end
 
     def disable_nav
@@ -21,13 +21,16 @@ class ApplicationController < ActionController::Base
       @disable_footer = true
     end
 
-    def after_sign_in_path_for(resource)
-      stored_location_for(resource) || crushes_path
-    end
-
-    def after_sign_up_path_for(resource)
-      stored_location_for(resource) || crushes_path
-    end
-
+    # def after_sign_in_path_for(resource)
+    #   stored_location_for(resource) || crushes_path
+    # end
+    #
+    # def after_sign_up_path_for(resource)
+    #   stored_location_for(resource) || crushes_path
+    # end
+    #
+    # def after_update_path_for(resource)
+    #   stored_location_for(resource) || user_path(current_user)
+    # end
 
 end

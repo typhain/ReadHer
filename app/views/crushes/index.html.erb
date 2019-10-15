@@ -13,6 +13,9 @@
                       <% end %>
                     </div>
 
+                    <% if @crushes.count == 0 %>
+                      <p>Aucun partage ne correspond à ta recherche</p>
+                    <% end %>
 
                 <div class="row mb-5" id="my_anchor">
                   <% @crushes.each do |n| %>
@@ -24,7 +27,7 @@
                             <div class="card-title"><%= n.book_title %></div>
                               <p class="card-text pr-4"></p>
                               <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
-                                <p class="card-quote">“<%= n.quote %>”</p>
+                                <p class="card-quote">“<%= n.quote.truncate(100) %>”</p>
                                 <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
                                 <div class="d-flex w-100 justify-content-between">
                                   <div>
@@ -43,22 +46,23 @@
                   <% end %>
                 </div>
 
+              <!-- ————————————— Flash error message ————————————— -->
 
 
                 <!-- ————————————— Pagination buttons ————————————— -->
-                  <div class="container text-center d-flex justify-content-center button-pages ">     
+                  <div class="container text-center d-flex justify-content-center button-pages ">
                   <%= will_paginate @crushes, class:"px-4"%>
 
                 </div>
                     <div class="container px-5 ">
                         <div  class="alert_message text-center p-5 ">
                           <strong><%= flash[:success] %></strong>
-                        </div> 
-                    </div> 
+                        </div>
+                    </div>
 
                     <div>
-          
-          
+
+
                 </ul>
               </div>
             </div>

@@ -4,8 +4,7 @@ class PagesController < ApplicationController
 
     def index
     end
-    
-    def about; end
+
 
     def welcome_page
       @disable_nav = true

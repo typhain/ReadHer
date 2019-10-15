@@ -2,7 +2,7 @@
       <div class="row">
       <div class="col-sm-12 mx-auto mt-2">
       <div class="card p-4 mt-5 mb-5">
-          <h2 class="card-title">Edit <%= resource_name.to_s.humanize  %></h2>
+          <h2 class="card-title">Editer le profil</h2>
           <div class="row">
           <div class="col-md-6 p-4 mb-1">
                       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -21,22 +21,27 @@
                         </div>
 
                         <div class="field ">
-                          <%= f.label :first_name, :class => "edit-form-text" %><br />
+                          <%= f.label 'Pseudo', :class => "edit-form-text" %><br />
+                          <%= f.text_field :pseudo, :class => "form-control", :id =>"inputEmail",  autofocus: true, autocomplete: "email" %>
+                        </div>
+
+                        <div class="field ">
+                          <%= f.label 'Prénom', :class => "edit-form-text" %><br />
                           <%= f.text_field :first_name, :class => "form-control", :id =>"inputEmail",  autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :last_name ,  :class => "edit-form-text" %><br />
+                          <%= f.label "Nom",  :class => "edit-form-text" %><br />
                           <%= f.text_field :last_name, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :city, :class => "edit-form-text" %><br />
+                          <%= f.label "Ville", :class => "edit-form-text" %><br />
                           <%= f.text_field :city, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
 
                         <div class="field">
-                          <%= f.label :description , :class => "edit-form-text" %><br />
+                          <%= f.label "Bio" , :class => "edit-form-text" %><br />
                           <%= f.text_area :description, :class => "form-control", :id =>"inputEmail", autofocus: true, autocomplete: "email" %>
                         </div>
                     </div>
@@ -52,10 +57,10 @@
                     <% end %>
 
                     <div class="field">
-                      <%= f.label :password, :class => "edit-form-text"%> <div id="info">(leave blank if you don’t want to change it)</div>
+                      <%= f.label :password, :class => "edit-form-text"%> <div id="info">(Laisse ce champ vide si tu ne souhaites pas modifier ton mot de passe)</div>
                       <%= f.password_field :password, autocomplete: "new-password", :class => "form-control", :id =>"inputEmail" %>
                       <% if @minimum_password_length %>
-                        <em id="info"><%= @minimum_password_length %> characters minimum  </em>
+                        <em id="info"><%= @minimum_password_length %> caractères minimum </em>
                       <% end %>
                     </div>
 
@@ -65,14 +70,14 @@
                     </div>
 
                     <div class="field">
-                      <%= f.label :current_password, :class => "edit-form-text" %> <br /><div id="info">(we need your current password to confirm your changes)</div>
+                      <%= f.label :current_password, :class => "edit-form-text" %> <br /><div id="info">(Nous avons besoin de ton mot de passe actuel pour confirmer tes modifications.)</div>
                       <%= f.password_field :current_password, autocomplete: "current-password", :class => "form-control", :id =>"inputEmail" %>
                     </div>
                     </div>
                     </div>
 
                     <div class="actions ">
-                          <%= f.submit "Update", class: "btn btn-dark", id: "btn_update_profile"%>
+                          <%= f.submit "Mettre à jour", class: "btn btn-dark", id: "btn_update_profile"%>
                     </div>
                   <% end %>
                   </div>
@@ -82,9 +87,9 @@
                   <div class="row col-sm-10 mx-auto mt-2 d-flex justify-align-content-center">
                     <div class="card col-md-6 p-4 mb-1">
 
-                  <h3 class="card-title">Cancel my account</h3>
-                  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "btn btn-dark", id: "get_library_btn_sm" %></p>
-                 <%= link_to "Back", :back %>
+                  <h3 class="card-title">Supprimer mon compte</h3>
+                  <p>Insatisfait ?<%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Souhaitez-vous vraiment supprimer votre compte?" }, method: :delete , class: "btn btn-dark", id: "get_library_btn_sm" %></p>
+                 <%= link_to "Retour", :back %>
       </div>  </div>
       </div>
 </div>

@@ -1,39 +1,49 @@
 
 <p id="notice"><%= notice %></p>
 <div class="container">
-    <h1 class="display-4 text-center p-4" id="rubric_chapter">Biblio</h1>
+    <h1 class="display-4 text-center p-4" id="rubric_chapter">Bibliothèque</h1>
     <div class="row">
 
-    <% @user.library.crushes.each do |crush| %>
-            <div class="col-sm-6 mb-4 ">
+    <% if current_user != @user && @user.library.crushes.blank? %>
+      <p class="card-body text-center"> <%= "#{@user.pseudo} n'a rien rangé dans sa bibliothèque pour l'instant" %> <p>
 
-            <div class="row">
-            <div class="col-12">
-              <div class="card border-0" id="square">
-                <div class="card-body">
-                 <div class="card-title"> <%= crush.book_title %></div>
-                  <p class="card-text"></p>
-                  <div class="card-subtitle mb-3 text-muted"></div>
-                    <p class="card-quote">“<%= crush.quote %>”</p>
-                    <p class="card-credit"><%= crush.author_name %> (<%= crush.author_country%>)</p>
-                    <div class="row d-flex justify-content-left ml-3">
-                      <div class="text-center">
-                        <%= link_to "Consulter", crush_path(crush), class:"btn ", id: "btn-remove" %>
-                      </div>
-                      <div class="text-center">
-                        <% if current_user =! @user %>
-                      <%= link_to "Supprimer", crush_library_path, :method=>:delete , class:"btn btn-dark", id: "btn-remove" %> 
-                        <% end %>
+    <% elsif current_user == @user && @user.library.crushes.blank? %>
+      <div class= "container text-center">
+        <p class="card-body text-center">Tu n'as rien rangé dans ta bibliothèque pour l'instant.<p>
+      </div>
+
+    <% else %>
+      <% @user.library.crushes.each do |crush| %>
+              <div class="col-sm-6 mb-4 ">
+
+              <div class="row">
+              <div class="col-12">
+                <div class="card border-0" id="square">
+                  <div class="card-body">
+                   <div class="card-title"> <%= crush.book_title %></div>
+                    <p class="card-text"></p>
+                    <div class="card-subtitle mb-3 text-muted"></div>
+                      <p class="card-quote">“<%= crush.quote %>”</p>
+                      <p class="card-credit"><%= crush.author_name %> (<%= crush.author_country%>)</p>
+                      <div class="row d-flex justify-content-around ml-0">
+                        <div class="text-center">
+                          <%= link_to "Consulter", crush_path(crush), class:"btn ", id: "btn-remove" %>
+                        </div>
+                        <div class="text-center">
+                          <% if current_user == @user %>
+                        <%= link_to "Supprimer", crush_library_path, :method=>:delete, class:"btn", id: "btn-remove" %>
+                          <% end %>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-          </div><br>
+              </div>
+            </div><br>
 
 
-          <% end %>
+            <% end %>
+        <% end %>
           <br>
 
 </div>
@@ -43,7 +53,7 @@
 
           <div class="d-flex bd-highlight">
             <div class="p-2 bd-highlight align-items-end" id="btn-right">
-            <%= link_to 'Back', crushes_path , :class => "btn  btn-dark ",  id: "btn-signin-signup" %>
+            <%= link_to 'Retour', crushes_path , :class => "btn  btn-dark ",  id: "btn-signin-signup" %>
             </div>
           </div>
 </div>

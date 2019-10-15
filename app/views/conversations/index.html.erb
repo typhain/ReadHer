@@ -1,18 +1,22 @@
 
 <h1 class="display-4 text-center m-2 pt-4 pb-4" id="rubric_chapter">Inbox</h1>
 
-<div class="container">
-  <div class="row card pt-3" id="square">
-    <ul>
-      <% @conversations.each do |conversation| %>
-        <div class="text-inbox">
-        <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
-        <li><a><%= link_to recipient.first_name, conversation_messages_path(conversation) %></a></li>
-     
-        </div>
-        <hr>
-      <% end %>
-      
-    </ul>
-  </div>
-</div>
+<div class="container text-center">
+<% if @conversations.blank? %>
+    <p> Aucun message <p>
+
+  <% else %>
+      <div class="row card pt-3" id="square">
+            <ul>
+              <% @conversations.each do |conversation| %>
+                <div class="text-inbox">
+                <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
+                <li><a><%= link_to recipient.pseudo, conversation_messages_path(conversation) %></a></li>
+                <a><%= link_to "Supprimer la conversation", conversation_path(conversation), method: :delete, class:"crush-link-btn", id: "crush-link" %></a>
+                </div>
+                <hr>
+              <% end %>
+            </ul>
+      </div>
+    </div>
+  <% end %>
