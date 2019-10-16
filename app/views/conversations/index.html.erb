@@ -1,22 +1,44 @@
 
 <h1 class="display-4 text-center m-2 pt-4 pb-4" id="rubric_chapter">Inbox</h1>
 
-<div class="container text-center">
 <% if @conversations.blank? %>
-    <p> Aucun message <p>
+  <div class="container text-center">
+      <p> Aucun message <p>
+  </div>
 
-  <% else %>
-      <div class="row card pt-3" id="square">
-            <ul>
-              <% @conversations.each do |conversation| %>
-                <div class="text-inbox">
-                <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
-                <li><a><%= link_to recipient.pseudo, conversation_messages_path(conversation) %></a></li>
-                <a><%= link_to "Supprimer la conversation", conversation_path(conversation), method: :delete, class:"crush-link-btn", id: "crush-link" %></a>
-                </div>
-                <hr>
-              <% end %>
-            </ul>
-      </div>
-    </div>
-  <% end %>
+<% else %>
+
+<div class="container">
+
+  <div class="row card pt-3" id="square">
+    <table class="table ml-2">
+    <thead>
+          <tr class="card-credit">
+          <th scope="row">Destinataire</th>
+          <th scope="row">Date</th>
+          <th scope="row">Conversation</th>
+          <th scope="row"></th>
+          <th scope="row"></th>
+          </tr>
+    </thead>
+
+    <% @conversations.each do |conversation| %>
+      <tbody>
+        <tr>
+          <td>
+            <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
+            <a class="card-title"><%= recipient.pseudo %><a>
+          </td>
+          <td>
+            <a class="card-subtitle"><%= conversation.created_at.to_formatted_s(:short)%></a>
+          </td>
+          <td class="card-quote"><%= conversation.messages.last.body.truncate(60) %></td>
+          <td><%= link_to "ouvrir", conversation_messages_path(conversation), class:"crush-link-btn", id: "crush-link" %></td>
+          <td><%= link_to "Supprimer", conversation_path(conversation), method: :delete, class:"crush-link-btn", id: "crush-link" %><td>
+          <% end %>
+        </tr>
+    </tbody>
+    <% end %>
+  </table>
+  </div>
+</div>
