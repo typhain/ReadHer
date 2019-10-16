@@ -9,7 +9,7 @@
         <% if @messages.count == 0 %>
           <p><p>
         <% else %>
-        <% @messages.each do |message| %>
+        <% @messages.each_with_index do |message, i| %>
           <% if message.body %>
             <li>
               <div class="media">
@@ -17,15 +17,19 @@
                 <div class="media-body">
                     <h5 class="mt-0 message_first_name"><%= message.user.pseudo %></h5>
                     <p class="text-muted"> <%= message.created_at.to_formatted_s(:short)%></p>
-                    <p class="text-muted"> <%= message.body %></p>
+                    <p class="text-muted"> <%= message.body %>
+                    <% if current_user != @receiver && @messages[-1].read? %>
+                      <p class="text-muted">Lu</p>
+                    <% end %>
                 </div>
               </div>
             </li>
           <% end %>
         <% end %>
       </ul>
+      <% end %>
     </div>
-<% end %>
+
 
     <div class="row ">
       <div class="col-8">

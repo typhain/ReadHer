@@ -14,7 +14,7 @@
     <table class="table ml-2">
     <thead>
           <tr class="card-credit">
-          <th scope="row">Destinataire</th>
+          <th scope="row">Contact</th>
           <th scope="row">Date</th>
           <th scope="row">Conversation</th>
           <th scope="row"></th>
@@ -27,13 +27,13 @@
         <tr>
           <td>
             <% recipient = conversation.sender_id == current_user.id ? conversation.receiver : conversation.sender %>
-            <a class="card-title"><%= recipient.pseudo %><a>
+            <%= link_to recipient.pseudo, user_path(recipient), class:"card-title text-dark"%>
           </td>
-          <td>
-            <a class="card-subtitle"><%= conversation.created_at.to_formatted_s(:short)%></a>
+          <td class="card-subtitle">
+            <%= conversation.created_at.to_formatted_s(:short)%>
           </td>
           <td class="card-quote"><%= conversation.messages.last.body.truncate(60) %></td>
-          <td><%= link_to "ouvrir", conversation_messages_path(conversation), class:"crush-link-btn", id: "crush-link" %></td>
+          <td><%= link_to "Lire", conversation_messages_path(conversation), class:"crush-link-btn", id: "crush-link" %></td>
           <td><%= link_to "Supprimer", conversation_path(conversation), method: :delete, class:"crush-link-btn", id: "crush-link" %><td>
           <% end %>
         </tr>
