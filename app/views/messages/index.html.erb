@@ -1,4 +1,6 @@
 
+<p class="text-muted">Lu</p>
+
 <html class="message">
 <div class="container ">
   <div class="jumbotron bg-white card" id="square">
@@ -9,7 +11,7 @@
         <% if @messages.count == 0 %>
           <p><p>
         <% else %>
-        <% @messages.each_with_index do |message, i| %>
+        <% @messages[1..-3].each do |message| %>
           <% if message.body %>
             <li>
               <div class="media">
@@ -18,14 +20,35 @@
                     <h5 class="mt-0 message_first_name"><%= message.user.pseudo %></h5>
                     <p class="text-muted"> <%= message.created_at.to_formatted_s(:short)%></p>
                     <p class="text-muted"> <%= message.body %>
-                    <% if current_user != @receiver && @messages[-1].read? %>
-                      <p class="text-muted">Lu</p>
-                    <% end %>
                 </div>
               </div>
             </li>
           <% end %>
         <% end %>
+          <% if current_user != @receiver && @messages[-2].read? %>
+            <div class="col-sm-12 rounded p-2">
+              <div class="media">
+                <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
+                <div class="media-body">
+                  <h5 class="mt-0 message_first_name"><%= @messages[-2].user.pseudo %></h5>
+                  <p class="text-muted"> <%= @messages[-2].created_at.to_formatted_s(:short)%></p>
+                  <p class="text-muted"> <%=@messages[-2].body %> <em>Lu<em></p>
+                </div>
+              </div>
+            </div>
+            <% else %>
+            <div class="col-sm-12 rounded p-2">
+              <div class="media">
+                <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
+                <div class="media-body">
+                  <h5 class="mt-0 message_first_name"><%= @messages[-2].user.pseudo %></h5>
+                  <p class="text-muted"> <%= @messages[-2].created_at.to_formatted_s(:short)%></p>
+                  <p class="text-muted"> <%=@messages[-2].body %></p>
+                </div>
+              </div>
+            </div>
+
+          <% end %>
       </ul>
       <% end %>
     </div>
