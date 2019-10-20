@@ -32,7 +32,11 @@
           <td class="card-subtitle">
             <%= conversation.created_at.to_formatted_s(:short)%>
           </td>
-          <td class="card-quote"><%= conversation.messages.last.body.truncate(60) %></td>
+            <% if conversation.messages.present? %>
+              <td class="card-quote"><%= conversation.messages.last.body.truncate(60) %></td>
+            <% else %>
+              <td class="card-quote">Aucun message</td>
+          <% end %>
           <td><%= link_to "Lire", conversation_messages_path(conversation), class:"crush-link-btn", id: "crush-link" %></td>
           <td><%= link_to "Supprimer", conversation_path(conversation), method: :delete, class:"crush-link-btn", id: "crush-link" %><td>
           <% end %>
