@@ -1,9 +1,16 @@
 App.messages = App.cable.subscriptions.create "MessagesChannel",
   connected: ->
-    # Called when the subscription is ready for use on the server
+    $(document).on 'keypress', "btn-send", (event) =>
+      if event.KeyCode is 13
+        @speak(event.target.value)
+        event.target.value = ""
+        event.preventdefault()
 
   disconnected: ->
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    # Called when there's incoming data on the websocket for this channel
+    $('btn-send').append(data.message)
+
+  speak: (message) ->
+    @perform 'speak', {message: message}

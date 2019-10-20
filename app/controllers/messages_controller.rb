@@ -14,6 +14,8 @@ class MessagesController < ApplicationController
 
     @receiver = @conversation.receiver
 
+    @sender = @conversation.sender
+
   end
 
   def create
