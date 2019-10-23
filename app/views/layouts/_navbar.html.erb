@@ -1,67 +1,70 @@
+<link rel="stylesheet" href="stylesheet/navbar.css">
 
-<nav class="navbar navbar-expand-lg py-3">
-  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="container" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
-  </button>
-  <a class="navbar-brand " href="#">
-    <%=link_to(image_tag("logo_readher.png", class: "logo_navbar pr-2"), crushes_path)%>
-  </a>
+<nav class="navbar navbar-expand-lg py-3 border-bottom border-white">
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <!--burger-->
+            <div class="bar2"></div>
+            <!--burger-->
+            <div class="bar3"></div>
+            <!--burger-->
+        </div>
+    </button>
+    
+    <a class="navbar-brand" href="#">
+        <%=link_to(image_tag("logo_readher.png", class: "logo_navbar pr-2"), crushes_path)%>
+    </a>
 
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-  <ul class="navbar-nav mr-auto text-center ">
-  <li class="nav-item py-3 px-2 mx-1" >
-      <%= link_to "Coups de cœur", crushes_path, class:"crush-btn" , anchor: "my_anchor"%>
-  </li>
-
-
-  <li class="nav-item py-3  mx-1">
-    <% if current_user %>
-        <%= link_to(image_tag("enveloppe-10-10.png", class: "box"), conversations_path)%>
-        <% end %>
-    </li>
-
-
-        <% if current_user == nil %>
-          <li class="nav-item border  py-1 px-2 mx-2 d-flex justify-align-items">
-          <%= link_to "Se connecter", new_user_session_path, class:"nav-link" , id:"login"%>
-          </li>
-          <li class="nav-item border py-1 px-2 mx-2">
-          <%= link_to "Crée ton compte", new_user_registration_path, class:"nav-link" %>
-          </li>
-        <% else %>
-
-          <li class="nav-item py-2 px-2 mx-1">
-          <%= link_to "Profil", user_path(current_user.id), class:"nav-link" %>
-          </li>
-
-          <li class="nav-item py-2 px-2 mx-1">
-            <% if current_user %>
-            <%= link_to  "Bibliothèque", library_path(current_user), class:"nav-link" %>
-          </li>
-            <% end %>
-
-            <li class="nav-item border py-1 px-2 mx-2">
-            <a <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"nav-link" %> </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item mx-1">
+                <%=link_to "Coups de cœur", crushes_path, class: "nav-link", anchor: "my_anchor"%>
             </li>
-            <% end %>
 
-</ul>
-    <form class="form-inline my-2 d-flex justifiy-content-center">
+            <li class="nav-item pt-1 mx-1">
+                <% if current_user %>
+                    <%=link_to(image_tag("enveloppe-10-10.png", class: "box"), conversations_path)%>
+                        <% end %>
+            </li>
 
-    <li class="nav-item" id="form-place">
+            <% if current_user== nil %>
+                <li class="nav-item">
+                    <%=link_to "Se connecter", new_user_session_path, class: "nav-link", id: "login"%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to "Crée ton compte", new_user_registration_path, class: "nav-link" %>
+                </li>
+                <% else %>
 
-    <%= form_tag crushes_path, method: :get do %>
-        <%= text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class:"form-control border-0" %>
-        <%= submit_tag 'Rechercher', class:"btn btn-outline-light mx-2", type:"submit"%>
-    <% end %>
+                    <li class="nav-item">
+                        <%=link_to "Profil", user_path(current_user.id), class: "nav-link" %>
+                    </li>
 
-    </li>
-    </form>
+                    <li class="nav-item">
+                        <% if current_user %>
+                            <%=link_to "Bibliothèque", library_path(current_user), class:"nav-link" %>
+                    </li>
+                    <% end %>
 
-  </div>
+                        <li class="nav-item">
+                            <a <%=link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "nav-link" %> </a>
+                        </li>
+                        <% end %>
+
+        </ul>
+
+        <form class="form-inline my-2 d-flex justifiy-content-center">
+
+            <li class="nav-item" id="form-place" class="">
+
+                <%=form_tag crushes_path, method: :get do %>
+                    <%=text_field_tag "term", params[:term], placeholder: "Une auteure ou un livre", class: "form-control border-0 rounded-0" %>
+                        <%=submit_tag 'Rechercher', class: "btn btn-outline-light mx-2 rounded-0", type: "submit"%>
+                            <% end %>
+
+            </li>
+        </form>
+
+    </div>
 </nav>

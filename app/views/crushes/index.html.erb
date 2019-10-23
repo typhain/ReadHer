@@ -17,12 +17,12 @@
                       <p>Aucun partage ne correspond à ta recherche</p>
                     <% end %>
 
-                <div class="row mb-5" id="my_anchor">
+                <div class="row mb-5 d-flex justify-content-center" id="my_anchor">
                   <% @crushes.each do |n| %>
-                    <div class="col-lg-6">
+                    <div class="col-lg-9 ">
                       <div class="row">
                         <div class="col-12">
-                          <div class="card  text-left", id="square">
+                          <div class="card text-left", id="square">
                             <div class="card-body">
                             <div class="card-title"><%= n.book_title %></div>
                               <p class="card-text pr-4"></p>
@@ -46,7 +46,6 @@
                   <% end %>
                 </div>
 
-              <!-- ————————————— Flash error message ————————————— -->
 
 
                 <!-- ————————————— Pagination buttons ————————————— -->
@@ -55,7 +54,7 @@
 
                 </div>
                     <div class="container px-5 ">
-                        <div  class="alert_message text-center p-5 ">
+                        <div  class="alert alert_message text-center p-5 ">
                           <strong><%= flash[:success] %></strong>
                         </div>
                     </div>

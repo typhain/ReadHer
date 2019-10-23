@@ -17,7 +17,7 @@ class User < ApplicationRecord
   after_create :create_library
   after_create :set_pseudo
 
-  #after_create :welcome_send, unless: :skip_sending_welcome_email
+  after_create :welcome_send, unless: :skip_sending_welcome_email
   attr_accessor :skip_sending_welcome_email
 
   def create_library
