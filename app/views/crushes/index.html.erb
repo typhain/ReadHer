@@ -26,7 +26,7 @@
                             <div class="card-body">
                             <div class="card-title"><%= n.book_title %></div>
                               <p class="card-text pr-4"></p>
-                              <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:long)%></div>
+                              <div class="card-subtitle mb-3 text-muted"><%= n.created_at.to_formatted_s(:short)%></div>
                                 <p class="card-quote">“<%= n.quote.truncate(100) %>”</p>
                                 <p class="card-credit"><%= n.author_name%> (<%= n.author_country%>)</p>
                                 <div class="d-flex w-100 justify-content-between">
