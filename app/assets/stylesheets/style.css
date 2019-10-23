@@ -24,13 +24,14 @@ a:hover{
 /* —————————————————— Alert Messages —————————————————— */
 
 .alert_message {
-    border: #fa8e58;
+    
     color: #212e9b;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 18px;
-    z-index: 0;
+    padding: 10px;
+    position: relative;
 }
 
 /* —————————————————— Body —————————————————— */
@@ -44,9 +45,7 @@ body {
 
 /* —————————————————— Pictures —————————————————— */
 
-.logo_navbar {
-    width: 100px
-}
+
 
 .logo {
     width: 200px
@@ -64,7 +63,9 @@ h1 {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
     padding-top: 0.2em;
-    padding-bottom: 0.5em; margin-top: 0.5em ;margin-bottom: 1em;
+    padding-bottom: 0.5em; 
+    margin-top: 0.5em ;
+    margin-bottom: 1em;
     font-size: 7em;
     line-height: 1;   
 }
@@ -77,62 +78,26 @@ h1 {
 }
 
 #keywords {
-    font-size: 6.7em;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-size: 5em;
     line-height: 0.9;
 }
 
-nav {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color:#000000;
-    font-size: 16px;
-    padding-left: 50%;
-}
-
-nav a:link {
-    color: white;
-}
-
-nav a:hover {
-    color: darkgray;
-}
-
-nav a:visited {
-    color: white;
-}
-
-nav a:active {
-    color: darkgray;
-}
-
-.nav-item a:link {
-    color: whitesmoke;
-    list-style: none;
-}
-
-.nav-item a:hover {
-    color: dimgray;
-    border: #fa8e58
-}
-
-.nav-item a:visited {
-    color: whitesmoke;
-}
-
 #add_crush_btn {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
-    font-size: 23px;
-    width: 150px;
-    height: 150px;
-    background: #fa8e58;
+    font-size: 19px;
+    width: 120px;
+    height: 120px;
+    background: white;
+    color: #CC5F49;
     margin-top: 30px;
     margin-bottom: 30px;
     border: 0;
     line-height: 1.1;
     -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7;
     box-shadow: 5px 5px 15px 5px #ffc4a7;
+    position: fixed; z-index: 10; left: 84%; bottom:25%;
 }
 
 .rounded-circle:hover {
@@ -308,32 +273,6 @@ li {  list-style: none;
     text-decoration: inherit
 }
 
-/* —————————————————— Inputs email / password —————————————————— */
-
-#inputEmail,
-#inputPassword {
-    border-radius: 0;
-    border-color: black;
-    font-size: 15px
-}
-
-#inputPassword {
-    border-top: 0
-}
-
-#inputPassword-border {
-    border-radius: 0;
-    border-color: black;
-    font-size: 15px
-}
-
-#six-min {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 13px;
-    padding-left: 10px
-}
 
 /* —————————————————— Boutons sign up / sign in —————————————————— */
 
@@ -536,13 +475,7 @@ li {  list-style: none;
 
 @media only screen and (max-width: 990px) {
 
-    .nav-item {
-        display: flex;
-        justify-content: center;
-
-    }
-
-
+   
     #catchline {
         font-family: bureau-grot-condensed, sans-serif;
         font-weight: 500;
@@ -721,7 +654,7 @@ a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
 a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 
-.box{width:50% }
+.box{ width:50% }
 
 
 
@@ -731,7 +664,6 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 @media only screen and (max-width: 600px) {
 
 
-    .navbar-nav{padding-top:20px}
     .crush-btn{font-size:1.2em
     }
     #catchline {
@@ -746,19 +678,10 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     }
 
 
-    .nav-link {
-        font-size: 1.2em;
-        line-height:1.2;
-        justify-content: center;
-    }
 
     #form-place{
         display: flex;
         padding-top: 20px}
-
-    #login{
-        padding-bottom: 10px
-    }
 
 
 }
@@ -789,8 +712,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     color: #000000;
 }
 
-#error_explanation{
+#error_explanation{ 
     color:white}
 
-#alerte-devise, #error_explanation{
+#alerte-devise{
     color: #212e9b}

@@ -345,13 +345,9 @@ CREATE TABLE public.users (
     description character varying,
     last_name character varying,
     first_name character varying,
-<<<<<<< HEAD
-    city character varying
-=======
     city character varying,
     role character varying,
     pseudo character varying
->>>>>>> develop
 );
 
 
