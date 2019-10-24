@@ -76,6 +76,8 @@ Rails.application.configure do
   enable_starttls_auto: true
   }
 
+# config.action_mailer.delivery_method = :letter_opener
+config.action_mailer.perform_deliveries = true
 
   # to visually see all the new fields and alterations of login, sign up etc pages
   config.scoped_views = true

@@ -1,0 +1,27 @@
+/* —————————————————— Inputs email / password —————————————————— */
+
+#inputEmail,
+#inputPassword {
+    border-radius: 0;
+    border-color: 0px ;
+    font-size: 15px
+}
+
+#inputPassword {
+    border-top: 0
+}
+
+#inputPassword-border {
+    border-radius: 0;
+    border-color: none;
+    font-size: 15px
+}
+
+#six-min {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 13px;
+    padding-left: 10px
+}
+

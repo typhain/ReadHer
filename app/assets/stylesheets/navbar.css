@@ -1,0 +1,67 @@
+.logo_navbar {
+    width: 100px; margin-right: 30px;
+}
+
+nav {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding-left: 50%;
+    
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:hover {
+    color: darkgray;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:active {
+    color: darkgray;
+}
+
+.nav-item a:link {
+    color: whitesmoke;
+    list-style: none;
+}
+
+.nav-item a:hover {
+    color: dimgray;
+    border: #fa8e58
+}
+
+.nav-item a:visited {
+    color: whitesmoke;
+}
+
+
+#login{
+    padding-bottom: 10px
+}
+
+
+@media only screen and (max-width: 990px) {
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .navbar-nav{
+        padding-top: 20px
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+        line-height:1.2;
+        justify-content: center;
+    }
+}

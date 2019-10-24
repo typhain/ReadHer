@@ -8,11 +8,10 @@ h4 { color:white
     color: white;
     font-size: 15px}
 
-
 /* —————————————————— Links —————————————————— */
 
-
-a {color: white}
+a { 
+    color: white}
 
 a:visited{
     color: white ; }
@@ -25,13 +24,14 @@ a:hover{
 /* —————————————————— Alert Messages —————————————————— */
 
 .alert_message {
-    border: #fa8e58;
+    
     color: #212e9b;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 18px;
-    z-index: 0;
+    padding: 10px;
+    position: relative;
 }
 
 /* —————————————————— Body —————————————————— */
@@ -41,14 +41,11 @@ body {
     color: black;
     background-repeat: no-repeat;
     height:100%;
-
 }
 
 /* —————————————————— Pictures —————————————————— */
 
-.logo_navbar {
-    width: 100px
-}
+
 
 .logo {
     width: 200px
@@ -61,18 +58,16 @@ h1 {
     color: black
 }
 
-
-
 /* —————————————————— Catchline —————————————————— */
 #catchline {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
     padding-top: 0.2em;
-    padding-bottom: 0.5em; margin-top: 0.5em ;margin-bottom: 1em;
+    padding-bottom: 0.5em; 
+    margin-top: 0.5em ;
+    margin-bottom: 1em;
     font-size: 7em;
-    line-height: 1;
-
-
+    line-height: 1;   
 }
 
 /* —————————————————— Punchline —————————————————— */
@@ -82,66 +77,27 @@ h1 {
     line-height: 1;
 }
 
-
 #keywords {
-    font-size: 6.7em;
+    font-family: bureau-grot-condensed, sans-serif;
+    font-size: 5em;
     line-height: 0.9;
 }
 
-nav {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color:#000000;
-    font-size: 16px;
-    padding-left: 50%;
-}
-
-nav a:link {
-    color: white;
-}
-
-nav a:hover {
-    color: darkgray;
-}
-
-nav a:visited {
-    color: white;
-}
-
-nav a:active {
-    color: darkgray;
-}
-
-
-.nav-item a:link {
-    color: whitesmoke;
-    list-style: none;
-
-}
-
-.nav-item a:hover {
-    color: dimgray;
-    border: #fa8e58
-}
-
-.nav-item a:visited {
-    color: whitesmoke;
-}
-
 #add_crush_btn {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
-    font-size: 23px;
-    width: 150px;
-    height: 150px;
-    background: #fa8e58;
+    font-size: 19px;
+    width: 120px;
+    height: 120px;
+    background: white;
+    color: #CC5F49;
     margin-top: 30px;
     margin-bottom: 30px;
     border: 0;
     line-height: 1.1;
     -webkit-box-shadow: 5px 5px 15px 5px #ffc4a7;
     box-shadow: 5px 5px 15px 5px #ffc4a7;
+    position: fixed; z-index: 10; left: 84%; bottom:25%;
 }
 
 .rounded-circle:hover {
@@ -149,7 +105,7 @@ nav a:active {
     transition: 0.3s;
 }
 
-li{        list-style: none;
+li {  list-style: none;
 }
 /*————————————————————————— Cartes Crushes —————————————————————————*/
 
@@ -163,7 +119,6 @@ li{        list-style: none;
 
     -webkit-box-shadow: 5px 5px 0px 0px, #212e9b;
     box-shadow: 5px 5px 0px 0px #212e9b;
-
 }
 
 .card-title {
@@ -173,7 +128,6 @@ li{        list-style: none;
     font-size: 2em;
     line-height: 1;
     color: #212e9b;
-
 }
 
 
@@ -202,7 +156,6 @@ li{        list-style: none;
     line-height: 1.0;
     font-size: 15px;
     padding-bottom: 5px;
-
     padding-bottom: 5px;
 }
 
@@ -275,7 +228,6 @@ li{        list-style: none;
     font-style: normal;
 }
 
-
 /*————————————————————————— Edit Form Text —————————————————————————*/
 
 .edit-form-text {
@@ -296,12 +248,11 @@ li{        list-style: none;
 }
 
 #crush-link:hover {
-
     text-decoration: inherit;
     color: #cd591f;
 }
 
-/* —————————————————— BADGE Lien —————————————————— */
+/* —————————————————— BADGE Links —————————————————— */
 
 #badge {
     margin-left: 8px;
@@ -322,33 +273,6 @@ li{        list-style: none;
     text-decoration: inherit
 }
 
-
-/* —————————————————— Input email / password —————————————————— */
-
-#inputEmail,
-#inputPassword {
-    border-radius: 0;
-    border-color: black;
-    font-size: 15px
-}
-
-#inputPassword {
-    border-top: 0
-}
-
-#inputPassword-border {
-    border-radius: 0;
-    border-color: black;
-    font-size: 15px
-}
-
-#six-min {
-    font-family: neue-haas-unica, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 13px;
-    padding-left: 10px
-}
 
 /* —————————————————— Boutons sign up / sign in —————————————————— */
 
@@ -372,7 +296,7 @@ li{        list-style: none;
     transition: 0.3s;
 }
 
-/* —————————————————— Boutons join us —————————————————— */
+/* —————————————————— Buttons join us —————————————————— */
 
 #btn-white{
     background-color: #ffffff;
@@ -414,7 +338,8 @@ li{        list-style: none;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 15px; border: 0
+    font-size: 15px; 
+    border: 0
 }
 
 #btn-editprofile {
@@ -490,12 +415,11 @@ li{        list-style: none;
 /* —————————————————— Mails —————————————————— */
 
 .welcome-title {
-    font-family: bureau-grot, sans-serif;
+    font-family: bureau-grot-condensed, sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1.2;
-    color: #000000
 }
 
 .welcome-text {
@@ -523,7 +447,6 @@ li{        list-style: none;
     border-color: black
 }
 
-
 #info {
     line-height: 1.3;
     color: #6d6d6d;
@@ -535,8 +458,6 @@ li{        list-style: none;
 #rubric_chapter {
    color: #FFF
 }
-
-
 
 /* —————————————————— Media Queries —————————————————— */
 
@@ -554,13 +475,7 @@ li{        list-style: none;
 
 @media only screen and (max-width: 990px) {
 
-    .nav-item {
-        display: flex;
-        justify-content: center;
-
-    }
-
-
+   
     #catchline {
         font-family: bureau-grot-condensed, sans-serif;
         font-weight: 500;
@@ -570,9 +485,6 @@ li{        list-style: none;
         line-height: 0.9;
         text-align: center;
     }
-
-
-
 }
 
 
@@ -638,16 +550,15 @@ li{        list-style: none;
     color: #6d6d6d;
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 400;
-    font-size: 2em}
+    font-size: 2em
+}
 
-
-    /* —————————————————— Inbox Page —————————————————— */
+/* —————————————————— Inbox Page —————————————————— */
 
     .image-cropped{
         width: 200px;
         height:200px;
         object-fit: cover;
-
     }
 
     .text-inbox{font-family: bureau-grot-condensed, sans-serif;
@@ -662,9 +573,9 @@ li{        list-style: none;
 
 
 
- a:hover{ color: gainsboro ;}
-a:visited{ color: white ; }
-a:active{ color: white ; }
+    a:hover{ color: gainsboro ;}
+    a:visited{ color: white ; }
+    a:active{ color: white ; }
 
 
  .comment {
@@ -725,7 +636,9 @@ a.footer-link :hover {
 }
 
 
-.to_comment{color: white}
+.to_comment{
+    color: white
+}
 
 
 #footer-credit {
@@ -741,7 +654,7 @@ a.footer-link:link {color:black}
 a.footer-link:visited {color:black}
 a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 
-.box{width:50% }
+.box{ width:50% }
 
 
 
@@ -751,7 +664,6 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 @media only screen and (max-width: 600px) {
 
 
-    .navbar-nav{padding-top:20px}
     .crush-btn{font-size:1.2em
     }
     #catchline {
@@ -766,19 +678,10 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     }
 
 
-    .nav-link {
-        font-size: 1.2em;
-        line-height:1.2;
-        justify-content: center;
-    }
 
     #form-place{
         display: flex;
         padding-top: 20px}
-
-    #login{
-        padding-bottom: 10px
-    }
 
 
 }
@@ -786,7 +689,7 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
 
 .button-pages{font-size: larger}
 
-/*---------- button view/add crushs ----------*/
+/*---------- Button view/add crushs ----------*/
 @media only screen and (min-width: 990px) {
     #crush-link{padding: 5px 10px;}
 
@@ -796,9 +699,6 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     #crush-link{padding: 12px 15px;}
 
 }
-
-/*---------- button view/add crushs ----------*/
-
 
 .page-link a:link {
     color: #000000;
@@ -812,6 +712,8 @@ a.footer-link:hover{color:white; text-decoration: none; transition: 0.3s;}
     color: #000000;
 }
 
-#error_explanation{color:white}
+#error_explanation{ 
+    color:white}
 
-#alerte-devise, #error_explanation{color: #212e9b}
+#alerte-devise{
+    color: #212e9b}
