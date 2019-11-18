@@ -18,6 +18,7 @@ class MessagesController < ApplicationController
 
   end
 
+
   def create
      @message = @conversation.messages.new(message_params)
      @message.user = current_user

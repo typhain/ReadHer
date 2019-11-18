@@ -19,7 +19,7 @@
                 <div class="media-body">
                     <h5 class="mt-0 message_first_name"><%= message.user.pseudo %></h5>
                     <p class="text-muted"> <%= message.created_at.to_formatted_s(:short)%></p>
-                    <p class="text-muted"> <%= message.body %>
+                    <p class="text-muted" id="messages"> <%= message.body %>
                 </div>
               </div>
             </li>
@@ -56,8 +56,8 @@
     <div class="row ">
       <div class="col-8">
         <%= form_for [@conversation, @message] do |f| %>
-          <div class="field " >
-            <%= f.text_area :body, placeholder: "Ton message", class:"comment rounded-0" %>
+          <div class="field" >
+            <%= f.text_area :body, placeholder: "Ton message", class:"comment rounded-0", id:"message"%>
           </div>
           <%= f.submit "Envoyer", id: "btn-send" %>
         <% end %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/manifesto'
   get 'pages/mentions_legales'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :crushes
   resources :crush_libraries
@@ -28,5 +29,5 @@ Rails.application.routes.draw do
   scope 'admin', module: 'admin', as: 'admin' do
     resources :crushes
   end
-  
+
 end
