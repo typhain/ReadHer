@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   get 'users/show'
   get 'pages/about'
@@ -28,5 +28,5 @@ Rails.application.routes.draw do
   scope 'admin', module: 'admin', as: 'admin' do
     resources :crushes
   end
-  
+
 end

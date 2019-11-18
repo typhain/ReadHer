@@ -11,7 +11,7 @@
             <!--burger-->
         </div>
     </button>
-    
+
     <a class="navbar-brand" href="#">
         <%=link_to(image_tag("logo_readher.png", class: "logo_navbar pr-2"), crushes_path)%>
     </a>
@@ -30,7 +30,10 @@
 
             <% if current_user== nil %>
                 <li class="nav-item">
-                    <%=link_to "Se connecter", new_user_session_path, class: "nav-link", id: "login"%>
+                    <%=link_to "Se connecter /", new_user_session_path, class: "nav-link", id: "login"%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to "Se connecter via facebook", user_facebook_omniauth_authorize_path, class: "nav-link", id: "login"%>
                 </li>
                 <li class="nav-item">
                     <%=link_to "Crée ton compte", new_user_registration_path, class: "nav-link" %>
