@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
-  devise :confirmable
 
   has_one :library
   has_many :crushes
@@ -44,7 +43,6 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.pseudo = auth.info.name
       user.password = Devise.friendly_token[0,20]
-      user.skip_confirmation!
     end
   end
 end
