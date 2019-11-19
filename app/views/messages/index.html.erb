@@ -1,7 +1,11 @@
 <html class="message">
 <div class="container ">
   <div class="jumbotron bg-white card" id="square">
-  <h2 class="card-title pb-2 text-left">Conversation avec <%= @receiver.pseudo %></h2>
+  <% if current_user == @sender %>
+    <h2 class="card-title pb-2 text-left">Conversation avec <%= @receiver.pseudo %></h2>
+  <% else %>
+    <h2 class="card-title pb-2 text-left">Conversation avec <%= @sender.pseudo %></h2>
+  <% end %>
 
 
       <ul class="col-sm-12 border rounded p-2">
@@ -9,20 +13,18 @@
           <p><p>
         <% else %>
         <% @messages[1..-3].each do |message| %>
-          <% if message.body %>
             <li>
               <div class="media">
                 <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
                 <div class="media-body">
                     <h5 class="mt-0 message_first_name"><%= message.user.pseudo %></h5>
                     <p class="text-muted"> <%= message.created_at.to_formatted_s(:short)%></p>
-                    <p class="text-muted"> <%= message.body %>
+                    <p class="text-muted" id="messages"> <%= message.body %>
                 </div>
               </div>
             </li>
-          <% end %>
         <% end %>
-          <% if current_user != @receiver && @messages[-2].read? %>
+          <% if @messages[-2] != current_user.messages && @messages[-2].read? %>
             <div class="col-sm-12 rounded p-2">
               <div class="media">
                 <%= image_tag user_avatar(current_user), alt: 'avatar', class:"align-self-start mr-3 pb-2 image-cropped", style:"width:64px ; height:64px " %>
@@ -54,8 +56,8 @@
     <div class="row ">
       <div class="col-8">
         <%= form_for [@conversation, @message] do |f| %>
-          <div class="field " >
-            <%= f.text_area :body, placeholder: "Ton message", class:"comment rounded-0" %>
+          <div class="field" >
+            <%= f.text_area :body, placeholder: "Ton message", class:"comment rounded-0", id:"message"%>
           </div>
           <%= f.submit "Envoyer", id: "btn-send" %>
         <% end %>
