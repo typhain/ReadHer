@@ -340,6 +340,7 @@ CREATE TABLE public.users (
     reset_password_token character varying,
     reset_password_sent_at timestamp without time zone,
     remember_created_at timestamp without time zone,
+    facebook_id character varying,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     description character varying,

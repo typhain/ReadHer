@@ -21,6 +21,11 @@ class ApplicationController < ActionController::Base
       @disable_footer = true
     end
 
+    def after_sign_in_path_for(resource)
+       request.env['omniauth.origin'] || crushes_path
+     end
+
+
     # def after_sign_in_path_for(resource)
     #   stored_location_for(resource) || crushes_path
     # end
